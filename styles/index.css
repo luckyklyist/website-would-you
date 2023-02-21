@@ -99,6 +99,21 @@
 body {
   background-color: #171717;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  background-color: #616161;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  width: 0.5rem;
+  background-color: transparent;
 }
 
 button {
@@ -200,4 +215,156 @@ nav hr {
   position: absolute;
   left: 0;
   top: 120px;
+}
+
+.homepage-main {
+  margin-top: 240px;
+}
+.homepage-main section.landing {
+  margin-left: 17vw;
+  margin-right: 17vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homepage-main section.landing .left h1 {
+  user-select: none;
+  font-size: 64px;
+  width: 500px;
+  font-weight: 700;
+  color: #fff;
+}
+.homepage-main section.landing .left h1 span.red {
+  color: #F00505;
+}
+.homepage-main section.landing .left h1 span.blue {
+  color: #0598F6;
+}
+.homepage-main section.landing .left p {
+  font-weight: 400;
+  font-size: 20px;
+  user-select: none;
+  color: #C0C0C0;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.homepage-main section.landing .right img {
+  user-select: none;
+}
+.homepage-main section.servers {
+  margin-top: 100px;
+}
+.homepage-main section.servers img {
+  user-select: none;
+  margin-bottom: 0;
+}
+.homepage-main section.servers .servers-wrapper {
+  background-color: #101010;
+  margin-top: -120px;
+}
+.homepage-main section.servers .servers-wrapper h2 {
+  user-select: none;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  text-align: center;
+}
+.homepage-main section.servers .servers-wrapper h3 {
+  color: #fff;
+  user-select: none;
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  text-align: center;
+}
+.homepage-main section.servers .servers-wrapper h3 span {
+  color: #0598F6;
+  font-weight: 600;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-up {
+  background-color: #101010;
+  width: 100vw;
+  height: 20px;
+  padding-top: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-down {
+  background-color: #101010;
+  width: 100vw;
+  height: 20px;
+  padding-bottom: 100px;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade {
+  height: 100px;
+  position: absolute;
+  width: calc(17vw - 22px);
+  z-index: 200;
+  top: 0px;
+  background-color: #101010;
+  overflow-y: hidden;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade.left {
+  box-shadow: 2px 0 40px rgba(0, 0, 0, 0.7);
+  left: 0;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade.right {
+  left: calc(100vw - (17vw - 22px));
+  box-shadow: -2px 0 40px rgba(0, 0, 0, 0.7);
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: max-content;
+  animation: serverSliderContainerMove 50s linear infinite;
+}
+@keyframes serverSliderContainerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-8400px);
+  }
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item {
+  border-radius: 10px;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  margin-right: 16px;
+  z-index: 1;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item img {
+  user-select: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right h4 {
+  user-select: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 15px;
+  width: 185px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right p {
+  user-select: none;
+  color: #C0C0C0;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 15px;
 }

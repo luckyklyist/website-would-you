@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
+import { useEffect } from "react";
+import servers from "../data/servers.json";
 
 export default function Home() {
   return (
@@ -14,12 +16,55 @@ export default function Home() {
       <Navbar />
 
       <main className="homepage-main">
-        <div className="left">
-          <h1>Entertain Your <span className="red">Discord</span> <span className="blue">Server</span></h1>
-          <p>Utilize Would You to entertain your server.</p>
-          <button className="wy-button primary">Invite</button>
-        </div>
-        <div className="right"></div>
+        <section className="landing">
+          <div className="left">
+            <h1>
+              Entertain Your <span className="red">Discord</span>{" "}
+              <span className="blue">Server</span>
+            </h1>
+            <p>Utilize Would You to entertain your server.</p>
+            <button className="wy-button primary">Invite</button>
+          </div>
+          <div className="right">
+            <img src="/LogoBig.png" alt="Would You Logo" draggable={false} />
+          </div>
+        </section>
+
+        <section className="servers">
+          <img src="/LandingWave.svg" alt="Wave" draggable={false} />
+          <div className="servers-wrapper">
+            <h2>Top Servers Using Would You</h2>
+            <h3>
+              Trusted by <span>2300</span> of your favorite communities on
+              discord
+            </h3>
+
+            <div className="server-slider-up"></div>
+            <div className="server-slider-wrapper">
+              <div className="servers-slider-container-shade left"></div>
+              <div className="servers-slider-container-shade right"></div>
+
+              <div className="servers-slider-container">
+                {servers.map((s: any) => (
+                  <div
+                    className="servers-slider-item"
+                  >
+                    <img
+                      src={`/logos/${s.avatar}`}
+                      alt={s.name}
+                      draggable={false}
+                    />
+                    <div className="servers-slider-item-right">
+                      <h4 title={s.name}>{s.name}</h4>
+                      <p>{s.members} Members</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="server-slider-down"></div>
+          </div>
+        </section>
       </main>
     </>
   );
