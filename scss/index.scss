@@ -1,0 +1,35 @@
+// Util imports
+@import "./util/font";
+@import "./util/vars";
+
+// General styles
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+// Library imports
+@import "./library/button";
+
+// Component imports
+@import "./components/navbar";
+
+// Page imports
+@import "./pages/home";

@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Thin.woff2") format("woff2"), url("/font/inter/woff/Inter-Thin.woff") format("woff"), url("/font/inter/ttf/Inter-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-ExtraLight.woff2") format("woff2"), url("/font/inter/woff/Inter-ExtraLight.woff") format("woff"), url("/font/inter/ttf/Inter-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Light.woff2") format("woff2"), url("/font/inter/woff/Inter-Light.woff") format("woff"), url("/font/inter/ttf/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Regular.woff2") format("woff2"), url("/font/inter/woff/Inter-Regular.woff") format("woff"), url("/font/inter/ttf/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Medium.woff2") format("woff2"), url("/font/inter/woff/Inter-Medium.woff") format("woff"), url("/font/inter/ttf/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-SemiBold.woff2") format("woff2"), url("/font/inter/woff/Inter-SemiBold.woff") format("woff"), url("/font/inter/ttf/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Bold.woff2") format("woff2"), url("/font/inter/woff/Inter-Bold.woff") format("woff"), url("/font/inter/ttf/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-ExtraBold.woff2") format("woff2"), url("/font/inter/woff/Inter-ExtraBold.woff") format("woff"), url("/font/inter/ttf/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter/woff2/Inter-Black.woff2") format("woff2"), url("/font/inter/woff/Inter-Black.woff") format("woff"), url("/font/inter/ttf/Inter-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-Thin.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-Thin.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-ExtraLight.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-ExtraLight.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-Light.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-Light.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-Regular.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-Regular.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-Medium.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-Medium.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/font/ibm-plex-mono/woff2/IBMPlexMono-SemiBold.woff2") format("woff2"), url("/font/ibm-plex-mono/woff/IBMPlexMono-SemiBold.woff") format("woff"), url("/font/ibm-plex-mono/ttf/IBMPlexMono-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+.wy-button {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 200px;
+  padding: 15px 27px;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #1B1B1B;
+  user-select: none;
+}
+.wy-button.primary {
+  background-color: #0598F6;
+}
+.wy-button.primary:hover {
+  background-color: #037AC7;
+}
+.wy-button.primary:active {
+  background-color: #016CB0;
+  color: #E4E4E4;
+}
+.wy-button.secondary {
+  background-color: #F00505;
+}
+.wy-button.secondary:hover {
+  background-color: #B60505;
+}
+.wy-button.secondary:active {
+  background-color: #9A0404;
+  color: #E4E4E4;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 120px;
+  background: rgba(23, 23, 23, 0.9);
+  backdrop-filter: blur(12.5px);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+nav .nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 17vw;
+}
+nav .nav-left .logo {
+  display: flex;
+  align-items: center;
+}
+nav .nav-left .logo img {
+  user-select: none;
+}
+nav .nav-left .logo p {
+  color: #fff;
+  user-select: none;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+nav .nav-left .nav-items {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+nav .nav-left .nav-items .nav-item {
+  margin-right: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #C0C0C0;
+}
+nav .nav-left .nav-items .nav-item:hover {
+  color: #fff;
+}
+nav .nav-right {
+  margin-right: 17vw;
+}
+nav hr {
+  border: 1px solid #242424;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 120px;
+}
