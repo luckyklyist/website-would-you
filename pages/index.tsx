@@ -1,9 +1,76 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import { useEffect } from "react";
 import servers from "../data/servers.json";
+import {
+  DiscordMessages,
+  DiscordMessage,
+  DiscordMention,
+  DiscordEmbed,
+  DiscordEmbedDescription,
+  DiscordEmbedFooter,
+  DiscordEmbedFields,
+  DiscordEmbedField,
+  DiscordCommand,
+  DiscordReaction,
+  DiscordReactions,
+  DiscordReply,
+  DiscordCustomEmoji,
+  DiscordAttachments,
+  DiscordActionRow,
+  DiscordButton,
+} from "@skyra/discord-components-react";
+import { useState } from "react";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Home() {
+  const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
+
+  const profiles = {
+    wouldyou: {
+      author: "Would You",
+      avatar:
+        "https://cdn.discordapp.com/avatars/981649513427111957/af5f8264403034530bba73ba6c2492d9.webp?size=96",
+      roleColor: "#1e88e5",
+      bot: true,
+      verified: true,
+    },
+    sky: {
+      author: "ForGetFulSkyBro",
+      avatar:
+        "https://cdn.discordapp.com/avatars/268843733317976066/ff3fe50f108cfe5e88ec909d4eb7a734.webp?size=60",
+      roleColor: "#f1c40f",
+      bot: false,
+      verified: false,
+    },
+    dominik: {
+      author: "Dominik",
+      avatar:
+        "https://cdn.discordapp.com/avatars/347077478726238228/3b77f755fa8e66fd75d1e2d3fb8b1611.webp?size=60",
+      roleColor: "#F47FFF",
+      bot: false,
+      verified: false,
+    },
+  };
+
+  const questions = [
+    "You can say “fuck this shit” and you automatically don’t have to do it anymore",
+    "You have an irl minecraft inventory, no weight limit, 64 per stack.",
+    "You can make anything have the opposite effect of what was supposed to be",
+    `Everytime you see something and say 'Dang, that's too
+    expensive.' a random person buys it and gives it to you`,
+    "Each time someone compliments you a turtle will appear and give you a sandwich",
+    "You are invisible to all doors, faucets, soaps, paper towels and hand dryer sensors.",
+    "You can spawn any soda at will, but it will always be flat",
+    "Any time you don’t understand something time freezes and David Attenborough explains how the thing works",
+    "You can eat infinite food without getting fat",
+  ];
+
+  function getRandomQuestion() {
+    const index = Math.round(Math.random() * (questions.length - 1));
+    return questions[index];
+  }
+
   return (
     <>
       <Head>
@@ -26,7 +93,57 @@ export default function Home() {
             <button className="wy-button primary">Invite</button>
           </div>
           <div className="right">
-            <img src="/LogoBig.png" alt="Would You Logo" draggable={false} />
+            <div className="interactive-mockup">
+              <DiscordMessages class="rounded-lg shadow">
+                <DiscordMessage
+                  profile="wouldyou"
+                  author={profiles.wouldyou.author}
+                  avatar={profiles.wouldyou.avatar}
+                  roleColor={profiles.wouldyou.roleColor}
+                  bot={profiles.wouldyou.bot}
+                  verified={profiles.wouldyou.verified}
+                  edited
+                >
+                  <DiscordCommand
+                    slot="reply"
+                    profile="dominik"
+                    author={profiles.dominik.author}
+                    avatar={profiles.dominik.avatar}
+                    roleColor={profiles.dominik.roleColor}
+                    command="/custom useful"
+                  ></DiscordCommand>
+                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                    <DiscordEmbedFields slot="fields">
+                      <DiscordEmbedField fieldTitle="Would you want this power?">
+                        {getRandomQuestion()}
+                      </DiscordEmbedField>
+                    </DiscordEmbedFields>
+                    <DiscordEmbedFooter
+                      timestamp={currentDate}
+                      slot="footer"
+                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                    >
+                      Would You
+                    </DiscordEmbedFooter>
+                  </DiscordEmbed>
+                  <DiscordReactions slot="reactions">
+                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
+                      {" "}
+                    </DiscordReaction>
+                    <DiscordReaction
+                      name="❌"
+                      emoji="/x.svg"
+                      count={1}
+                    ></DiscordReaction>
+                  </DiscordReactions>
+                  <DiscordAttachments slot="components">
+                    <DiscordActionRow>
+                      <DiscordButton type="primary">Replay</DiscordButton>
+                    </DiscordActionRow>
+                  </DiscordAttachments>
+                </DiscordMessage>
+              </DiscordMessages>
+            </div>
           </div>
         </section>
 
@@ -46,9 +163,7 @@ export default function Home() {
 
               <div className="servers-slider-container">
                 {servers.map((s: any) => (
-                  <div
-                    className="servers-slider-item"
-                  >
+                  <div className="servers-slider-item">
                     <img
                       src={`/logos/${s.avatar}`}
                       alt={s.name}
@@ -65,7 +180,267 @@ export default function Home() {
             <div className="server-slider-down"></div>
           </div>
         </section>
+
+        <section className="features">
+          <div className="features-head">
+            <h2>Features</h2>
+            <h3>What Does Would You Offer To Your Server?</h3>
+          </div>
+
+          <div className="feature">
+            <div className="feature-mockup left">
+              <DiscordMessages class="rounded-lg shadow">
+                <DiscordMessage
+                  profile="wouldyou"
+                  author={profiles.wouldyou.author}
+                  avatar={profiles.wouldyou.avatar}
+                  roleColor={profiles.wouldyou.roleColor}
+                  bot={profiles.wouldyou.bot}
+                  verified={profiles.wouldyou.verified}
+                >
+                  <DiscordMention type="role" color="#3489c3">
+                    QOTD
+                  </DiscordMention>
+                  <DiscordEmbed
+                    slot="embeds"
+                    color="#1e88e5"
+                    embed-title="Would you want this power?"
+                  >
+                    <DiscordEmbedDescription slot="description">
+                      You get 3% smarter every time someone calls you stupid.{" "}
+                    </DiscordEmbedDescription>
+                    <DiscordEmbedFields slot="fields"> </DiscordEmbedFields>
+                    <DiscordEmbedFooter
+                      timestamp={currentDate}
+                      slot="footer"
+                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                    >
+                      {" "}
+                      Would You{" "}
+                    </DiscordEmbedFooter>
+                  </DiscordEmbed>
+                </DiscordMessage>
+              </DiscordMessages>
+            </div>
+            <div className="feature-info right">
+              <h4>Increase user engagement</h4>
+              <p>
+                A Daily Would You rather messages allow you to keep your users
+                engaged and active in your community.
+              </p>
+            </div>
+          </div>
+
+          <div className="feature">
+            <div className="feature-info left">
+              <h4>Keep the server active</h4>
+              <p>
+                We provide your server with hundreds of funny possible
+                superpowers ready to start a conversation with.
+              </p>
+            </div>
+            <div className="feature-mockup right">
+              <DiscordMessages class="rounded-lg shadow">
+                <DiscordMessage
+                  profile="wouldyou"
+                  author={profiles.wouldyou.author}
+                  avatar={profiles.wouldyou.avatar}
+                  roleColor={profiles.wouldyou.roleColor}
+                  bot={profiles.wouldyou.bot}
+                  verified={profiles.wouldyou.verified}
+                  edited
+                >
+                  <DiscordCommand
+                    slot="reply"
+                    profile="dominik"
+                    author={profiles.dominik.author}
+                    avatar={profiles.dominik.avatar}
+                    roleColor={profiles.dominik.roleColor}
+                    command="/custom useful"
+                  ></DiscordCommand>
+                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                    <DiscordEmbedDescription> </DiscordEmbedDescription>
+                    <DiscordEmbedFields slot="fields">
+                      <DiscordEmbedField fieldTitle="Would you want this power?">
+                        Your pocket can hold 10 items no matter the size.
+                      </DiscordEmbedField>
+                      <DiscordEmbedField fieldTitle="Stats">
+                        Everyone who voted would want this power.
+                      </DiscordEmbedField>
+                    </DiscordEmbedFields>
+                    <DiscordEmbedFooter
+                      timestamp={currentDate}
+                      slot="footer"
+                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                    >
+                      Would You
+                    </DiscordEmbedFooter>
+                  </DiscordEmbed>
+                  <DiscordReactions slot="reactions">
+                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
+                      {" "}
+                    </DiscordReaction>
+                    <DiscordReaction
+                      name="❌"
+                      emoji="/x.svg"
+                      count={1}
+                    ></DiscordReaction>
+                  </DiscordReactions>
+                </DiscordMessage>
+
+                <DiscordMessage
+                  profile="sky"
+                  author={profiles.sky.author}
+                  avatar={profiles.sky.avatar}
+                  roleColor={profiles.sky.roleColor}
+                  bot={profiles.sky.bot}
+                  verified={profiles.sky.verified}
+                >
+                  <DiscordReply
+                    slot="reply"
+                    profile="wouldyou"
+                    author={profiles.wouldyou.author}
+                    avatar={profiles.wouldyou.avatar}
+                    roleColor={profiles.wouldyou.roleColor}
+                    bot={profiles.wouldyou.bot}
+                    verified={profiles.wouldyou.verified}
+                  >
+                    <p style={{ whiteSpace: "initial" }}>
+                      Click to see commands
+                    </p>
+                  </DiscordReply>
+                  I would sell the pants <br /> Profit
+                </DiscordMessage>
+
+                <DiscordMessage
+                  profile="dominik"
+                  author={profiles.dominik.author}
+                  avatar={profiles.dominik.avatar}
+                  roleColor={profiles.dominik.roleColor}
+                  bot={profiles.dominik.bot}
+                  verified={profiles.dominik.verified}
+                >
+                  It's not your pants <br /> Whatever pants you wear they do
+                  that
+                </DiscordMessage>
+
+                <DiscordMessage
+                  profile="sky"
+                  author={profiles.sky.author}
+                  avatar={profiles.sky.avatar}
+                  roleColor={profiles.sky.roleColor}
+                  bot={profiles.sky.bot}
+                  verified={profiles.sky.verified}
+                >
+                  <DiscordReply
+                    slot="reply"
+                    profile="dominik"
+                    author={profiles.dominik.author}
+                    avatar={profiles.dominik.avatar}
+                    roleColor={profiles.dominik.roleColor}
+                  >
+                    <p style={{ whiteSpace: "initial" }}>
+                      Whatever pants you wear they do that
+                    </p>
+                  </DiscordReply>
+                  Ohhhh
+                </DiscordMessage>
+
+                <DiscordMessage
+                  profile="dominik"
+                  author={profiles.dominik.author}
+                  avatar={profiles.dominik.avatar}
+                  roleColor={profiles.dominik.roleColor}
+                  bot={profiles.dominik.bot}
+                  verified={profiles.dominik.verified}
+                >
+                  So if you don't wear them you don't get the benefit
+                </DiscordMessage>
+              </DiscordMessages>
+            </div>
+          </div>
+
+          <div className="feature">
+            <div className="feature-mockup left">
+              <DiscordMessages class="rounded-lg shadow">
+                <DiscordMessage
+                  profile="wouldyou"
+                  author={profiles.wouldyou.author}
+                  avatar={profiles.wouldyou.avatar}
+                  roleColor={profiles.wouldyou.roleColor}
+                  bot={profiles.wouldyou.bot}
+                  verified={profiles.wouldyou.verified}
+                >
+                  <DiscordCommand
+                    slot="reply"
+                    profile="dominik"
+                    command="/custom rather"
+                    author={profiles.dominik.author}
+                    avatar={profiles.dominik.avatar}
+                    roleColor={profiles.dominik.roleColor}
+                  ></DiscordCommand>
+                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                    <DiscordEmbedDescription> </DiscordEmbedDescription>
+                    <DiscordEmbedFields slot="fields">
+                      <DiscordEmbedField fieldTitle="Would You rather have">
+                        <DiscordCustomEmoji
+                          name="one"
+                          url="/1.svg"
+                          embed-emoji
+                        ></DiscordCustomEmoji>
+                        Unlimited food but live in a small house
+                      </DiscordEmbedField>
+                      <DiscordEmbedField fieldTitle="or">
+                        <DiscordCustomEmoji
+                          name="two"
+                          url="/2.svg"
+                          embed-emoji
+                        ></DiscordCustomEmoji>
+                        Live in a big mansion but have limited food
+                      </DiscordEmbedField>
+                    </DiscordEmbedFields>
+                    <DiscordEmbedFooter
+                      timestamp={currentDate}
+                      slot="footer"
+                      footer-image="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                    >
+                      Would You
+                    </DiscordEmbedFooter>
+                  </DiscordEmbed>
+                  <DiscordReactions slot="reactions">
+                    <DiscordReaction
+                      name="1️⃣"
+                      emoji="1.svg"
+                      count={3}
+                    ></DiscordReaction>
+                    <DiscordReaction name="2️⃣" emoji="2.svg" count={2}>
+                      {" "}
+                    </DiscordReaction>
+                  </DiscordReactions>
+                </DiscordMessage>
+              </DiscordMessages>
+            </div>
+            <div className="feature-info right">
+              <h4>Upgrade your server</h4>
+              <p>
+                Customized responses make your server unique and stand out from
+                the crowd.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="invite">
+          <h2>
+            Keep Your Server Active - <span className="red">Would</span>{" "}
+            <span className="blue">You</span>
+          </h2>
+          <h3>Invite Me To Your Server Now.</h3>
+          <button className="wy-button primary">Invite</button>
+        </section>
       </main>
+
+      <Footer />
     </>
   );
 }

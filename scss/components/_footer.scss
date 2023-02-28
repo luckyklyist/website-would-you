@@ -1,0 +1,99 @@
+footer {
+  background-color: $backgroundSecondary;
+  padding: 70px 17vw 30px 17vw;
+
+  .footer-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .footer-head-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      &.extend {
+        flex: 1.75;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+          user-select: none;
+        }
+
+        p {
+          color: #fff;
+          user-select: none;
+          font-size: 22px;
+          font-weight: 600;
+          margin-left: 15px;
+        }
+      }
+
+      .logo-subtext {
+        font-size: 16px;
+        user-select: none;
+        font-weight: 400;
+        color: $textSecondary;
+        margin-top: 18px;
+        margin-right: 80px;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        user-select: none;
+        font-size: 18px;
+        color: $text;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      a {
+        transition: all 0.3s ease;
+        color: $textSecondary;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 3px;
+        user-select: none;
+
+        &:hover {
+          color: $text;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    hr {
+      border: 1px solid #242424;
+      border-radius: 20px;
+    }
+
+    p {
+      margin-top: 30px;
+      text-align: center;
+      user-select: none;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text;
+
+      a {
+        cursor: pointer;
+        color: $primary;
+        transition: all 0.3s ease;
+        user-select: none;
+
+        &:hover {
+          color: $primaryHover;
+        }
+
+        &:active {
+          color: $primaryActive;
+        }
+      }
+    }
+  }
+}

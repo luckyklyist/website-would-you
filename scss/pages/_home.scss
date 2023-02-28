@@ -34,12 +34,6 @@
         margin-bottom: 24px;
       }
     }
-
-    .right {
-      img {
-        user-select: none;
-      }
-    }
   }
 
   section.servers {
@@ -103,7 +97,7 @@
           height: 100px;
           position: absolute;
           width: calc(17vw - 22px);
-          z-index: 200;
+          z-index: 20;
           top: 0px;
           background-color: #101010;
           overflow-y: hidden;
@@ -124,7 +118,7 @@
           align-items: center;
           overflow: hidden;
           width: max-content;
-          animation: serverSliderContainerMove 50s linear infinite;
+          animation: serverSliderContainerMove 80s linear infinite;
 
           @keyframes serverSliderContainerMove {
             0% {
@@ -132,7 +126,7 @@
             }
 
             100% {
-              transform: translateX(-8400px);
+              transform: translateX(-7000px);
             }
           }
 
@@ -178,5 +172,200 @@
         }
       }
     }
+  }
+
+  section.features {
+    .features-head {
+      margin: 45px 17vw 50px 17vw;
+      text-align: center;
+
+      h2 {
+        user-select: none;
+        font-size: 50px;
+        font-weight: 700;
+        color: $text;
+        margin-left: 17vw;
+        margin-right: 17vw;
+        text-align: center;
+        background: linear-gradient(92.91deg, $primary 10%, $secondary 90%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h3 {
+        color: $text;
+        user-select: none;
+        font-size: 26px;
+        font-weight: 500;
+        margin-top: 5px;
+        text-align: center;
+      }
+    }
+
+    .feature {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      .feature-mockup {
+        &.left {
+          margin-left: 17vw;
+        }
+
+        &.right {
+          margin-right: 17vw;
+        }
+      }
+
+      .feature-info {
+        h4 {
+          color: $text;
+          user-select: none;
+          font-weight: 700;
+          font-size: 35px;
+        }
+
+        p {
+          color: $textSecondary;
+          user-select: none;
+          font-weight: 400;
+          font-size: 18px;
+        }
+
+        &.right {
+          margin-right: 17vw;
+          margin-left: 80px;
+        }
+
+        &.left {
+          margin-left: 17vw;
+          margin-right: 80px;
+        }
+      }
+    }
+  }
+
+  section.invite {
+    background-color: $backgroundSecondaryDark;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      user-select: none;
+      font-size: 50px;
+      font-weight: 700;
+      color: $text;
+      margin-left: 17vw;
+      margin-right: 17vw;
+      text-align: center;
+      padding-top: 80px;
+
+      span {
+        &.blue {
+          color: $primary;
+        }
+
+        &.red {
+          color: $secondary;
+        }
+      }
+    }
+
+    h3 {
+      color: $textSecondary;
+      user-select: none;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 0px;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 25px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+// Discord Component Library Custom Bugfixing & Styling
+.discord-messages {
+  width: calc(50vw - 80px - 17vw);
+}
+
+.discord-embed-description {
+  font-size: 14px;
+}
+
+.discord-mention.discord-role-mention {
+  padding: 0 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.discord-embed-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+  .discord-footer-image {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
+.discord-field-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.discord-embed-field {
+  font-size: 14px;
+}
+
+.discord-reaction {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  user-select: none;
+  transition: none 0.1s ease;
+  transition-property: background-color, border-color;
+  background-color: #2f3136;
+  border: 1px solid transparent;
+
+  .discord-reaction-inner {
+    display: flex;
+    align-items: center;
+    padding: 0.125rem 0.375rem;
+
+    img {
+      width: 1rem;
+      height: 1rem;
+      margin: 0.125rem 0;
+      min-width: auto;
+      min-height: auto;
+      object-fit: contain;
+      vertical-align: bottom;
+    }
+
+    .discord-reaction-count {
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-left: 0.375rem;
+      text-align: center;
+      color: #b9bbbe;
+    }
+  }
+
+  &:hover {
+    background-color: #36393f;
+    border-color: #515359;
   }
 }

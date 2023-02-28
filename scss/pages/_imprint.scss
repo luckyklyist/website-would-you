@@ -1,0 +1,54 @@
+.imprint-main {
+  h1 {
+    font-weight: 800;
+    font-size: 60px;
+    user-select: none;
+    color: $secondary;
+    margin: 160px 17vw 30px 17vw;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  br {
+    user-select: none;
+  }
+
+  p {
+    margin: 0 17vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text;
+  }
+
+  h3 {
+    margin: 28px 17vw 0 17vw;
+    font-size: 22px;
+    font-weight: 600;
+    color: $text;
+  }
+
+  .embedded-link,
+  .link {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: $primary;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    &:hover {
+      color: $primaryHover;
+      text-decoration-color: $primaryHover;
+    }
+
+    &:active {
+      color: $primaryActive;
+      text-decoration-color: $primaryHover;
+    }
+  }
+
+  .link {
+    margin: 0 17vw;
+  }
+}
