@@ -148,16 +148,29 @@
             }
 
             .servers-slider-item-right {
-              h4 {
-                user-select: none;
-                color: $text;
-                font-weight: 500;
-                font-size: 18px;
-                margin-left: 15px;
-                width: calc(300px - 40px - 15px - 60px);
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+              .servers-slider-item-right-head {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                h4 {
+                  user-select: none;
+                  color: $text;
+                  font-weight: 500;
+                  font-size: 18px;
+                  margin-left: 15px;
+                  width: auto;
+                  max-width: calc(300px - 40px - 15px - 82px);
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  margin-left: 6px;
+                }
               }
 
               p {
@@ -367,5 +380,37 @@
   &:hover {
     background-color: #36393f;
     border-color: #515359;
+  }
+}
+
+.discord-button {
+  background-color: #4e5058;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 6px;
+
+  &:hover {
+    background-color: #6d6f78;
+  }
+
+  &:active {
+    background-color: #82858f;
+  }
+
+  &.discord-button-primary {
+    background-color: #5865f2;
+
+    &:hover {
+      background-color: #4752c4;
+    }
+
+    &:active {
+      background-color: #3c45a5;
+    }
   }
 }

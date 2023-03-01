@@ -431,16 +431,27 @@ footer .footer-copyright p a:active {
   width: 60px;
   height: 60px;
 }
-.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right h4 {
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right .servers-slider-item-right-head {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right .servers-slider-item-right-head h4 {
   user-select: none;
   color: #fff;
   font-weight: 500;
   font-size: 18px;
   margin-left: 15px;
-  width: 185px;
+  width: auto;
+  max-width: 163px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right .servers-slider-item-right-head svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right p {
   user-select: none;
@@ -615,6 +626,33 @@ footer .footer-copyright p a:active {
   border-color: #515359;
 }
 
+.discord-button {
+  background-color: #4e5058;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 6px;
+}
+.discord-button:hover {
+  background-color: #6d6f78;
+}
+.discord-button:active {
+  background-color: #82858f;
+}
+.discord-button.discord-button-primary {
+  background-color: #5865f2;
+}
+.discord-button.discord-button-primary:hover {
+  background-color: #4752c4;
+}
+.discord-button.discord-button-primary:active {
+  background-color: #3c45a5;
+}
+
 .imprint-main h1 {
   font-weight: 800;
   font-size: 60px;
@@ -660,4 +698,96 @@ footer .footer-copyright p a:active {
 }
 .imprint-main .link {
   margin: 0 17vw;
+}
+
+.commands-main h1 {
+  color: #F00505;
+  font-weight: 800;
+  font-size: 60px;
+  user-select: none;
+  margin: 160px 17vw 0 17vw;
+}
+.commands-main h1 span {
+  color: #0598F6;
+}
+.commands-main h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin: -5px 17vw 30px 17vw;
+  user-select: none;
+}
+.commands-main .commands {
+  margin: 0 17vw 50px 17vw;
+}
+.commands-main .commands .command {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #1b1b1b;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  min-height: 91px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.commands-main .commands .command .command-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding: 20px 25px 20px 29px;
+}
+.commands-main .commands .command .command-head svg {
+  transition: all 0.3s ease;
+}
+.commands-main .commands .command .command-head .command-head-left h4 {
+  user-select: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.commands-main .commands .command .command-head .command-head-left p {
+  user-select: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C0C0C0;
+}
+.commands-main .commands .command .command-expand {
+  position: absolute;
+}
+.commands-main .commands .command .command-expand .command-expand-group {
+  padding: 0 29px 10px 29px;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.commands-main .commands .command .command-expand .command-expand-group h5 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.commands-main .commands .command .command-expand .command-expand-group h6 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: #C0C0C0;
+  background-color: #1b1b1b;
+  padding: 6px 9px;
+  border: 1px solid #131313;
+  border-radius: 5px;
+  width: fit-content;
+}
+.commands-main .commands .command:hover {
+  background-color: #1f1f1f;
+}
+.commands-main .commands .command.active {
+  min-height: 236px;
+  background-color: #222222;
+}
+.commands-main .commands .command.active .command-head svg {
+  rotate: 180deg;
+}
+.commands-main .commands .command.active .command-expand .command-expand-group {
+  opacity: 1;
 }

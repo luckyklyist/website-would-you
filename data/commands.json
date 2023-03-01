@@ -1,0 +1,93 @@
+{
+  "commands": [
+    {
+      "name": "custom",
+      "description": "Send a custom would you message",
+      "usage": "/custom <subcommand> 'message'",
+      "subcommands": ["wouldyou", "rather", "wwyd"]
+    },
+    {
+      "name": "dailymsg",
+      "description": "Configure Daily Would You messages",
+      "usage": "/dailymsg <subcommand>",
+      "subcommands": ["channel", "timezone", "message", "role", "types"]
+    },
+    {
+      "name": "guide",
+      "description": "A Guide on how to use the bot and increase activity",
+      "usage": "/guide"
+    },
+    {
+      "name": "help",
+      "description": "The help command",
+      "usage": "/help"
+    },
+    {
+      "name": "info",
+      "description": "Shows general information about the bot",
+      "usage": "/info"
+    },
+    {
+      "name": "language",
+      "description": "Change the language for the current guild",
+      "usage": "/language <language>",
+      "subcommands": ["spanish", "german", "english"]
+    },
+    {
+      "name": "ping",
+      "description": "Displays the bot's ping",
+      "usage": "/ping"
+    },
+    {
+      "name": "rather",
+      "description": "Get a would you rather question",
+      "usage": "/rather <category>",
+      "subcommands": ["useful", "useless"]
+    },
+    {
+      "name": "replay",
+      "description": "Configure the replay system",
+      "usage": "/replay <subcommand>",
+      "subcommands": ["cooldown", "toggle"]
+    },
+    {
+      "name": "support",
+      "description": "Links our support server",
+      "usage": "/support"
+    },
+    {
+      "name": "vote",
+      "description": "Vote for Would You",
+      "usage": "/vote"
+    },
+    {
+      "name": "welcome",
+      "description": "Change settings for the welcome system",
+      "usage": "/welcome <subcommand>",
+      "subcommands": ["add", "remove"]
+    },
+    {
+      "name": "wouldyou",
+      "description": "Get a would you question",
+      "usage": "/wouldyou <category>",
+      "subcommands": ["useful", "useless"]
+    },
+    {
+      "name": "wwyd",
+      "description": "What would you do in this situation",
+      "usage": "/wwyd"
+    },
+    {
+      "name": "wycustom",
+      "description": "Ajust custom WouldYou messages.",
+      "usage": "/wycustom <subcommand>",
+      "subcommands": ["add", "export", "import", "remove", "removeall", "view"]
+    },
+    {
+      "name": "wytype",
+      "description": "Changes the type of messages that will be used",
+      "usage": "/wytype",
+      "subcommands": ["custom", "mixed", "regular"]
+    }
+  ]
+}
