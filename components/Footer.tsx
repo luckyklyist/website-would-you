@@ -13,35 +13,37 @@ const Footer = () => {
             Utilize Would You to entertain your server.
           </p>
         </div>
-        <div className="footer-head-column">
-          <h4>Recommended</h4>
-          <Link href="/">Home</Link>
-          <Link href="/commands">Commands</Link>
-        </div>
-        <div className="footer-head-column">
-          <h4>Legal</h4>
-          <Link href="/imprint">Imprint</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-        </div>
-        <div className="footer-head-column">
-          <h4>Links</h4>
-          <Link href="/discord" target={"_blank"}>
-            Support Server
-          </Link>
-          <Link href="/invite" target={"_blank"}>
-            Invite
-          </Link>
-          <Link href="/vote" target={"_blank"}>
-            Vote
-          </Link>
+        <div className="footer-head-column-wrapper">
+          <div className="footer-head-column">
+            <h4>Recommended</h4>
+            <Link href="/">Home</Link>
+            <Link href="/commands">Commands</Link>
+          </div>
+          <div className="footer-head-column">
+            <h4>Legal</h4>
+            <Link href="/imprint">Imprint</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+          </div>
+          <div className="footer-head-column">
+            <h4>Links</h4>
+            <Link href="/discord" target={"_blank"}>
+              Support Server
+            </Link>
+            <Link href="/invite" target={"_blank"}>
+              Invite
+            </Link>
+            <Link href="/vote" target={"_blank"}>
+              Vote
+            </Link>
+          </div>
         </div>
       </div>
       <div className="footer-copyright">
         <hr />
         <p>
           Made With ♥ By{" "}
-          <Link href="https://github.com/MarcWebDev" target={"_blank"}>
-            MarcWebDev
+          <Link href="https://github.com/marchoffmann07" target={"_blank"}>
+            MarcDev
           </Link>{" "}
           &{" "}
           <Link href="https://github.com/mezotv" target={"_blank"}>

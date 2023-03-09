@@ -118,17 +118,6 @@
           align-items: center;
           overflow: hidden;
           width: max-content;
-          animation: serverSliderContainerMove 80s linear infinite;
-
-          @keyframes serverSliderContainerMove {
-            0% {
-              transform: translateX(0);
-            }
-
-            100% {
-              transform: translateX(-7000px);
-            }
-          }
 
           .servers-slider-item {
             border-radius: 10px;

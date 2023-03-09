@@ -2,10 +2,45 @@ footer {
   background-color: $backgroundSecondary;
   padding: 70px 17vw 30px 17vw;
 
+  @media screen and (max-width: 1300px) {
+    padding: 70px 50px 30px 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 40px 50px 30px 50px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 40px 30px 30px 30px;
+  }
+
   .footer-head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
+
+    @media screen and (max-width: 950px) {
+      flex-direction: column;
+    }
+
+    .footer-head-column-wrapper {
+      display: flex;
+      align-items: flex-start;
+      width: calc((100vw - 100px) / 100 * 50);
+
+      @media screen and (max-width: 1200px) {
+        width: calc((100vw - 100px) / 100 * 60);
+      }
+
+      @media screen and (max-width: 950px) {
+        margin-top: 40px;
+        width: calc(100vw - 100px);
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+    }
 
     .footer-head-column {
       flex: 1;
@@ -49,6 +84,10 @@ footer {
         color: $text;
         font-weight: 500;
         margin-bottom: 10px;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 30px;
+        }
       }
 
       a {

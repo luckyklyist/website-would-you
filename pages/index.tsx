@@ -21,7 +21,7 @@ import {
 } from "@skyra/discord-components-react";
 import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
@@ -190,7 +190,12 @@ export default function Home() {
               <div className="servers-slider-container-shade left"></div>
               <div className="servers-slider-container-shade right"></div>
 
-              <div className="servers-slider-container">
+              <motion.div
+                className="servers-slider-container"
+                initial={{ transform: "translateX(0)" }}
+                animate={{ transform: "translateX(-7000px)" }}
+                transition={{ duration: 80, repeat: Infinity }}
+              >
                 {servers.map((s: any) => (
                   <div className="servers-slider-item">
                     <img
@@ -246,7 +251,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
             <div className="server-slider-down"></div>
           </div>
@@ -272,15 +277,12 @@ export default function Home() {
                   <DiscordMention type="role" color="#3489c3">
                     QOTD
                   </DiscordMention>
-                  <DiscordEmbed
-                    slot="embeds"
-                    color="#1e88e5"
-                    embed-title="Would you want this power?"
-                  >
-                    <DiscordEmbedDescription slot="description">
-                      You get 3% smarter every time someone calls you stupid.{" "}
-                    </DiscordEmbedDescription>
-                    <DiscordEmbedFields slot="fields"> </DiscordEmbedFields>
+                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                    <DiscordEmbedFields slot="fields">
+                      <DiscordEmbedField fieldTitle="Would you want this power?">
+                        You get 3% smarter every time someone calls you stupid.
+                      </DiscordEmbedField>
+                    </DiscordEmbedFields>
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
