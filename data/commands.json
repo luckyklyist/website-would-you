@@ -13,6 +13,12 @@
       "subcommands": ["channel", "timezone", "message", "role", "types"]
     },
     {
+      "name": "debug",
+      "description": "Debug the would you bot",
+      "usage": "/debug <subcommand>",
+      "subcommands": ["channel", "mode", "webhook"]
+    },
+    {
       "name": "guide",
       "description": "A Guide on how to use the bot and increase activity",
       "usage": "/guide"
