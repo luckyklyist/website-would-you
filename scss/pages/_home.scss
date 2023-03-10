@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     @media screen and (max-width: 1300px) {
       margin-left: 50px;
       margin-right: 50px;
@@ -511,6 +511,8 @@
 
 .discord-button {
   background-color: #4e5058;
+  display: flex;
+  align-items: center;
   font-size: 15px;
   color: #fff;
   border-radius: 3px;
@@ -519,6 +521,18 @@
   cursor: pointer;
   user-select: none;
   margin-bottom: 6px;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    margin-right: 6px;
+  }
 
   &:hover {
     background-color: #6d6f78;

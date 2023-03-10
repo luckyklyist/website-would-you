@@ -920,6 +920,8 @@ footer .footer-copyright p a:active {
 
 .discord-button {
   background-color: #4e5058;
+  display: flex;
+  align-items: center;
   font-size: 15px;
   color: #fff;
   border-radius: 3px;
@@ -928,6 +930,16 @@ footer .footer-copyright p a:active {
   cursor: pointer;
   user-select: none;
   margin-bottom: 6px;
+}
+.discord-button span {
+  display: flex;
+  align-items: center;
+}
+.discord-button svg {
+  width: 20px;
+  height: 20px;
+  user-select: none;
+  margin-right: 6px;
 }
 .discord-button:hover {
   background-color: #6d6f78;

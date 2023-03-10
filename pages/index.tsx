@@ -40,7 +40,7 @@ export default function Home() {
     sky: {
       author: "ForGetFulSkyBro",
       avatar:
-        "https://cdn.discordapp.com/avatars/268843733317976066/ff3fe50f108cfe5e88ec909d4eb7a734.webp?size=60",
+        "https://cdn.discordapp.com/avatars/268843733317976066/a_8bd7baad840e8d0b54e7bb90bc91fab2.webp?size=80",
       roleColor: "#f1c40f",
       bot: false,
       verified: false,
@@ -50,6 +50,14 @@ export default function Home() {
       avatar:
         "https://cdn.discordapp.com/avatars/347077478726238228/3b77f755fa8e66fd75d1e2d3fb8b1611.webp?size=60",
       roleColor: "#F47FFF",
+      bot: false,
+      verified: false,
+    },
+    marc: {
+      author: "MarcDev",
+      avatar:
+        "https://cdn.discordapp.com/avatars/799319682862809169/b3b2a0adea2900dc6c82962dca366b16.webp?size=80",
+      roleColor: "#346beb",
       bot: false,
       verified: false,
     },
@@ -168,6 +176,17 @@ export default function Home() {
                     <DiscordActionRow>
                       {replayedRounds < 3 ? (
                         <DiscordButton type="primary" onClick={() => replay()}>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 36 36"
+                            width="36"
+                            height="36"
+                          >
+                            <path
+                              fill="#FFF"
+                              d="M22.242 22.242l2.829 2.829c-3.905 3.905-10.237 3.904-14.143-.001-2.247-2.246-3.194-5.296-2.854-8.225l-4.037.367c-.215 3.84 1.128 7.752 4.062 10.687 5.467 5.467 14.333 5.468 19.799 0l2.828 2.828.849-9.334-9.333.849zM27.899 8.1C22.431 2.633 13.568 2.633 8.1 8.1L5.272 5.272l-.849 9.334 9.334-.849-2.829-2.829c3.906-3.905 10.236-3.905 14.142 0 2.248 2.247 3.194 5.297 2.856 8.226l4.036-.366c.216-3.841-1.128-7.753-4.063-10.688z"
+                            />
+                          </svg>
                           Replay
                         </DiscordButton>
                       ) : (
@@ -177,6 +196,21 @@ export default function Home() {
                               "https://wouldyoubot.gg/invite")
                           }
                         >
+                          <svg
+                            aria-hidden="true"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M10 5V3H5.375A2.377 2.377 0 0 0 3 5.375v13.25A2.377 2.377 0 0 0 5.375 21h13.25A2.376 2.376 0 0 0 21 18.625V14h-2v5H5V5h5Z"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M21 2.999h-7v2h3.586l-8.293 8.293 1.414 1.414L19 6.413v3.586h2v-7Z"
+                            />
+                          </svg>
                           Invite Would You
                         </DiscordButton>
                       )}
@@ -500,11 +534,11 @@ export default function Home() {
                 >
                   <DiscordCommand
                     slot="reply"
-                    profile="dominik"
+                    profile="marc"
                     command="/custom rather"
-                    author={profiles.dominik.author}
-                    avatar={profiles.dominik.avatar}
-                    roleColor={profiles.dominik.roleColor}
+                    author={profiles.marc.author}
+                    avatar={profiles.marc.avatar}
+                    roleColor={profiles.marc.roleColor}
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
