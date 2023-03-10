@@ -20,8 +20,12 @@ footer {
     margin-bottom: 70px;
 
     @media screen and (max-width: 950px) {
+      align-items: center;
       flex-direction: column;
     }
+
+    display: flex;
+    align-items: center;
 
     .footer-head-column-wrapper {
       display: flex;
@@ -39,6 +43,7 @@ footer {
 
       @media screen and (max-width: 600px) {
         flex-direction: column;
+        width: calc(100vw - 100px);
       }
     }
 
@@ -47,8 +52,18 @@ footer {
       display: flex;
       flex-direction: column;
 
+      @media screen and (max-width: 600px) {
+        align-items: center;
+        width: calc(100vw - 100px);
+      }
+
       &.extend {
         flex: 1.75;
+
+        @media screen and (max-width: 950px) {
+          width: calc(100vw - 100px);
+          flex: 1;
+        }
       }
 
       .logo {
@@ -75,6 +90,12 @@ footer {
         color: $textSecondary;
         margin-top: 18px;
         margin-right: 80px;
+
+        @media screen and (max-width: 950px) {
+          text-align: center;
+          width: calc(100vw - 100px);
+          margin-right: 0;
+        }
       }
 
       h4 {
