@@ -116,7 +116,7 @@ export default function Home() {
               Entertain Your <span className="red">Discord</span>{" "}
               <span className="blue">Server</span>
             </h1>
-            <p>Elevate your server's engagement with Would You, featuring user voting, daily messages, and customizability.</p>
+            <p>Elevate your server&apos;s engagement with Would You, featuring user voting, daily messages, and customizability.</p>
             <button className="wy-button primary">Invite</button>
           </motion.div>
           <motion.div
