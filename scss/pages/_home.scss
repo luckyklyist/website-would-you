@@ -7,14 +7,44 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    @media screen and (max-width: 1300px) {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+
+      .right {
+        margin-top: 60px;
+
+        .interactive-mockup {
+          .discord-messages {
+            width: calc(100vw - 100px);
+          }
+        }
+      }
+    }
 
     .left {
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       h1 {
         user-select: none;
         font-size: 64px;
         width: 500px;
         font-weight: 700;
         color: $text;
+
+        @media screen and (max-width: 1000px) {
+          text-align: center;
+          width: calc(100vw - 100px);
+        }
 
         span.red {
           color: $secondary;
@@ -32,6 +62,10 @@
         color: $textSecondary;
         margin-top: 10px;
         margin-bottom: 24px;
+
+        @media screen and (max-width: 1000px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -48,6 +82,14 @@
       background-color: $backgroundSecondary;
       margin-top: -120px;
 
+      @media screen and (max-width: 1200px) {
+        margin-top: -80px;
+      }
+
+      @media screen and (max-width: 900px) {
+        margin-top: -30px;
+      }
+
       h2 {
         user-select: none;
         font-size: 50px;
@@ -56,6 +98,11 @@
         margin-left: 17vw;
         margin-right: 17vw;
         text-align: center;
+
+        @media screen and (max-width: 1300px) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
       }
 
       h3 {
@@ -66,6 +113,11 @@
         margin-left: 17vw;
         margin-right: 17vw;
         text-align: center;
+
+        @media screen and (max-width: 1300px) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
 
         span {
           color: $primary;
@@ -102,6 +154,10 @@
           background-color: #101010;
           overflow-y: hidden;
 
+          @media screen and (max-width: 1300px) {
+            width: calc(50px - 22px);
+          }
+
           &.left {
             box-shadow: 2px 0 40px rgba(0, 0, 0, 0.7);
             left: 0;
@@ -110,6 +166,10 @@
           &.right {
             left: calc(100vw - (17vw - 22px));
             box-shadow: -2px 0 40px rgba(0, 0, 0, 0.7);
+
+            @media screen and (max-width: 1300px) {
+              left: calc(100vw - (50px - 22px));
+            }
           }
         }
 
@@ -181,6 +241,10 @@
       margin: 45px 17vw 50px 17vw;
       text-align: center;
 
+      @media screen and (max-width: 1300px) {
+        margin: 45px 50px 50px 50px;
+      }
+
       h2 {
         user-select: none;
         font-size: 50px;
@@ -192,6 +256,16 @@
         background: linear-gradient(92.91deg, $primary 10%, $secondary 90%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media screen and (max-width: 1300px) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+
+        @media screen and (max-width: 450px) {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
       }
 
       h3 {
@@ -211,22 +285,63 @@
       justify-content: space-between;
       margin-bottom: 50px;
 
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+      }
+
       .feature-mockup {
         &.left {
           margin-left: 17vw;
+
+          @media screen and (max-width: 1300px) {
+            margin-left: 50px;
+          }
+
+          @media screen and (max-width: 900px) {
+            margin-left: 0;
+            order: 2;
+            margin-bottom: 80px;
+
+            .discord-messages {
+              width: calc(100vw - 100px);
+            }
+          }
         }
 
         &.right {
           margin-right: 17vw;
+
+          @media screen and (max-width: 1300px) {
+            margin-right: 50px;
+          }
+
+          @media screen and (max-width: 900px) {
+            margin-right: 0;
+            margin-bottom: 80px;
+
+            .discord-messages {
+              width: calc(100vw - 100px);
+            }
+          }
         }
       }
 
       .feature-info {
+        width: 50%;
+
+        @media screen and (max-width: 900px) {
+          width: calc(100vw - 100px);
+        }
+
         h4 {
           color: $text;
           user-select: none;
           font-weight: 700;
           font-size: 35px;
+
+          @media screen and (max-width: 900px) {
+            text-align: center;
+          }
         }
 
         p {
@@ -234,16 +349,29 @@
           user-select: none;
           font-weight: 400;
           font-size: 18px;
+
+          @media screen and (max-width: 900px) {
+            text-align: center;
+            margin-bottom: 30px;
+          }
         }
 
         &.right {
           margin-right: 17vw;
           margin-left: 80px;
+
+          @media screen and (max-width: 1300px) {
+            margin-right: 50px;
+          }
         }
 
         &.left {
           margin-left: 17vw;
           margin-right: 80px;
+
+          @media screen and (max-width: 1300px) {
+            margin-left: 50px;
+          }
         }
       }
     }
@@ -265,6 +393,11 @@
       margin-right: 17vw;
       text-align: center;
       padding-top: 80px;
+
+      @media screen and (max-width: 1300px) {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
 
       span {
         &.blue {
@@ -296,6 +429,10 @@
 // Discord Component Library Custom Bugfixing & Styling
 .discord-messages {
   width: calc(50vw - 80px - 17vw);
+
+  @media screen and (max-width: 1300px) {
+    width: calc(50vw - 80px - 50px);
+  }
 }
 
 .discord-embed-description {

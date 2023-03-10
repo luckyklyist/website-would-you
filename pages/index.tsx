@@ -97,15 +97,27 @@ export default function Home() {
 
       <main className="homepage-main">
         <section className="landing">
-          <div className="left">
+          <motion.div
+            className="left"
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            viewport={{ once: true }}
+          >
             <h1>
               Entertain Your <span className="red">Discord</span>{" "}
               <span className="blue">Server</span>
             </h1>
             <p>Utilize Would You to entertain your server.</p>
             <button className="wy-button primary">Invite</button>
-          </div>
-          <div className="right">
+          </motion.div>
+          <motion.div
+            className="right"
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            viewport={{ once: true }}
+          >
             <div className="interactive-mockup">
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
@@ -173,10 +185,16 @@ export default function Home() {
                 </DiscordMessage>
               </DiscordMessages>
             </div>
-          </div>
+          </motion.div>
         </section>
 
-        <section className="servers">
+        <motion.section
+          className="servers"
+          initial={{ opacity: 0, transform: "translateY(25px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.65, ease: "easeInOut" }}
+        >
           <img src="/LandingWave.svg" alt="Wave" draggable={false} />
           <div className="servers-wrapper">
             <h2>Top Servers Using Would You</h2>
@@ -197,7 +215,7 @@ export default function Home() {
                 transition={{ duration: 80, repeat: Infinity }}
               >
                 {servers.map((s: any) => (
-                  <div className="servers-slider-item">
+                  <div className="servers-slider-item" key={s.name}>
                     <img
                       src={`/logos/${s.avatar}`}
                       alt={s.name}
@@ -255,16 +273,28 @@ export default function Home() {
             </div>
             <div className="server-slider-down"></div>
           </div>
-        </section>
+        </motion.section>
 
         <section className="features">
-          <div className="features-head">
+          <motion.div
+            className="features-head"
+            initial={{ opacity: 0, transform: "translateY(15px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          >
             <h2>Features</h2>
             <h3>What Does Would You Offer To Your Server?</h3>
-          </div>
+          </motion.div>
 
           <div className="feature">
-            <div className="feature-mockup left">
+            <motion.div
+              className="feature-mockup left"
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
                   profile="wouldyou"
@@ -294,25 +324,43 @@ export default function Home() {
                   </DiscordEmbed>
                 </DiscordMessage>
               </DiscordMessages>
-            </div>
-            <div className="feature-info right">
+            </motion.div>
+            <motion.div
+              className="feature-info right"
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <h4>Increase user engagement</h4>
               <p>
                 A Daily Would You rather messages allow you to keep your users
                 engaged and active in your community.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           <div className="feature">
-            <div className="feature-info left">
+            <motion.div
+              className="feature-info left"
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <h4>Keep the server active</h4>
               <p>
                 We provide your server with hundreds of funny possible
                 superpowers ready to start a conversation with.
               </p>
-            </div>
-            <div className="feature-mockup right">
+            </motion.div>
+            <motion.div
+              className="feature-mockup right"
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
                   profile="wouldyou"
@@ -393,8 +441,8 @@ export default function Home() {
                   bot={profiles.dominik.bot}
                   verified={profiles.dominik.verified}
                 >
-                  It's not your pants <br /> Whatever pants you wear they do
-                  that
+                  It&apos;s not your pants <br /> Whatever pants you wear they
+                  do that
                 </DiscordMessage>
 
                 <DiscordMessage
@@ -427,14 +475,20 @@ export default function Home() {
                   bot={profiles.dominik.bot}
                   verified={profiles.dominik.verified}
                 >
-                  So if you don't wear them you don't get the benefit
+                  So if you don&apos;t wear them you don&apos;t get the benefit
                 </DiscordMessage>
               </DiscordMessages>
-            </div>
+            </motion.div>
           </div>
 
           <div className="feature">
-            <div className="feature-mockup left">
+            <motion.div
+              className="feature-mockup left"
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
                   profile="wouldyou"
@@ -492,24 +546,50 @@ export default function Home() {
                   </DiscordReactions>
                 </DiscordMessage>
               </DiscordMessages>
-            </div>
-            <div className="feature-info right">
+            </motion.div>
+            <motion.div
+              className="feature-info right"
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
               <h4>Upgrade your server</h4>
               <p>
                 Customized responses make your server unique and stand out from
                 the crowd.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         <section className="invite">
-          <h2>
+          <motion.h2
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
+          >
             Keep Your Server Active - <span className="red">Would</span>{" "}
             <span className="blue">You</span>
-          </h2>
-          <h3>Invite Me To Your Server Now.</h3>
-          <button className="wy-button primary">Invite</button>
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
+          >
+            Invite Me To Your Server Now.
+          </motion.h3>
+          <motion.button
+            className="wy-button primary"
+            initial={{ opacity: 0, transform: "translateY(-20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
+          >
+            Invite
+          </motion.button>
         </section>
       </main>
 

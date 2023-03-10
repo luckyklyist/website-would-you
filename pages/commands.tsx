@@ -35,6 +35,7 @@ export default function Commands() {
                   ? setOpenedCommand("")
                   : setOpenedCommand(c.name)
               }
+              key={c.name}
             >
               <div className="command-head">
                 <div className="command-head-left">

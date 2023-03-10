@@ -47,7 +47,7 @@ export default function Imprint() {
             resolution proceedings in front of a consumer arbitration board.
           </p>
 
-          <h3>Would You Bot's Privacy Policy</h3>
+          <h3>Would You Bot&apos;s Privacy Policy</h3>
           <Link
             href="https://wouldyoubot.gg/privacy/"
             className="link"

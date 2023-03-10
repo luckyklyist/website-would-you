@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 
 const Navbar = () => {

@@ -69,7 +69,7 @@ export default function Privacy() {
             Manual removal of the data can be requested through email at
             dominik@wouldyoubot.com or as mentioned above a dm to the founders.
             For security reasons, we will ask you to provide us with proof of
-            ownership of the server. It is only the server's owner that may
+            ownership of the server. It is only the server&apos;s owner that may
             request manual removal and requesting it will result in the bot
             being removed from the server!
           </p>

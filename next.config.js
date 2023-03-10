@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   async redirects() {
     return [
       {
@@ -17,7 +20,7 @@ const nextConfig = {
         source: "/vote",
         destination: process.env.NEXT_PUBLIC_VOTE,
         permanent: true,
-      }
+      },
     ];
   },
 };

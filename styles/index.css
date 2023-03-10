@@ -94,6 +94,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -453,12 +454,42 @@ footer .footer-copyright p a:active {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.landing {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .homepage-main section.landing {
+    flex-direction: column;
+  }
+  .homepage-main section.landing .right {
+    margin-top: 60px;
+  }
+  .homepage-main section.landing .right .interactive-mockup .discord-messages {
+    width: calc(100vw - 100px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .homepage-main section.landing .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .homepage-main section.landing .left h1 {
   user-select: none;
   font-size: 64px;
   width: 500px;
   font-weight: 700;
   color: #fff;
+}
+@media screen and (max-width: 1000px) {
+  .homepage-main section.landing .left h1 {
+    text-align: center;
+    width: calc(100vw - 100px);
+  }
 }
 .homepage-main section.landing .left h1 span.red {
   color: #F00505;
@@ -474,6 +505,11 @@ footer .footer-copyright p a:active {
   margin-top: 10px;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 1000px) {
+  .homepage-main section.landing .left p {
+    text-align: center;
+  }
+}
 .homepage-main section.servers {
   margin-top: 100px;
 }
@@ -485,6 +521,16 @@ footer .footer-copyright p a:active {
   background-color: #101010;
   margin-top: -120px;
 }
+@media screen and (max-width: 1200px) {
+  .homepage-main section.servers .servers-wrapper {
+    margin-top: -80px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .homepage-main section.servers .servers-wrapper {
+    margin-top: -30px;
+  }
+}
 .homepage-main section.servers .servers-wrapper h2 {
   user-select: none;
   font-size: 50px;
@@ -494,6 +540,12 @@ footer .footer-copyright p a:active {
   margin-right: 17vw;
   text-align: center;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.servers .servers-wrapper h2 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
 .homepage-main section.servers .servers-wrapper h3 {
   color: #fff;
   user-select: none;
@@ -502,6 +554,12 @@ footer .footer-copyright p a:active {
   margin-left: 17vw;
   margin-right: 17vw;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.servers .servers-wrapper h3 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 .homepage-main section.servers .servers-wrapper h3 span {
   color: #0598F6;
@@ -534,6 +592,11 @@ footer .footer-copyright p a:active {
   background-color: #101010;
   overflow-y: hidden;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade {
+    width: 28px;
+  }
+}
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade.left {
   box-shadow: 2px 0 40px rgba(0, 0, 0, 0.7);
   left: 0;
@@ -541,6 +604,11 @@ footer .footer-copyright p a:active {
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade.right {
   left: calc(100vw - (17vw - 22px));
   box-shadow: -2px 0 40px rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container-shade.right {
+    left: calc(100vw - 28px);
+  }
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container {
   display: flex;
@@ -597,6 +665,11 @@ footer .footer-copyright p a:active {
   margin: 45px 17vw 50px 17vw;
   text-align: center;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .features-head {
+    margin: 45px 50px 50px 50px;
+  }
+}
 .homepage-main section.features .features-head h2 {
   user-select: none;
   font-size: 50px;
@@ -608,6 +681,18 @@ footer .footer-copyright p a:active {
   background: linear-gradient(92.91deg, #0598F6 10%, #F00505 90%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .features-head h2 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .homepage-main section.features .features-head h2 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 .homepage-main section.features .features-head h3 {
   color: #fff;
@@ -624,11 +709,53 @@ footer .footer-copyright p a:active {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature {
+    flex-direction: column;
+  }
+}
 .homepage-main section.features .feature .feature-mockup.left {
   margin-left: 17vw;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .feature .feature-mockup.left {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature .feature-mockup.left {
+    margin-left: 0;
+    order: 2;
+    margin-bottom: 80px;
+  }
+  .homepage-main section.features .feature .feature-mockup.left .discord-messages {
+    width: calc(100vw - 100px);
+  }
+}
 .homepage-main section.features .feature .feature-mockup.right {
   margin-right: 17vw;
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .feature .feature-mockup.right {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature .feature-mockup.right {
+    margin-right: 0;
+    margin-bottom: 80px;
+  }
+  .homepage-main section.features .feature .feature-mockup.right .discord-messages {
+    width: calc(100vw - 100px);
+  }
+}
+.homepage-main section.features .feature .feature-info {
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature .feature-info {
+    width: calc(100vw - 100px);
+  }
 }
 .homepage-main section.features .feature .feature-info h4 {
   color: #fff;
@@ -636,19 +763,40 @@ footer .footer-copyright p a:active {
   font-weight: 700;
   font-size: 35px;
 }
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature .feature-info h4 {
+    text-align: center;
+  }
+}
 .homepage-main section.features .feature .feature-info p {
   color: #C0C0C0;
   user-select: none;
   font-weight: 400;
   font-size: 18px;
 }
+@media screen and (max-width: 900px) {
+  .homepage-main section.features .feature .feature-info p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
 .homepage-main section.features .feature .feature-info.right {
   margin-right: 17vw;
   margin-left: 80px;
 }
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .feature .feature-info.right {
+    margin-right: 50px;
+  }
+}
 .homepage-main section.features .feature .feature-info.left {
   margin-left: 17vw;
   margin-right: 80px;
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.features .feature .feature-info.left {
+    margin-left: 50px;
+  }
 }
 .homepage-main section.invite {
   background-color: #0A0A0A;
@@ -666,6 +814,12 @@ footer .footer-copyright p a:active {
   margin-right: 17vw;
   text-align: center;
   padding-top: 80px;
+}
+@media screen and (max-width: 1300px) {
+  .homepage-main section.invite h2 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 .homepage-main section.invite h2 span.blue {
   color: #0598F6;
@@ -688,6 +842,11 @@ footer .footer-copyright p a:active {
 
 .discord-messages {
   width: calc(50vw - 80px - 17vw);
+}
+@media screen and (max-width: 1300px) {
+  .discord-messages {
+    width: calc(50vw - 80px - 50px);
+  }
 }
 
 .discord-embed-description {
@@ -880,6 +1039,16 @@ footer .footer-copyright p a:active {
   user-select: none;
   margin: 160px 17vw 0 17vw;
 }
+@media screen and (max-width: 1300px) {
+  .commands-main h1 {
+    margin: 160px 50px 0 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .commands-main h1 {
+    margin: 160px 30px 0 30px;
+  }
+}
 .commands-main h1 span {
   color: #0598F6;
 }
@@ -890,8 +1059,28 @@ footer .footer-copyright p a:active {
   margin: -5px 17vw 30px 17vw;
   user-select: none;
 }
+@media screen and (max-width: 1300px) {
+  .commands-main h3 {
+    margin: -5px 50px 30px 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .commands-main h3 {
+    margin: -5px 30px 30px 30px;
+  }
+}
 .commands-main .commands {
   margin: 0 17vw 50px 17vw;
+}
+@media screen and (max-width: 1300px) {
+  .commands-main .commands {
+    margin: 0 50px 50px 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .commands-main .commands {
+    margin: 0 30px 50px 30px;
+  }
 }
 .commands-main .commands .command {
   width: 100%;
@@ -899,7 +1088,7 @@ footer .footer-copyright p a:active {
   background-color: #1b1b1b;
   transition: all 0.3s ease;
   margin-bottom: 10px;
-  min-height: 91px;
+  max-height: 91px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -913,6 +1102,9 @@ footer .footer-copyright p a:active {
 }
 .commands-main .commands .command .command-head svg {
   transition: all 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 33px;
 }
 .commands-main .commands .command .command-head .command-head-left h4 {
   user-select: none;
@@ -925,9 +1117,15 @@ footer .footer-copyright p a:active {
   font-size: 16px;
   font-weight: 400;
   color: #C0C0C0;
+  width: calc(100vw - 40px - 60px - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.commands-main .commands .command .command-expand {
-  position: absolute;
+@media screen and (max-width: 450px) {
+  .commands-main .commands .command .command-head .command-head-left p {
+    width: calc(100vw - 40px - 60px - 40px);
+  }
 }
 .commands-main .commands .command .command-expand .command-expand-group {
   padding: 0 29px 10px 29px;
@@ -955,12 +1153,20 @@ footer .footer-copyright p a:active {
   background-color: #1f1f1f;
 }
 .commands-main .commands .command.active {
-  min-height: 236px;
+  max-height: 300px;
   background-color: #222222;
 }
 .commands-main .commands .command.active .command-head svg {
   rotate: 180deg;
 }
+.commands-main .commands .command.active .command-head .command-head-left p {
+  text-overflow: initial;
+  overflow: initial;
+  white-space: initial;
+}
 .commands-main .commands .command.active .command-expand .command-expand-group {
   opacity: 1;
+}
+.commands-main .commands .command.active .command-expand .command-expand-group:last-child {
+  margin-bottom: 10px;
 }
