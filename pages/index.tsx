@@ -22,6 +22,7 @@ import {
 import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
@@ -116,7 +117,10 @@ export default function Home() {
               Entertain Your <span className="red">Discord</span>{" "}
               <span className="blue">Server</span>
             </h1>
-            <p>Elevate your server&apos;s engagement with Would You, featuring user voting, daily messages, and customizability.</p>
+            <p>
+              Elevate your server&apos;s engagement with Would You, featuring
+              user voting, daily messages, and customizability.
+            </p>
             <button className="wy-button primary">Invite</button>
           </motion.div>
           <motion.div
@@ -192,8 +196,10 @@ export default function Home() {
                       ) : (
                         <DiscordButton
                           onClick={() =>
-                            (window.location.href =
-                              "https://wouldyoubot.gg/invite")
+                            window.open(
+                              "https://wouldyoubot.gg/invite",
+                              "_blank"
+                            )
                           }
                         >
                           <svg
