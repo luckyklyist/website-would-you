@@ -516,9 +516,66 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.landing .left h1 span.red {
   color: #F00505;
+  text-shadow: 2px 2px 20px #F00505;
+  animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.landing .left h1 span.blue {
   color: #0598F6;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 7s linear 7s infinite;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.4;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .homepage-main section.landing .left p {
   font-weight: 400;
