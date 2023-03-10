@@ -5,6 +5,8 @@
     font-size: 60px;
     user-select: none;
     margin: 160px 17vw 0 17vw;
+    text-shadow: 2px 2px 20px $secondary;
+    animation: flickerAnimation 7s linear 2s infinite;
 
     @media screen and (max-width: 1300px) {
       margin: 160px 50px 0 50px;
@@ -16,6 +18,8 @@
 
     span {
       color: $primary;
+      text-shadow: 2px 2px 20px $primary;
+      animation: flickerAnimation 5s linear 1s infinite;
     }
   }
 

@@ -57,76 +57,6 @@
           text-shadow: 2px 2px 20px $primary;
           animation: flickerAnimation 7s linear 7s infinite;
         }
-
-        @keyframes flickerAnimation {
-          0% {
-            opacity: 1;
-          }
-
-          28% {
-            opacity: 1;
-          }
-
-          30% {
-            opacity: 0;
-          }
-
-          32% {
-            opacity: 1;
-          }
-
-          51% {
-            opacity: 1;
-          }
-
-          52% {
-            opacity: 0;
-          }
-
-          53% {
-            opacity: 1;
-          }
-
-          54% {
-            opacity: 0;
-          }
-
-          55% {
-            opacity: 1;
-          }
-
-          80% {
-            opacity: 1;
-          }
-
-          82% {
-            opacity: 0;
-          }
-
-          84% {
-            opacity: 1;
-          }
-
-          90% {
-            opacity: 1;
-          }
-
-          96% {
-            opacity: 1;
-          }
-
-          97% {
-            opacity: 0.4;
-          }
-
-          98% {
-            opacity: 1;
-          }
-
-          100% {
-            opacity: 1;
-          }
-        }
       }
 
       p {
@@ -197,6 +127,8 @@
         span {
           color: $primary;
           font-weight: 600;
+          text-shadow: 2px 2px 20px $primary;
+          animation: flickerAnimation 6s linear 2.5s infinite;
         }
       }
 
@@ -477,10 +409,14 @@
       span {
         &.blue {
           color: $primary;
+          text-shadow: 2px 2px 20px $primary;
+          animation: flickerAnimation 6s linear 2.5s infinite;
         }
 
         &.red {
           color: $secondary;
+          text-shadow: 2px 2px 20px $secondary;
+          animation: flickerAnimation 4s linear 4s infinite;
         }
       }
     }

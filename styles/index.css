@@ -126,6 +126,59 @@ a {
   text-decoration: none;
 }
 
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.4;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .wy-button {
   font-size: 16px;
   outline: none;
@@ -294,7 +347,7 @@ nav hr {
   z-index: 500;
   top: 0;
   left: 0;
-  background-color: #0A0A0A;
+  background-color: #0e0e0e;
 }
 .nav-mobile-menu .links {
   position: absolute;
@@ -524,59 +577,6 @@ footer .footer-copyright p a:active {
   text-shadow: 2px 2px 20px #0598F6;
   animation: flickerAnimation 7s linear 7s infinite;
 }
-@keyframes flickerAnimation {
-  0% {
-    opacity: 1;
-  }
-  28% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 1;
-  }
-  51% {
-    opacity: 1;
-  }
-  52% {
-    opacity: 0;
-  }
-  53% {
-    opacity: 1;
-  }
-  54% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  82% {
-    opacity: 0;
-  }
-  84% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  96% {
-    opacity: 1;
-  }
-  97% {
-    opacity: 0.4;
-  }
-  98% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .homepage-main section.landing .left p {
   font-weight: 400;
   font-size: 20px;
@@ -645,6 +645,8 @@ footer .footer-copyright p a:active {
 .homepage-main section.servers .servers-wrapper h3 span {
   color: #0598F6;
   font-weight: 600;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-up {
   background-color: #101010;
@@ -880,7 +882,7 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.invite {
-  background-color: #0A0A0A;
+  background-color: #0e0e0e;
   margin-top: 150px;
   display: flex;
   flex-direction: column;
@@ -904,9 +906,13 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.invite h2 span.blue {
   color: #0598F6;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.invite h2 span.red {
   color: #F00505;
+  text-shadow: 2px 2px 20px #F00505;
+  animation: flickerAnimation 4s linear 4s infinite;
 }
 .homepage-main section.invite h3 {
   color: #C0C0C0;
@@ -1044,6 +1050,8 @@ footer .footer-copyright p a:active {
   user-select: none;
   color: #F00505;
   margin: 160px 17vw 30px 17vw;
+  text-shadow: 2px 2px 20px #F00505;
+  animation: flickerAnimation 7s linear 2s infinite;
 }
 @media screen and (max-width: 1300px) {
   .imprint-main h1 {
@@ -1057,6 +1065,8 @@ footer .footer-copyright p a:active {
 }
 .imprint-main h1 span {
   color: #0598F6;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 5s linear 1s infinite;
 }
 .imprint-main br {
   user-select: none;
@@ -1131,6 +1141,8 @@ footer .footer-copyright p a:active {
   font-size: 60px;
   user-select: none;
   margin: 160px 17vw 0 17vw;
+  text-shadow: 2px 2px 20px #F00505;
+  animation: flickerAnimation 7s linear 2s infinite;
 }
 @media screen and (max-width: 1300px) {
   .commands-main h1 {
@@ -1144,6 +1156,8 @@ footer .footer-copyright p a:active {
 }
 .commands-main h1 span {
   color: #0598F6;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 5s linear 1s infinite;
 }
 .commands-main h3 {
   font-size: 24px;
