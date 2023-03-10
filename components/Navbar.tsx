@@ -54,10 +54,12 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-left">
-        <div className="logo">
-          <img src="/Logo.png" alt="Would You Logo" draggable={false} />
-          <p>Would You</p>
-        </div>
+        <Link href="/">
+          <div className="logo">
+            <img src="/Logo.png" alt="Would You Logo" draggable={false} />
+            <p>Would You</p>
+          </div>
+        </Link>
         <div className="nav-items">
           <Link href="/">Home</Link>
           <Link href="/commands">Commands</Link>
