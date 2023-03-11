@@ -43,7 +43,7 @@ const Footer = () => {
         <hr />
         <p>
           Made With ♥ By{" "}
-          <Link href="https://github.com/marchoffmann07" target={"_blank"}>
+          <Link href="https://github.com/MarcWebDev" target={"_blank"}>
             MarcDev
           </Link>{" "}
           &{" "}
