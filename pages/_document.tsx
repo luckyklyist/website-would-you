@@ -13,7 +13,7 @@ export default function Document() {
           property="og:description"
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
         />
-        <meta property="og:image" content="/static/img/round.webp" />
+        <meta property="og:image" content="/Logo.png" />
         <meta name="theme-color" content="#0598F6" />
         <meta name="msapplication-TileColor" content="#0598F6" />
       </Head>
