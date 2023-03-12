@@ -622,6 +622,7 @@ export default function Home() {
           >
             Invite Me To Your Server Now.
           </motion.h3>
+          <Link href="/invite" target="_blank">
           <motion.button
             className="wy-button primary"
             initial={{ opacity: 0, transform: "translateY(-20px)" }}
@@ -631,6 +632,7 @@ export default function Home() {
           >
             Invite
           </motion.button>
+          </Link>
         </section>
       </main>
 
