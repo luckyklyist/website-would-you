@@ -120,7 +120,9 @@ export default function Home() {
               Elevate your server&apos;s engagement with Would You, featuring
               user voting, daily messages, and customizability.
             </p>
-            <button className="wy-button primary">Invite</button>
+            <Link href="/invite" target="_blank">
+              <button className="wy-button primary">Invite</button>
+            </Link>
           </motion.div>
           <motion.div
             className="right"
