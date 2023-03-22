@@ -1,13 +1,33 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, useAnimationControls } from "framer-motion";
+import axios from "axios";
+import { useRecoilState } from "recoil";
+import { userState } from "@/atoms/user";
 
-const Navbar = () => {
+interface NavbarProps {
+  sessionKey: string;
+}
+
+const Navbar = ({ sessionKey }: NavbarProps) => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [user, setUser] = useRecoilState(userState);
   const lineOneControls = useAnimationControls();
   const lineTwoControls = useAnimationControls();
   const lineThreeControls = useAnimationControls();
   const menuControls = useAnimationControls();
+
+  console.log(sessionKey);
+
+  useEffect(() => {
+    axios
+      .post("http://localhost:3001/api/v1/session/user", {
+        sessionKey,
+      })
+      .then(function response(response) {
+        setUser(response.data.session.user);
+      });
+  }, []);
 
   function toggleMobileMenu() {
     if (mobileMenu) {
@@ -65,12 +85,44 @@ const Navbar = () => {
           <Link href="/commands">Commands</Link>
           <Link href="/vote">Vote</Link>
           <Link href="/discord">Support</Link>
+          <Link href="/invite">Invite</Link>
         </div>
       </div>
       <div className="nav-right">
-        <Link href="/invite" target={"_blank"}>
-          <button className="wy-button primary">Invite</button>
-        </Link>
+        {user.username !== undefined ? (
+          <div className="nav-user">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#25314C"
+                d="M12 17a.997.997 0 0 1-.707-.293l-7-7a.999.999 0 1 1 1.414-1.414L12 14.586l6.293-6.293a.999.999 0 1 1 1.414 1.414l-7 7A.997.997 0 0 1 12 17Z"
+              />
+            </svg>
+            <p>{user?.username}</p>
+            <img
+              src={`https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.png?size=64`}
+              width={45}
+              height={45}
+              alt=""
+              draggable={false}
+            />
+          </div>
+        ) : (
+          <Link
+            href={
+              process.env.NEXT_PUBLIC_MODE === "DEVELOPMENT"
+                ? "http://localhost:3001/api/v1/auth/login"
+                : "https://api.wouldyoubot.gg/api/v1/auth/login"
+            }
+          >
+            <button className="wy-button primary">Login</button>
+          </Link>
+        )}
         <div className="menu-icon" onClick={() => toggleMobileMenu()}>
           <motion.span
             className="menu-line line-1"
@@ -102,8 +154,16 @@ const Navbar = () => {
           <Link href="/commands">Commands</Link>
           <Link href="/vote">Vote</Link>
           <Link href="/discord">Support</Link>
-          <Link href="/invite" target={"_blank"}>
-            <button className="wy-button primary">Invite</button>
+          <Link href="/invite">Invite</Link>
+          <Link
+            href={
+              process.env.NEXT_PUBLIC_MODE === "DEVELOPMENT"
+                ? "http://localhost:3001/api/v1/auth/login"
+                : "https://api.wouldyoubot.gg/api/v1/auth/login"
+            }
+            target={"_blank"}
+          >
+            <button className="wy-button primary">Login</button>
           </Link>
         </div>
       </motion.div>

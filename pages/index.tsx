@@ -23,8 +23,42 @@ import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { withIronSessionSsr } from "iron-session/next";
 
-export default function Home() {
+export const getServerSideProps = withIronSessionSsr(
+  async function getServerSideProps({ req }) {
+    const user = req.session.user;
+
+    if (user === undefined || user === '' || user === null) {
+      return {
+        props: {
+          sessionKey: '',
+        },
+      };
+    }
+
+    return {
+      props: {
+        sessionKey: req.session.user,
+      },
+    };
+  },
+  {
+    cookieName: "wouldyou_user",
+    password:
+      "wouldyouweb-v3-03-2023-production-marcdev-12398649187956916593619589153-9054832097540723572537",
+    // secure: process.env.NODE_PUBLIC_MODE === 'DEVELOPMENT' ? false : true,
+    cookieOptions: {
+      secure: process.env.NODE_ENV === 'production',
+    },
+  }
+);
+
+interface HomeProps {
+  sessionKey: string;
+}
+
+export default function Home({ sessionKey }: HomeProps) {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
@@ -101,7 +135,7 @@ export default function Home() {
         <link rel="icon" href="/Logo.png" />
       </Head>
 
-      <Navbar />
+      <Navbar sessionKey={sessionKey} />
 
       <main className="homepage-main">
         <section className="landing">
