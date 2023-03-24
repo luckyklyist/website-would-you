@@ -216,30 +216,36 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  height: 120px;
+  width: 66vw;
+  height: 80px;
   background: rgba(23, 23, 23, 0.9);
   backdrop-filter: blur(12.5px);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
+  border-radius: 15px;
+  border: 1px solid #232323;
+  margin: 30px 17vw;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1300px) {
+  nav {
+    margin: 30px 50px;
+    width: calc(100vw - 100px);
+  }
+}
+@media screen and (max-width: 450px) {
+  nav {
+    margin: 20px 30px;
+    width: calc(100vw - 60px);
+  }
 }
 nav .nav-left {
   display: flex;
   align-items: center;
-  margin-left: 17vw;
   z-index: 1000;
-}
-@media screen and (max-width: 1300px) {
-  nav .nav-left {
-    margin-left: 50px;
-  }
-}
-@media screen and (max-width: 450px) {
-  nav .nav-left {
-    margin-left: 30px;
-  }
+  margin-left: 30px;
 }
 nav .nav-left .logo {
   display: flex;
@@ -283,15 +289,10 @@ nav .nav-left .nav-items a:hover {
   color: #fff;
 }
 nav .nav-right {
-  margin-right: 17vw;
+  margin-right: 30px;
   display: flex;
   align-items: center;
   z-index: 1000;
-}
-@media screen and (max-width: 1300px) {
-  nav .nav-right {
-    margin-right: 50px;
-  }
 }
 @media screen and (max-width: 480px) {
   nav .nav-right .wy-button {
@@ -378,8 +379,23 @@ nav hr {
   width: 100vw;
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 78px;
   z-index: 1000;
+  transition: all 0.275s ease-in-out;
+  opacity: 0;
+}
+nav.active {
+  margin: 10px 17vw;
+}
+@media screen and (max-width: 1300px) {
+  nav.active {
+    margin: 10px 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav.active {
+    margin: 10px 30px;
+  }
 }
 
 .nav-mobile-menu {

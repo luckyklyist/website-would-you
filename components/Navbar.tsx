@@ -16,8 +16,17 @@ const Navbar = ({ sessionKey }: NavbarProps) => {
   const lineTwoControls = useAnimationControls();
   const lineThreeControls = useAnimationControls();
   const menuControls = useAnimationControls();
+  const [navActive, setNavActive] = useState(false);
 
-  console.log(sessionKey);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 100) {
+        setNavActive(true);
+      } else {
+        setNavActive(false);
+      }
+    });
+  });
 
   useEffect(() => {
     axios
@@ -72,7 +81,7 @@ const Navbar = ({ sessionKey }: NavbarProps) => {
   }
 
   return (
-    <nav>
+    <nav className={`${navActive ? "active" : ""}`}>
       <div className="nav-left">
         <Link href="/">
           <div className="logo">
@@ -140,8 +149,8 @@ const Navbar = ({ sessionKey }: NavbarProps) => {
             animate={lineThreeControls}
           ></motion.span>
         </div>
+        <hr />
       </div>
-      <hr />
 
       <motion.div
         className="nav-mobile-menu"
