@@ -21,7 +21,7 @@ export default function Privacy() {
         <h3>Last updated and effective: April 1, 2023</h3>
         <br />
         <p>
-        Thank you for choosing to be part of our community at Would You("we," "us," or "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to        your personal information, please contact us at dominik@wouldyoubot.com.
+        Thank you for choosing to be part of our community at Would You(&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to        your personal information, please contact us at dominik@wouldyoubot.com.
 
         This privacy notice describes how we might use your information if you:
 
@@ -30,8 +30,8 @@ export default function Privacy() {
 
         In this privacy notice, if we refer to:
 
-        - "Website," we are referring to any website of ours that references or links to this policy.
-        - "Services," we are referring to our Website, and other related services, including any sales, marketing, or events.
+        - &quot;Website,&quot; we are referring to any website of ours that references or links to this policy.
+        - &quot;Services,&quot; we are referring to our Website, and other related services, including any sales, marketing, or events.
 
         The purpose of this privacy notice is to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it. If there are any terms in this privacy notice that you do not agree with, please discontinue         use of our Services immediately.
         </p>
@@ -99,11 +99,11 @@ export default function Privacy() {
         </p>
         <h3> Do California residents have specific privacy rights?</h3>
         <p>
-        California Civil Code Section 1798.83, also known as the "Shine The Light. law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to         third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal Information in the Immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit        your request in writing to us using the contact Information provided below. If you are under 18 years of age, reside in California, and have a registered account with the Website, you have the right to request removal of unwanted data that you publicly post on the        Website. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside In California. We will make sure the data is not publicly displayed on       the Website, but please be aware that the data may not be completely or comprehensively removed from all our systems (e.g. backups etc.).
+        California Civil Code Section 1798.83, also known as the &quot;Shine The Light&quot;. law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to         third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal Information in the Immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit        your request in writing to us using the contact Information provided below. If you are under 18 years of age, reside in California, and have a registered account with the Website, you have the right to request removal of unwanted data that you publicly post on the        Website. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside In California. We will make sure the data is not publicly displayed on       the Website, but please be aware that the data may not be completely or comprehensively removed from all our systems (e.g. backups etc.).
         </p>
         <h3> Do we make updates to this notice?</h3>
         <p>
-        We may update this privacy notice from time to time. The updated version will be indicated by an updated "Revised" date and the updated version will be effective as soon as it is accessible. If we make material changes to this privacy notice, we may notify you either         by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this privacy notice frequently to be informed of how we are protecting your information.
+        We may update this privacy notice from time to time. The updated version will be indicated by an updated &quot;Revised&quot; date and the updated version will be effective as soon as it is accessible. If we make material changes to this privacy notice, we may notify you either         by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this privacy notice frequently to be informed of how we are protecting your information.
         </p>
         <h3> How can you contact us about this notice?</h3>
         <p>
