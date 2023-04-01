@@ -111,11 +111,11 @@ export default function Privacy() {
         </p>
         <h3> How can you review, update, or delete the data we collect from you?</h3>
         <p>
-        Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal Information,         please visit: <a href="https://wouldyoubot.gg/discord" target={"_blank"}>https://wouldyoubot.gg/discord</a>.
+        Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal Information,         please visit: <a href="https://wouldyoubot.gg/discord" target={"_blank"} rel="noreferrer">https://wouldyoubot.gg/discord</a>.
         </p>
         <h3>Attribution</h3>
         <p>
-        Thanks to <a href="https://scrumpbot.com/" target={"_blank"}>https://scrumpbot.com/</a> for help on this privacy policy.</p>
+        Thanks to <a href="https://scrumpbot.com/" target={"_blank"} rel="noreferrer">https://scrumpbot.com/</a> for help on this privacy policy.</p>
           <br />
           <br />
           <br />
