@@ -28,6 +28,20 @@
     "verified": true
   },
   {
+    "name": "Crunchy",
+    "members": "33k+",
+    "avatar": "crunchy.gif",
+    "partnered": true,
+    "verified": false
+  },
+  {
+    "name": "Medium Cafe",
+    "members": "117k+",
+    "avatar": "mediumcafe.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
     "name": "Dreamy Café | Anime ・ Gaming",
     "members": "3500+",
     "avatar": "dreamy.webp",
@@ -73,6 +87,13 @@
     "name": "👑 Hollynn’s Kingdom 👑",
     "members": "2500+",
     "avatar": "hollynns.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
+    "name": "Wednesday",
+    "members": "700+",
+    "avatar": "wednesday.webp",
     "partnered": false,
     "verified": false
   },
@@ -133,6 +154,20 @@
     "verified": true
   },
   {
+    "name": "Crunchy",
+    "members": "33k+",
+    "avatar": "crunchy.gif",
+    "partnered": true,
+    "verified": false
+  },
+  {
+    "name": "Medium Cafe",
+    "members": "117k+",
+    "avatar": "mediumcafe.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
     "name": "Dreamy Café | Anime ・ Gaming",
     "members": "3500+",
     "avatar": "dreamy.webp",
@@ -178,6 +213,13 @@
     "name": "👑 Hollynn’s Kingdom 👑",
     "members": "2500+",
     "avatar": "hollynns.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
+    "name": "Wednesday",
+    "members": "700+",
+    "avatar": "wednesday.webp",
     "partnered": false,
     "verified": false
   },
