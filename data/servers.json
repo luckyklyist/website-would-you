@@ -42,9 +42,23 @@
     "verified": false
   },
   {
+    "name": "Birb Paradise",
+    "members": "3.2k+",
+    "avatar": "birb.webp",
+    "partnered": true,
+    "verified": false
+  },
+  {
     "name": "Dreamy Café | Anime ・ Gaming",
     "members": "3500+",
     "avatar": "dreamy.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
+    "name": "MangaTx",
+    "members": "7k+",
+    "avatar": "mangatx.webp",
     "partnered": false,
     "verified": false
   },
@@ -168,9 +182,23 @@
     "verified": false
   },
   {
+    "name": "Birb Paradise",
+    "members": "3.2k+",
+    "avatar": "birb.webp",
+    "partnered": true,
+    "verified": false
+  },
+  {
     "name": "Dreamy Café | Anime ・ Gaming",
     "members": "3500+",
     "avatar": "dreamy.webp",
+    "partnered": false,
+    "verified": false
+  },
+  {
+    "name": "MangaTx",
+    "members": "7k+",
+    "avatar": "mangatx.webp",
     "partnered": false,
     "verified": false
   },
