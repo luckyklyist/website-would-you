@@ -325,7 +325,7 @@ export default function Home({ sessionKey }: HomeProps) {
           <div className="servers-wrapper">
             <h2>Top Servers Using Would You</h2>
             <h3>
-              Trusted by <span>2500</span> of your favorite communities on
+              Trusted by <span>2600</span> of your favorite communities on
               discord
             </h3>
 
@@ -711,6 +711,7 @@ export default function Home({ sessionKey }: HomeProps) {
           >
             Invite Me To Your Server Now.
           </motion.h3>
+          <Link href="/invite" target="_blank">
           <motion.button
             className="wy-button primary"
             initial={{ opacity: 0, transform: "translateY(-20px)" }}
@@ -720,6 +721,7 @@ export default function Home({ sessionKey }: HomeProps) {
           >
             Invite
           </motion.button>
+          </Link>
         </section>
       </main>
 
