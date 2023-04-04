@@ -240,7 +240,7 @@ export default function Home() {
           <div className="servers-wrapper">
             <h2>Top Servers Using Would You</h2>
             <h3>
-              Trusted by <span>2600</span> of your favorite communities on
+              Trusted by <span>2700</span> of your favorite communities on
               discord
             </h3>
 
