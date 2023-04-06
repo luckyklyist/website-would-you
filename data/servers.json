@@ -91,6 +91,13 @@
     "verified": false
   },
   {
+    "name": "Hobo Slayer",
+    "members": "700+",
+    "avatar": "hoboslayer.webp",
+    "partnered": true,
+    "verified": false
+  },
+  {
     "name": "Cozy Campfire",
     "members": "20k+",
     "avatar": "campfire.webp",
@@ -235,6 +242,13 @@
     "members": "3000+",
     "avatar": "howtodiscord.webp",
     "partnered": false,
+    "verified": false
+  },
+  {
+    "name": "Hobo Slayer",
+    "members": "700+",
+    "avatar": "hoboslayer.webp",
+    "partnered": true,
     "verified": false
   },
   {
