@@ -140,7 +140,7 @@ export default function Home() {
                   roleColor={profiles.wouldyou.roleColor}
                   bot={profiles.wouldyou.bot}
                   verified={profiles.wouldyou.verified}
-                  edited
+                  edited={replayedRounds>0}
                 >
                   <DiscordCommand
                     slot="reply"
@@ -410,7 +410,6 @@ export default function Home() {
                   roleColor={profiles.wouldyou.roleColor}
                   bot={profiles.wouldyou.bot}
                   verified={profiles.wouldyou.verified}
-                  edited
                 >
                   <DiscordCommand
                     slot="reply"
