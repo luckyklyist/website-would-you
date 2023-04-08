@@ -24,6 +24,16 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+function DiscordInteractiveReaction(props) {
+  const [reacted, setReacted] = useState(false);
+  const [count, setCount] = useState(props.count);
+  return <DiscordReaction emoji={props.emoji} name={props.name} onClick={() => {
+    if (!reacted) setCount(count + 1);
+    else setCount(count - 1);
+    setReacted(!reacted);
+  }} reacted={reacted} count={count}>{props.children}</DiscordReaction>
+}
+
 export default function Home() {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
@@ -140,7 +150,7 @@ export default function Home() {
                   roleColor={profiles.wouldyou.roleColor}
                   bot={profiles.wouldyou.bot}
                   verified={profiles.wouldyou.verified}
-                  edited
+                  edited={replayedRounds>0}
                 >
                   <DiscordCommand
                     slot="reply"
@@ -168,14 +178,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
-                      {" "}
-                    </DiscordReaction>
-                    <DiscordReaction
+                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
                       count={1}
-                    ></DiscordReaction>
+                    />
                   </DiscordReactions>
                   <DiscordAttachments slot="components">
                     <DiscordActionRow>
@@ -277,7 +285,7 @@ export default function Home() {
                               fill="#3BA55C"
                               fill-rule="evenodd"
                               d="M60 30.555c0 2.959-4.8 5.169-5.7 7.828-.9 2.659 1.65 7.49 0 9.7-1.65 2.21-6.9 1.311-9.225 2.997-2.325 1.685-2.963 6.892-5.775 7.828-2.813.936-6.262-2.997-9.262-2.997-3 0-6.563 3.746-9.263 2.997-2.7-.75-3.45-6.143-5.775-7.828-2.325-1.686-7.5-.674-9.225-2.996-1.725-2.323.862-6.892 0-9.701C4.912 35.573 0 33.513 0 30.555c0-2.96 4.8-5.169 5.7-7.828.9-2.66-1.65-7.491 0-9.701 1.65-2.21 6.937-1.31 9.3-2.996 2.363-1.686 2.925-6.892 5.738-7.94C23.55 1.04 27 5.197 30 5.197c3 0 6.563-3.745 9.263-2.996 2.7.749 3.412 6.142 5.737 7.828 2.325 1.685 7.5.674 9.225 2.996 1.725 2.322-.863 6.892 0 9.7.862 2.81 5.775 4.87 5.775 7.829Z"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                             <path
                               fill="#fff"
@@ -297,7 +305,7 @@ export default function Home() {
                               fill="#5865F2"
                               fill-rule="evenodd"
                               d="M59.987 30.112c0 2.959-4.799 5.168-5.698 7.827-.9 2.658 1.65 7.489 0 9.698-1.65 2.21-6.899 1.311-9.223 2.996-2.325 1.685-2.962 6.89-5.774 7.826-2.812.937-6.261-2.995-9.26-2.995-3 0-6.562 3.745-9.261 2.995-2.7-.748-3.45-6.14-5.774-7.826-2.325-1.685-7.499-.674-9.223-2.996-1.725-2.321.862-6.89 0-9.698C4.91 35.13 0 33.07 0 30.112s4.799-5.167 5.699-7.826c.9-2.659-1.65-7.49 0-9.699 1.65-2.21 6.936-1.31 9.298-2.996 2.362-1.685 2.924-6.89 5.736-7.938 2.812-1.049 6.261 3.108 9.26 3.108 3 0 6.562-3.745 9.261-2.996 2.7.749 3.412 6.141 5.737 7.826 2.324 1.686 7.498.675 9.223 2.996 1.724 2.322-.863 6.89 0 9.699.862 2.808 5.773 4.868 5.773 7.826Z"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                             <path
                               fill="#fff"
@@ -410,7 +418,6 @@ export default function Home() {
                   roleColor={profiles.wouldyou.roleColor}
                   bot={profiles.wouldyou.bot}
                   verified={profiles.wouldyou.verified}
-                  edited
                 >
                   <DiscordCommand
                     slot="reply"
@@ -439,14 +446,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
-                      {" "}
-                    </DiscordReaction>
-                    <DiscordReaction
+                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
                       count={1}
-                    ></DiscordReaction>
+                    />
                   </DiscordReactions>
                 </DiscordMessage>
 
@@ -576,14 +581,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction
+                    <DiscordInteractiveReaction
                       name="1️⃣"
                       emoji="1.svg"
                       count={3}
-                    ></DiscordReaction>
-                    <DiscordReaction name="2️⃣" emoji="2.svg" count={2}>
-                      {" "}
-                    </DiscordReaction>
+                    />
+                    <DiscordInteractiveReaction name="2️⃣" emoji="2.svg" count={2} />
                   </DiscordReactions>
                 </DiscordMessage>
               </DiscordMessages>
