@@ -158,7 +158,7 @@ export default function Home() {
                     author={profiles.dominik.author}
                     avatar={profiles.dominik.avatar}
                     roleColor={profiles.dominik.roleColor}
-                    command="/custom useful"
+                    command="/wouldyou useful"
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedFields slot="fields">
@@ -425,7 +425,7 @@ export default function Home() {
                     author={profiles.dominik.author}
                     avatar={profiles.dominik.avatar}
                     roleColor={profiles.dominik.roleColor}
-                    command="/custom useful"
+                    command="/wouldyou useful"
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
