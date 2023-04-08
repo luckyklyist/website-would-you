@@ -24,6 +24,16 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+function DiscordInteractiveReaction(props) {
+  const [reacted, setReacted] = useState(false);
+  const [count, setCount] = useState(props.count);
+  return <DiscordReaction emoji={props.emoji} name={props.name} onClick={() => {
+    if (!reacted) setCount(count + 1);
+    else setCount(count - 1);
+    setReacted(!reacted);
+  }} reacted={reacted} count={count}>{props.children}</DiscordReaction>
+}
+
 export default function Home() {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
@@ -168,14 +178,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
-                      {" "}
-                    </DiscordReaction>
-                    <DiscordReaction
+                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
                       count={1}
-                    ></DiscordReaction>
+                    />
                   </DiscordReactions>
                   <DiscordAttachments slot="components">
                     <DiscordActionRow>
@@ -438,14 +446,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction name="✅" emoji="/check.svg" count={4}>
-                      {" "}
-                    </DiscordReaction>
-                    <DiscordReaction
+                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
                       count={1}
-                    ></DiscordReaction>
+                    />
                   </DiscordReactions>
                 </DiscordMessage>
 
@@ -575,14 +581,12 @@ export default function Home() {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordReaction
+                    <DiscordInteractiveReaction
                       name="1️⃣"
                       emoji="1.svg"
                       count={3}
-                    ></DiscordReaction>
-                    <DiscordReaction name="2️⃣" emoji="2.svg" count={2}>
-                      {" "}
-                    </DiscordReaction>
+                    />
+                    <DiscordInteractiveReaction name="2️⃣" emoji="2.svg" count={2} />
                   </DiscordReactions>
                 </DiscordMessage>
               </DiscordMessages>
