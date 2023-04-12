@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { withIronSessionSsr } from "iron-session/next";
 
 function DiscordInteractiveReaction(props) {
   const [reacted, setReacted] = useState(false);
@@ -34,7 +35,40 @@ function DiscordInteractiveReaction(props) {
   }} reacted={reacted} count={count}>{props.children}</DiscordReaction>
 }
 
-export default function Home() {
+export const getServerSideProps = withIronSessionSsr(
+  async function getServerSideProps({ req }) {
+    const user = req.session.user;
+
+    if (user === undefined || user === "" || user === null) {
+      return {
+        props: {
+          sessionKey: "",
+        },
+      };
+    }
+
+    return {
+      props: {
+        sessionKey: req.session.user,
+      },
+    };
+  },
+  {
+    cookieName: "wouldyou_user",
+    password:
+      "wouldyouweb-v3-03-2023-production-marcdev-12398649187956916593619589153-9054832097540723572537",
+    // secure: process.env.NODE_PUBLIC_MODE === 'DEVELOPMENT' ? false : true,
+    cookieOptions: {
+      secure: process.env.NODE_ENV === "production",
+    },
+  }
+);
+
+interface HomeProps {
+  sessionKey: string;
+}
+
+export default function Home({ sessionKey }: HomeProps) {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
@@ -44,7 +78,7 @@ export default function Home() {
       author: "Would You",
       avatar:
         "https://cdn.discordapp.com/avatars/981649513427111957/af5f8264403034530bba73ba6c2492d9.webp?size=96",
-      roleColor: "#1e88e5",
+      roleColor: "#308BF2",
       bot: true,
       verified: true,
     },
@@ -60,7 +94,7 @@ export default function Home() {
       author: "Dominik",
       avatar:
         "https://cdn.discordapp.com/avatars/347077478726238228/3b77f755fa8e66fd75d1e2d3fb8b1611.webp?size=60",
-      roleColor: "#F47FFF",
+      roleColor: "#6590FF",
       bot: false,
       verified: false,
     },
@@ -75,16 +109,78 @@ export default function Home() {
   };
 
   const questions = [
-    "You can say “fuck this shit” and you automatically don’t have to do it anymore",
-    "You have an irl minecraft inventory, no weight limit, 64 per stack.",
-    "You can make anything have the opposite effect of what was supposed to be",
-    `Everytime you see something and say 'Dang, that's too
-    expensive.' a random person buys it and gives it to you`,
-    "Each time someone compliments you a turtle will appear and give you a sandwich",
-    "You are invisible to all doors, faucets, soaps, paper towels and hand dryer sensors.",
-    "You can spawn any soda at will, but it will always be flat",
-    "Any time you don’t understand something time freezes and David Attenborough explains how the thing works",
-    "You can eat infinite food without getting fat",
+    "Would you rather accept help or just take care of things on your own?",
+    "Would you rather all electrical devices mysteriously stop working (possibly forever) or the governments of the world are only run by people going through puberty?",
+    "Would you rather all plants scream when you cut them / pick their fruit or animals beg for their lives before they are killed?",
+    "Would you rather always feel like someone is following you, but no one is, or always feel like someone is watching you, even though no one is?",
+    "Would you rather always have a great body for your entire life but have slightly below average intelligence or have a mediocre body for your entire life but be slightly above average in intelligence?",
+    "Would you rather always have a mullet haircut or a ponytail haircut?",
+    "Would you rather always know exactly what time it is or always know which direction you are facing?",
+    "Would you rather always live 10 miles from where you were born or never be able to settle down in one place for more than a year?",
+    "Would you rather be a bowling champion or a curling champion?",
+    "Would you rather be a famous artist or a famous photographer?",
+    "Would you rather be a famous astronaut or a famous scientist?",
+    "Would you rather be a famous astronomer or a famous physicist?",
+    "Would you rather be a famous athlete or a famous coach?",
+    "Would you rather be a famous athlete or a famous politician?",
+    "Would you rather be a famous chef or a famous singer?",
+    "Would you rather be a famous chef or a famous writer?",
+    "Would you rather be a famous comedian or a famous magician?",
+    "Would you rather be a famous dancer or a famous gymnast?",
+    "Would you rather be a famous explorer or a famous archaeologist?",
+    "Would you rather be a famous fashion designer or a famous hair stylist?",
+    "Would you rather be a famous fashion designer or a famous interior designer?",
+    "Would you rather be a famous inventor or a famous engineer?",
+    "Would you rather be a famous musician or a famous DJ?",
+    "Would you rather be a famous musician or a famous actor?",
+    "Would you rather be a famous poet or a famous playwright?",
+    "Would you rather be a famous race car driver or a famous stunt pilot?",
+    "Would you rather be a famous writer or a famous illustrator?",
+    "Would you rather be a king or a knight?",
+    "Would you rather be a practicing doctor or a medical researcher?",
+    "Would you rather be a professional athlete or a professional artist?",
+    "Would you rather be a superhero or a supervillain?",
+    "Would you rather be a superhero or a wizard?",
+    "Would you rather be a superhero with super intelligence or super agility?",
+    "Would you rather be a superhero with the ability to control fire or the ability to control ice?",
+    "Would you rather be a superhero with the ability to control time or the ability to control space?",
+    "Would you rather be a superhero with the power of flight or the power of invisibility?",
+    "Would you rather be a superhero with the power of super hearing or the power of super vision?",
+    "Would you rather be a superhero with the power of super intelligence or the power of telepathy?",
+    "Would you rather be a superhero with the power of super speed or the power of super strength?",
+    "Would you rather be a superhero with the power of super strength or the power of super speed?",
+    "Would you rather be a superhero with the power of teleportation or the power of telekinesis?",
+    "Would you rather be able to breathe underwater or walk on lava?",
+    "Would you rather be able to control animals (but not humans) with your mind or control electronics with your mind?",
+    "Would you rather be able to dodge anything no matter how fast it’s moving or be able to ask any three questions and have them answered accurately?",
+    "Would you rather be able to fly or be invisible?",
+    "Would you rather be able to go to any theme park in the world for free for the rest of your life or eat for free at any drive-through restaurant for the rest of your life?",
+    "Would you rather be able to see 10 minutes into your own future or 10 minutes into the future of anyone but yourself?",
+    "Would you rather be able to slow down time by 10% or jump three times as high as you can now?",
+    "Would you rather be able to speed read or speak at an incredible speed?",
+    "Would you rather be able to teleport anywhere or be able to read minds?",
+    "Would you rather be able to teleport or be able to time travel?",
+    "Would you rather be an amazing painter or a brilliant mathematician?",
+    "Would you rather be an unimportant character in the last movie you saw or an unimportant character in the last book you read?",
+    "Would you rather be a reverse centaur or a reverse mermaid/merman?",
+    "Would you rather be born again in the same country or a different one of your choosing?",
+    "Would you rather be covered in fur or covered in scales?",
+    "Would you rather be famous when you are alive and forgotten when you die or unknown when you are alive but famous after you die?",
+    "Would you rather be fantastic at riding horses or amazing at driving dirt bikes?",
+    "Would you rather be feared by all or loved by all?",
+    "Would you rather be fluent in legalese or fluent in French?",
+    "Would you rather be forced to eat only spicy food or only incredibly bland food?",
+    "Would you rather be forced to speak in a single different accent not of your choosing forever or speak in a random different accent whenever you wake up for one year?",
+    "Would you rather be given a top tier gaming PC or a top tier Apple computer? Both are the same price.",
+    "Would you rather be insulted by Gordon Ramsay for 10 seconds or receive unlimited text messages from Donald Trump for 10 days?",
+    "Would you rather be locked in a room that is constantly dark for a week or a room that is constantly bright for a week?",
+    "Would you rather be lost in the woods of a mountain for a year or stranded on a tropical island for a year?",
+    "Would you rather be married to a 10 with a bad personality or a 6 with an amazing personality?",
+    "Would you rather be poor and work at a job you love, or rich and work at a job you hate?",
+    "Would you rather be put in a maximum-security federal prison with the hardest of the hardened criminals for one year or be put in a relatively relaxed prison where wall street types are held for ten years?",
+    "Would you rather be smacked in the face with a fish or farted on?",
+    "Would you rather be so afraid of heights that you can’t go to the second floor of a building or be so afraid of the sun that you can only leave the house on rainy days?",
+    "Would you rather be the world’s best actress or singer?",
   ];
 
   useEffect(() => {
@@ -111,7 +207,7 @@ export default function Home() {
         <link rel="icon" href="/Logo.png" />
       </Head>
 
-      <Navbar />
+      <Navbar sessionKey={sessionKey} />
 
       <main className="homepage-main">
         <section className="landing">
@@ -163,18 +259,18 @@ export default function Home() {
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedFields slot="fields">
                       <DiscordEmbedField fieldTitle="">
-                        <p className="discord-field-title">
-                          Would you want this power?
-                        </p>
                         <p className="discord-embed-field">{currentQuestion}</p>
                       </DiscordEmbedField>
                     </DiscordEmbedFields>
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage={profiles.dominik.avatar}
                     >
-                      Would You
+                      Requested by Dominik | Type: General | ID:{" "}
+                      {questions.findIndex(
+                        (value) => value === currentQuestion
+                      ) + 50}
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
@@ -200,7 +296,7 @@ export default function Home() {
                               d="M22.242 22.242l2.829 2.829c-3.905 3.905-10.237 3.904-14.143-.001-2.247-2.246-3.194-5.296-2.854-8.225l-4.037.367c-.215 3.84 1.128 7.752 4.062 10.687 5.467 5.467 14.333 5.468 19.799 0l2.828 2.828.849-9.334-9.333.849zM27.899 8.1C22.431 2.633 13.568 2.633 8.1 8.1L5.272 5.272l-.849 9.334 9.334-.849-2.829-2.829c3.906-3.905 10.236-3.905 14.142 0 2.248 2.247 3.194 5.297 2.856 8.226l4.036-.366c.216-3.841-1.128-7.753-4.063-10.688z"
                             />
                           </svg>
-                          Replay
+                          New Question
                         </DiscordButton>
                       ) : (
                         <DiscordButton
@@ -425,24 +521,22 @@ export default function Home() {
                     author={profiles.dominik.author}
                     avatar={profiles.dominik.avatar}
                     roleColor={profiles.dominik.roleColor}
-                    command="/wouldyou useful"
+                    command="/neverhaveiever"
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
-                    <DiscordEmbedDescription> </DiscordEmbedDescription>
                     <DiscordEmbedFields slot="fields">
-                      <DiscordEmbedField fieldTitle="Would you want this power?">
-                        Your pocket can hold 10 items no matter the size.
-                      </DiscordEmbedField>
-                      <DiscordEmbedField fieldTitle="Stats">
-                        Everyone who voted would want this power.
+                      <DiscordEmbedField fieldTitle="">
+                        <p className="discord-embed-field">
+                          Never have I ever thrown something at a moving car.
+                        </p>
                       </DiscordEmbedField>
                     </DiscordEmbedFields>
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage={profiles.dominik.avatar}
                     >
-                      Would You
+                      Requested by Dominik | Type: Random | ID: 196
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
@@ -453,6 +547,24 @@ export default function Home() {
                       count={1}
                     />
                   </DiscordReactions>
+                  <DiscordAttachments slot="components">
+                    <DiscordActionRow>
+                      <DiscordButton type="primary">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 36 36"
+                          width="36"
+                          height="36"
+                        >
+                          <path
+                            fill="#FFF"
+                            d="M22.242 22.242l2.829 2.829c-3.905 3.905-10.237 3.904-14.143-.001-2.247-2.246-3.194-5.296-2.854-8.225l-4.037.367c-.215 3.84 1.128 7.752 4.062 10.687 5.467 5.467 14.333 5.468 19.799 0l2.828 2.828.849-9.334-9.333.849zM27.899 8.1C22.431 2.633 13.568 2.633 8.1 8.1L5.272 5.272l-.849 9.334 9.334-.849-2.829-2.829c3.906-3.905 10.236-3.905 14.142 0 2.248 2.247 3.194 5.297 2.856 8.226l4.036-.366c.216-3.841-1.128-7.753-4.063-10.688z"
+                          />
+                        </svg>
+                        New Question
+                      </DiscordButton>
+                    </DiscordActionRow>
+                  </DiscordAttachments>
                 </DiscordMessage>
 
                 <DiscordMessage
@@ -476,7 +588,7 @@ export default function Home() {
                       Click to see commands
                     </p>
                   </DiscordReply>
-                  I would sell the pants <br /> Profit
+                  Nah man I never did that stuff
                 </DiscordMessage>
 
                 <DiscordMessage
@@ -487,8 +599,7 @@ export default function Home() {
                   bot={profiles.dominik.bot}
                   verified={profiles.dominik.verified}
                 >
-                  It&apos;s not your pants <br /> Whatever pants you wear they
-                  do that
+                  Me neither, doing something like this isn&apos;t cool
                 </DiscordMessage>
 
                 <DiscordMessage
@@ -507,10 +618,10 @@ export default function Home() {
                     roleColor={profiles.dominik.roleColor}
                   >
                     <p style={{ whiteSpace: "initial" }}>
-                      Whatever pants you wear they do that
+                      Me neither, doing something like this isn&apos;t cool
                     </p>
                   </DiscordReply>
-                  Ohhhh
+                  Yep exactly
                 </DiscordMessage>
 
                 <DiscordMessage
@@ -521,7 +632,7 @@ export default function Home() {
                   bot={profiles.dominik.bot}
                   verified={profiles.dominik.verified}
                 >
-                  So if you don&apos;t wear them you don&apos;t get the benefit
+                  But I actually saw someone doing this like two weeks ago
                 </DiscordMessage>
               </DiscordMessages>
             </motion.div>
