@@ -340,7 +340,7 @@ export default function Home({ sessionKey }: HomeProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: "easeInOut" }}
         >
-          <img src="/LandingWave.svg" alt="Wave" draggable={false} />
+          <img src="/LandingWave.svg" className="wave" alt="Wave" draggable={false} />
           <div className="servers-wrapper">
             <h2>Top Servers Using Would You</h2>
             <h3>
