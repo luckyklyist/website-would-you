@@ -94,7 +94,11 @@ const Navbar = ({ sessionKey }: NavbarProps) => {
           <Link href="/commands">Commands</Link>
           <Link href="/vote">Vote</Link>
           <Link href="/discord">Support</Link>
-          <Link href="/invite">Invite</Link>
+          <Link href="/invite" target={"popup"} onClick={() => {
+            window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
+            return false;
+          }
+          }>Invite</Link>
         </div>
       </div>
       <div className="nav-right">

@@ -226,9 +226,11 @@ export default function Home({ sessionKey }: HomeProps) {
               Elevate your server&apos;s engagement with Would You, featuring
               user voting, daily messages, and customizability.
             </p>
-            <Link href="/invite" target="_blank">
-              <button className="wy-button primary">Invite</button>
-            </Link>
+              <Link href="/invite" target={"popup"} onClick={() => {
+                window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
+                return false;
+              }
+              }><button className="wy-button primary">Invite</button></Link>
           </motion.div>
           <motion.div
             className="right"
