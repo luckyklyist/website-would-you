@@ -22,7 +22,7 @@ export default function Terms() {
 
           <h3>Agreement to Terms.</h3>
           <p>
-            These terms of service (the "Terms") apply to the Would You Discord
+            These terms of service (the &quot;Terms&quot;) apply to the Would You Discord
             bot. By using Would You, you agree to be bound by these Terms and
             any additional terms that may be provided by the Company. If you do
             not agree to these Terms, you may not use Would You.

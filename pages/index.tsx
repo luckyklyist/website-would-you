@@ -738,7 +738,11 @@ export default function Home({ sessionKey }: HomeProps) {
           >
             Invite Me To Your Server Now.
           </motion.h3>
-          <Link href="/invite" target="_blank">
+          <Link href="/invite" target={"popup"} onClick={() => {
+                window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
+                return false;
+              }
+              }>
           <motion.button
             className="wy-button primary"
             initial={{ opacity: 0, transform: "translateY(-20px)" }}
