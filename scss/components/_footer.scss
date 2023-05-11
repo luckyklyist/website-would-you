@@ -71,12 +71,12 @@ footer {
         align-items: center;
 
         img {
-          user-select: none;
+          
         }
 
         p {
           color: #fff;
-          user-select: none;
+          
           font-size: 22px;
           font-weight: 600;
           margin-left: 15px;
@@ -85,7 +85,7 @@ footer {
 
       .logo-subtext {
         font-size: 16px;
-        user-select: none;
+        
         font-weight: 400;
         color: $textSecondary;
         margin-top: 18px;
@@ -100,7 +100,7 @@ footer {
 
       h4 {
         text-transform: uppercase;
-        user-select: none;
+        
         font-size: 18px;
         color: $text;
         font-weight: 500;
@@ -117,7 +117,7 @@ footer {
         font-size: 16px;
         font-weight: 400;
         margin-bottom: 3px;
-        user-select: none;
+        
 
         &:hover {
           color: $text;
@@ -135,7 +135,7 @@ footer {
     p {
       margin-top: 30px;
       text-align: center;
-      user-select: none;
+      
       font-size: 16px;
       font-weight: 400;
       color: $text;
@@ -144,7 +144,7 @@ footer {
         cursor: pointer;
         color: $primary;
         transition: all 0.3s ease;
-        user-select: none;
+        
 
         &:hover {
           color: $primaryHover;

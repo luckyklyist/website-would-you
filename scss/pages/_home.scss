@@ -35,7 +35,7 @@
       }
 
       h1 {
-        user-select: none;
+        
         font-size: 64px;
         width: 500px;
         font-weight: 700;
@@ -62,7 +62,7 @@
       p {
         font-weight: 400;
         font-size: 20px;
-        user-select: none;
+        
         color: $textSecondary;
         margin-top: 10px;
         margin-bottom: 24px;
@@ -79,7 +79,7 @@
     margin-top: 100px;
 
     img {
-      user-select: none;
+      
       margin-bottom: 0;
     }
     
@@ -100,7 +100,7 @@
       }
 
       h2 {
-        user-select: none;
+        
         font-size: 50px;
         font-weight: 700;
         color: $text;
@@ -116,7 +116,7 @@
 
       h3 {
         color: $text;
-        user-select: none;
+        
         font-size: 26px;
         font-weight: 500;
         margin-left: 17vw;
@@ -201,7 +201,7 @@
             z-index: 1;
 
             img {
-              user-select: none;
+              
               border-radius: 10px;
               width: 60px;
               height: 60px;
@@ -214,7 +214,7 @@
                 position: relative;
 
                 h4 {
-                  user-select: none;
+                  
                   color: $text;
                   font-weight: 500;
                   font-size: 18px;
@@ -234,7 +234,7 @@
               }
 
               p {
-                user-select: none;
+                
                 color: $textSecondary;
                 font-weight: 400;
                 font-size: 14px;
@@ -257,7 +257,7 @@
       }
 
       h2 {
-        user-select: none;
+        
         font-size: 50px;
         font-weight: 700;
         color: $text;
@@ -281,7 +281,7 @@
 
       h3 {
         color: $text;
-        user-select: none;
+        
         font-size: 26px;
         font-weight: 500;
         margin-top: 5px;
@@ -346,7 +346,7 @@
 
         h4 {
           color: $text;
-          user-select: none;
+          
           font-weight: 700;
           font-size: 35px;
 
@@ -357,7 +357,7 @@
 
         p {
           color: $textSecondary;
-          user-select: none;
+          
           font-weight: 400;
           font-size: 18px;
 
@@ -396,7 +396,7 @@
     align-items: center;
 
     h2 {
-      user-select: none;
+      
       font-size: 50px;
       font-weight: 700;
       color: $text;
@@ -427,7 +427,7 @@
 
     h3 {
       color: $textSecondary;
-      user-select: none;
+      
       font-size: 20px;
       font-weight: 400;
       margin-top: 0px;
@@ -488,7 +488,7 @@
   flex-shrink: 0;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
-  user-select: none;
+  
   transition: none 0.1s ease;
   transition-property: background-color, border-color;
   background-color: #2f3136;
@@ -534,7 +534,7 @@
   padding: 5px 16px;
   transition: all 0.2s ease;
   cursor: pointer;
-  user-select: none;
+  
   margin-bottom: 6px;
 
   span {
@@ -545,7 +545,7 @@
   svg {
     width: 19px;
     height: 19px;
-    user-select: none;
+    
     margin-right: 6px;
   }
 

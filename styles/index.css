@@ -189,7 +189,7 @@ a {
   transition: all 0.3s ease;
   cursor: pointer;
   background-color: #1B1B1B;
-  user-select: none;
+  
 }
 .wy-button.primary {
   background-color: #0598F6;
@@ -252,11 +252,11 @@ nav .nav-left .logo {
   align-items: center;
 }
 nav .nav-left .logo img {
-  user-select: none;
+  
 }
 nav .nav-left .logo p {
   color: #fff;
-  user-select: none;
+  
   font-size: 22px;
   font-weight: 600;
   margin-left: 15px;
@@ -280,7 +280,7 @@ nav .nav-left .nav-items a {
   margin-right: 28px;
   cursor: pointer;
   transition: all 0.3s ease;
-  user-select: none;
+  
   font-size: 18px;
   font-weight: 400;
   color: #C0C0C0;
@@ -324,14 +324,14 @@ nav .nav-right .nav-user svg path {
   transition: all 0.3s ease;
 }
 nav .nav-right .nav-user img {
-  user-select: none;
+  
   width: 45px;
   height: 45px;
   border-radius: 50%;
   margin-left: 14px;
 }
 nav .nav-right .nav-user p {
-  user-select: none;
+  
   color: #C0C0C0;
   font-size: 16px;
   font-weight: 400;
@@ -366,7 +366,7 @@ nav .nav-right .menu-icon span.menu-line {
   height: 3px;
   border-radius: 20px;
   background-color: #fff;
-  user-select: none;
+  
 }
 nav .nav-right .menu-icon span.menu-line.line-1 {
   transform-origin: 0 0;
@@ -505,18 +505,18 @@ footer .footer-head .footer-head-column .logo {
   align-items: center;
 }
 footer .footer-head .footer-head-column .logo img {
-  user-select: none;
+  
 }
 footer .footer-head .footer-head-column .logo p {
   color: #fff;
-  user-select: none;
+  
   font-size: 22px;
   font-weight: 600;
   margin-left: 15px;
 }
 footer .footer-head .footer-head-column .logo-subtext {
   font-size: 16px;
-  user-select: none;
+  
   font-weight: 400;
   color: #C0C0C0;
   margin-top: 18px;
@@ -531,7 +531,7 @@ footer .footer-head .footer-head-column .logo-subtext {
 }
 footer .footer-head .footer-head-column h4 {
   text-transform: uppercase;
-  user-select: none;
+  
   font-size: 18px;
   color: #fff;
   font-weight: 500;
@@ -548,7 +548,7 @@ footer .footer-head .footer-head-column a {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 3px;
-  user-select: none;
+  
 }
 footer .footer-head .footer-head-column a:hover {
   color: #fff;
@@ -560,7 +560,7 @@ footer .footer-copyright hr {
 footer .footer-copyright p {
   margin-top: 30px;
   text-align: center;
-  user-select: none;
+  
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -569,7 +569,7 @@ footer .footer-copyright p a {
   cursor: pointer;
   color: #0598F6;
   transition: all 0.3s ease;
-  user-select: none;
+  
 }
 footer .footer-copyright p a:hover {
   color: #037AC7;
@@ -613,7 +613,7 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.landing .left h1 {
-  user-select: none;
+  
   font-size: 64px;
   width: 500px;
   font-weight: 700;
@@ -638,7 +638,7 @@ footer .footer-copyright p a:active {
 .homepage-main section.landing .left p {
   font-weight: 400;
   font-size: 20px;
-  user-select: none;
+  
   color: #C0C0C0;
   margin-top: 10px;
   margin-bottom: 24px;
@@ -653,7 +653,7 @@ footer .footer-copyright p a:active {
   margin-top: 100px;
 }
 .homepage-main section.servers img {
-  user-select: none;
+  
   margin-bottom: 0;
 }
 .homepage-main section.servers .servers-wrapper {
@@ -671,7 +671,7 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.servers .servers-wrapper h2 {
-  user-select: none;
+  
   font-size: 50px;
   font-weight: 700;
   color: #fff;
@@ -687,7 +687,7 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.servers .servers-wrapper h3 {
   color: #fff;
-  user-select: none;
+  
   font-size: 26px;
   font-weight: 500;
   margin-left: 17vw;
@@ -768,7 +768,7 @@ footer .footer-copyright p a:active {
   z-index: 1;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item img {
-  user-select: none;
+  
   border-radius: 10px;
   width: 60px;
   height: 60px;
@@ -779,7 +779,7 @@ footer .footer-copyright p a:active {
   position: relative;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right .servers-slider-item-right-head h4 {
-  user-select: none;
+  
   color: #fff;
   font-weight: 500;
   font-size: 18px;
@@ -796,7 +796,7 @@ footer .footer-copyright p a:active {
   margin-left: 6px;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item .servers-slider-item-right p {
-  user-select: none;
+  
   color: #C0C0C0;
   font-weight: 400;
   font-size: 14px;
@@ -812,7 +812,7 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.features .features-head h2 {
-  user-select: none;
+  
   font-size: 50px;
   font-weight: 700;
   color: #fff;
@@ -837,7 +837,7 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.features .features-head h3 {
   color: #fff;
-  user-select: none;
+  
   font-size: 26px;
   font-weight: 500;
   margin-top: 5px;
@@ -900,7 +900,7 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.features .feature .feature-info h4 {
   color: #fff;
-  user-select: none;
+  
   font-weight: 700;
   font-size: 35px;
 }
@@ -911,7 +911,7 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.features .feature .feature-info p {
   color: #C0C0C0;
-  user-select: none;
+  
   font-weight: 400;
   font-size: 18px;
 }
@@ -947,7 +947,7 @@ footer .footer-copyright p a:active {
   align-items: center;
 }
 .homepage-main section.invite h2 {
-  user-select: none;
+  
   font-size: 50px;
   font-weight: 700;
   color: #fff;
@@ -974,7 +974,7 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.invite h3 {
   color: #C0C0C0;
-  user-select: none;
+  
   font-size: 20px;
   font-weight: 400;
   margin-top: 0px;
@@ -1031,7 +1031,7 @@ footer .footer-copyright p a:active {
   flex-shrink: 0;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
-  user-select: none;
+  
   transition: none 0.1s ease;
   transition-property: background-color, border-color;
   background-color: #2f3136;
@@ -1073,7 +1073,7 @@ footer .footer-copyright p a:active {
   padding: 5px 16px;
   transition: all 0.2s ease;
   cursor: pointer;
-  user-select: none;
+  
   margin-bottom: 6px;
 }
 .discord-button span {
@@ -1083,7 +1083,7 @@ footer .footer-copyright p a:active {
 .discord-button svg {
   width: 19px;
   height: 19px;
-  user-select: none;
+  
   margin-right: 6px;
 }
 .discord-button:hover {
@@ -1105,7 +1105,7 @@ footer .footer-copyright p a:active {
 .imprint-main h1 {
   font-weight: 800;
   font-size: 60px;
-  user-select: none;
+  
   color: #F00505;
   margin: 160px 17vw 30px 17vw;
   text-shadow: 2px 2px 20px #F00505;
@@ -1127,7 +1127,7 @@ footer .footer-copyright p a:active {
   animation: flickerAnimation 5s linear 1s infinite;
 }
 .imprint-main br {
-  user-select: none;
+  
 }
 .imprint-main p {
   margin: 0 17vw;
@@ -1197,7 +1197,7 @@ footer .footer-copyright p a:active {
   color: #F00505;
   font-weight: 800;
   font-size: 60px;
-  user-select: none;
+  
   margin: 160px 17vw 0 17vw;
   text-shadow: 2px 2px 20px #F00505;
   animation: flickerAnimation 7s linear 2s infinite;
@@ -1222,7 +1222,7 @@ footer .footer-copyright p a:active {
   font-weight: 500;
   color: #fff;
   margin: -5px 17vw 30px 17vw;
-  user-select: none;
+  
 }
 @media screen and (max-width: 1300px) {
   .commands-main h3 {
@@ -1272,13 +1272,13 @@ footer .footer-copyright p a:active {
   top: 33px;
 }
 .commands-main .commands .command .command-head .command-head-left h4 {
-  user-select: none;
+  
   font-size: 18px;
   font-weight: 500;
   color: #fff;
 }
 .commands-main .commands .command .command-head .command-head-left p {
-  user-select: none;
+  
   font-size: 16px;
   font-weight: 400;
   color: #C0C0C0;
@@ -1298,13 +1298,13 @@ footer .footer-copyright p a:active {
   transition: all 0.25s ease;
 }
 .commands-main .commands .command .command-expand .command-expand-group h5 {
-  user-select: none;
+  
   font-weight: 400;
   font-size: 16px;
   color: #fff;
 }
 .commands-main .commands .command .command-expand .command-expand-group h6 {
-  user-select: none;
+  
   font-weight: 400;
   font-size: 12px;
   color: #C0C0C0;
