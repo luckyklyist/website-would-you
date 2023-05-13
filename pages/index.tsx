@@ -85,7 +85,7 @@ export default function Home({ sessionKey }: HomeProps) {
     sky: {
       author: "ForGetFulSkyBro",
       avatar:
-        "https://cdn.discordapp.com/avatars/268843733317976066/a_8bd7baad840e8d0b54e7bb90bc91fab2.webp?size=80",
+        "https://cdn.discordapp.com/avatars/268843733317976066/7dbdf9bde5553090ad243b5a94243b2d.webp?size=80",
       roleColor: "#f1c40f",
       bot: false,
       verified: false,
@@ -93,7 +93,7 @@ export default function Home({ sessionKey }: HomeProps) {
     dominik: {
       author: "Dominik",
       avatar:
-        "https://cdn.discordapp.com/avatars/347077478726238228/3b77f755fa8e66fd75d1e2d3fb8b1611.webp?size=60",
+        "https://cdn.discordapp.com/avatars/347077478726238228/390c5d8876a17608395d7e4be72149dd.webp?size=80",
       roleColor: "#6590FF",
       bot: false,
       verified: false,
