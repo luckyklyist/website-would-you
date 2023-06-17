@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
+import axios from "axios";
 import servers from "../data/servers.json";
 import {
   DiscordMessages,
@@ -19,20 +20,31 @@ import {
   DiscordActionRow,
   DiscordButton,
 } from "@skyra/discord-components-react";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { withIronSessionSsr } from "iron-session/next";
+import dynamic from "next/dynamic";
 
 function DiscordInteractiveReaction(props) {
   const [reacted, setReacted] = useState(false);
   const [count, setCount] = useState(props.count);
-  return <DiscordReaction emoji={props.emoji} name={props.name} onClick={() => {
-    if (!reacted) setCount(count + 1);
-    else setCount(count - 1);
-    setReacted(!reacted);
-  }} reacted={reacted} count={count}>{props.children}</DiscordReaction>
+  return (
+    <DiscordReaction
+      emoji={props.emoji}
+      name={props.name}
+      onClick={() => {
+        if (!reacted) setCount(count + 1);
+        else setCount(count - 1);
+        setReacted(!reacted);
+      }}
+      reacted={reacted}
+      count={count}
+    >
+      {props.children}
+    </DiscordReaction>
+  );
 }
 
 export const getServerSideProps = withIronSessionSsr(
@@ -68,10 +80,11 @@ interface HomeProps {
   sessionKey: string;
 }
 
-export default function Home({ sessionKey }: HomeProps) {
+const Home = ({ sessionKey }: HomeProps) => {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
+  const [serverCount, setServerCount] = useState(4500);
 
   const profiles = {
     wouldyou: {
@@ -184,6 +197,16 @@ export default function Home({ sessionKey }: HomeProps) {
   ];
 
   useEffect(() => {
+    axios.get("https://japi.rest/discord/v1/application/981649513427111957/") 
+      .then((response) => {
+        if(response.data.data.bot.approximate_guild_count === undefined) return setServerCount(0)
+        setServerCount(response.data.data.bot.approximate_guild_count);
+        console.log(response)
+      })
+      .catch((error) => {});
+  }, []);
+
+  useEffect(() => {
     setCurrentQuestion(getRandomQuestion());
   }, []);
 
@@ -226,11 +249,20 @@ export default function Home({ sessionKey }: HomeProps) {
               Elevate your server&apos;s engagement with Would You, featuring
               user voting, daily messages, and customizability.
             </p>
-              <Link href="/invite" target={"popup"} onClick={() => {
-                window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
+            <Link
+              href="/invite"
+              target={"popup"}
+              onClick={() => {
+                window.open(
+                  "/invite",
+                  "_blank",
+                  "width=500,height=700,screenX=160,screenY=100"
+                );
                 return false;
-              }
-              }><button className="wy-button primary">Invite</button></Link>
+              }}
+            >
+              <button className="wy-button primary">Invite</button>
+            </Link>
           </motion.div>
           <motion.div
             className="right"
@@ -248,7 +280,7 @@ export default function Home({ sessionKey }: HomeProps) {
                   roleColor={profiles.wouldyou.roleColor}
                   bot={profiles.wouldyou.bot}
                   verified={profiles.wouldyou.verified}
-                  edited={replayedRounds>0}
+                  edited={replayedRounds > 0}
                 >
                   <DiscordCommand
                     slot="reply"
@@ -276,7 +308,11 @@ export default function Home({ sessionKey }: HomeProps) {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
+                      name="✅"
+                      emoji="/check.svg"
+                      count={4}
+                    />
                     <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
@@ -342,11 +378,16 @@ export default function Home({ sessionKey }: HomeProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: "easeInOut" }}
         >
-          <img src="/LandingWave.svg" className="wave" alt="Wave" draggable={false} />
+          <img
+            src="/LandingWave.svg"
+            className="wave"
+            alt="Wave"
+            draggable={false}
+          />
           <div className="servers-wrapper">
             <h2>Top Servers Using Would You</h2>
             <h3>
-              Trusted by <span>2800</span> of your favorite communities on
+              Trusted by <span>{serverCount}</span> of your favorite communities on
               discord
             </h3>
 
@@ -542,7 +583,11 @@ export default function Home({ sessionKey }: HomeProps) {
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                   <DiscordReactions slot="reactions">
-                    <DiscordInteractiveReaction name="✅" emoji="/check.svg" count={4} />
+                    <DiscordInteractiveReaction
+                      name="✅"
+                      emoji="/check.svg"
+                      count={4}
+                    />
                     <DiscordInteractiveReaction
                       name="❌"
                       emoji="/x.svg"
@@ -699,7 +744,11 @@ export default function Home({ sessionKey }: HomeProps) {
                       emoji="1.svg"
                       count={3}
                     />
-                    <DiscordInteractiveReaction name="2️⃣" emoji="2.svg" count={2} />
+                    <DiscordInteractiveReaction
+                      name="2️⃣"
+                      emoji="2.svg"
+                      count={2}
+                    />
                   </DiscordReactions>
                 </DiscordMessage>
               </DiscordMessages>
@@ -738,20 +787,27 @@ export default function Home({ sessionKey }: HomeProps) {
           >
             Invite Me To Your Server Now.
           </motion.h3>
-          <Link href="/invite" target={"popup"} onClick={() => {
-                window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
-                return false;
-              }
-              }>
-          <motion.button
-            className="wy-button primary"
-            initial={{ opacity: 0, transform: "translateY(-20px)" }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: "easeInOut" }}
+          <Link
+            href="/invite"
+            target={"popup"}
+            onClick={() => {
+              window.open(
+                "/invite",
+                "_blank",
+                "width=500,height=700,screenX=160,screenY=100"
+              );
+              return false;
+            }}
           >
-            Invite
-          </motion.button>
+            <motion.button
+              className="wy-button primary"
+              initial={{ opacity: 0, transform: "translateY(-20px)" }}
+              whileInView={{ opacity: 1, transform: "translateY(0)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
+            >
+              Invite
+            </motion.button>
           </Link>
         </section>
       </main>
@@ -760,3 +816,4 @@ export default function Home({ sessionKey }: HomeProps) {
     </>
   );
 }
+export default dynamic(() => Promise.resolve(Home), { ssr: false });
