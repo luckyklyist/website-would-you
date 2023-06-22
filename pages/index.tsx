@@ -84,7 +84,7 @@ const Home = ({ sessionKey }: HomeProps) => {
   const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
   const [replayedRounds, setReplayedRounds] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
-  const [serverCount, setServerCount] = useState(4500);
+  const [serverCount, setServerCount] = useState(4580);
 
   const profiles = {
     wouldyou: {
@@ -385,10 +385,9 @@ const Home = ({ sessionKey }: HomeProps) => {
             draggable={false}
           />
           <div className="servers-wrapper">
-            <h2>Top Servers Using Would You</h2>
+            <h2>Used by <span>{serverCount}</span> communities</h2>
             <h3>
-              Trusted by <span>{serverCount}</span> of your favorite communities on
-              discord
+              keeping  <span>2,000,000+</span> users entertained
             </h3>
 
             <div className="server-slider-up"></div>
