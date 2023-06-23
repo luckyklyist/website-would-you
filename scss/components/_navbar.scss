@@ -2,46 +2,40 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100vw - 17vw - 17vw);
-  height: 80px;
+  width: 100vw;
+  height: 120px;
   background: rgba(23, 23, 23, 0.9);
   backdrop-filter: blur(12.5px);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
-  border-radius: 15px;
-  border: 1px solid #232323;
-  margin: 30px 17vw;
-  transition: all 0.3s ease-in-out;
-
-  @media screen and (max-width: 1300px) {
-    margin: 30px 50px;
-    width: calc(100vw - 100px);
-  }
-
-  @media screen and (max-width: 450px) {
-    margin: 20px 30px;
-    width: calc(100vw - 60px);
-  }
 
   .nav-left {
     display: flex;
     align-items: center;
+    margin-left: 17vw;
     z-index: 1000;
-    margin-left: 30px;
+
+    @media screen and (max-width: 1300px) {
+      margin-left: 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin-left: 30px;
+    }
 
     .logo {
       display: flex;
       align-items: center;
 
       img {
-        
+        user-select: none;
       }
 
       p {
         color: #fff;
-        
+        user-select: none;
         font-size: 22px;
         font-weight: 600;
         margin-left: 15px;
@@ -57,7 +51,7 @@ nav {
         margin-left: 50px;
       }
 
-      @media screen and (max-width: 920px) {
+      @media screen and (max-width: 830px) {
         display: none;
       }
 
@@ -65,7 +59,7 @@ nav {
         margin-right: 28px;
         cursor: pointer;
         transition: all 0.3s ease;
-        
+        user-select: none;
         font-size: 18px;
         font-weight: 400;
         color: $textSecondary;
@@ -78,10 +72,14 @@ nav {
   }
 
   .nav-right {
-    margin-right: 30px;
+    margin-right: 17vw;
     display: flex;
     align-items: center;
     z-index: 1000;
+
+    @media screen and (max-width: 1300px) {
+      margin-right: 50px;
+    }
 
     @media screen and (max-width: 480px) {
       .wy-button {
@@ -93,58 +91,6 @@ nav {
       margin-left: 30px;
     }
 
-    .nav-user {
-      display: flex;
-      align-items: center;
-      transition: all 0.25s ease-in-out;
-      border-radius: 10px;
-      padding: 8px 12px;
-      background-color: transparent;
-      cursor: pointer;
-
-      svg {
-        width: 22px;
-        height: 22px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
-
-        path {
-          fill: $textSecondary;
-          transition: all 0.3s ease;
-        }
-      }
-
-      img {
-        
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin-left: 14px;
-      }
-
-      p {
-        
-        color: $textSecondary;
-        font-size: 16px;
-        font-weight: 400;
-        transition: all 0.3s ease;
-      }
-
-      &:hover {
-        background-color: #131313;
-
-        p {
-          color: $text;
-        }
-
-        svg {
-          path {
-            fill: $text;
-          }
-        }
-      }
-    }
-
     .menu-icon {
       width: 32px;
       height: 24px;
@@ -152,7 +98,7 @@ nav {
       display: none;
       position: relative;
 
-      @media screen and (max-width: 920px) {
+      @media screen and (max-width: 830px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -164,7 +110,7 @@ nav {
         height: 3px;
         border-radius: 20px;
         background-color: $text;
-        
+        user-select: none;
       }
 
       span.menu-line.line-1 {
@@ -182,22 +128,8 @@ nav {
     width: 100vw;
     position: absolute;
     left: 0;
-    top: 78px;
+    top: 120px;
     z-index: 1000;
-    transition: all 0.275s ease-in-out;
-    opacity: 0;
-  }
-
-  &.active {
-    margin: 10px 17vw;
-
-    @media screen and (max-width: 1300px) {
-      margin: 10px 50px;
-    }
-
-    @media screen and (max-width: 450px) {
-      margin: 10px 30px;
-    }
   }
 }
 

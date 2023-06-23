@@ -24,17 +24,16 @@ const Footer = () => {
             <h4>Legal</h4>
             <Link href="/imprint">Imprint</Link>
             <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
           </div>
           <div className="footer-head-column">
             <h4>Links</h4>
             <Link href="/discord" target={"_blank"}>
               Support Server
             </Link>
-            <Link href="/invite" target={"popup"} onClick={() => {
-              window.open("/invite", '_blank', 'width=500,height=700,screenX=160,screenY=100');
-              return false;
-            }
-            }>Invite</Link>
+            <Link href="/invite" target={"_blank"}>
+              Invite
+            </Link>
             <Link href="/vote" target={"_blank"}>
               Vote
             </Link>

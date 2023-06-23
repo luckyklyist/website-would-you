@@ -2,7 +2,7 @@
   h1 {
     font-weight: 800;
     font-size: 60px;
-    
+    user-select: none;
     color: $secondary;
     margin: 160px 17vw 30px 17vw;
     text-shadow: 2px 2px 20px $secondary;
@@ -24,7 +24,7 @@
   }
 
   br {
-    
+    user-select: none;
   }
 
   p {
