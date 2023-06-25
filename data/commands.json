@@ -1,18 +1,6 @@
 {
   "commands": [
     {
-      "name": "custom",
-      "description": "Send a custom would you message",
-      "usage": "/custom <subcommand> 'message'",
-      "subcommands": ["wouldyou", "rather", "wwyd"]
-    },
-    {
-      "name": "dailymsg",
-      "description": "Configure Daily Would You messages",
-      "usage": "/dailymsg <subcommand>",
-      "subcommands": ["channel", "timezone", "message", "role", "types"]
-    },
-    {
       "name": "debug",
       "description": "Debug the would you bot",
       "usage": "/debug <subcommand>",
@@ -25,7 +13,7 @@
     },
     {
       "name": "help",
-      "description": "The help command",
+      "description": "Lists all commands",
       "usage": "/help"
     },
     {
@@ -40,21 +28,26 @@
       "subcommands": ["spanish", "german", "english"]
     },
     {
+      "name": "neverhaveiever",
+      "description": "Get a never have I ever message",
+      "usage": "/neverhaveiever>"
+    },
+    {
       "name": "ping",
       "description": "Displays the bot's ping",
       "usage": "/ping"
-    },
-    {
-      "name": "rather",
-      "description": "Get a would you rather question",
-      "usage": "/rather <category>",
-      "subcommands": ["useful", "useless"]
     },
     {
       "name": "replay",
       "description": "Configure the replay system",
       "usage": "/replay <subcommand>",
       "subcommands": ["cooldown", "toggle"]
+    },
+    {
+      "name": "settings",
+      "description": "Change settings for Daily Messages and Welcomes",
+      "usage": "/settings <category>",
+      "subcommands": ["General Settings", "Daily Messages", "Welcomes"]
     },
     {
       "name": "support",
@@ -67,14 +60,8 @@
       "usage": "/vote"
     },
     {
-      "name": "welcome",
-      "description": "Change settings for the welcome system",
-      "usage": "/welcome <subcommand>",
-      "subcommands": ["add", "remove"]
-    },
-    {
-      "name": "wouldyou",
-      "description": "Get a would you question",
+      "name": "wouldyourather",
+      "description": "Get a would you rather question",
       "usage": "/wouldyou <category>",
       "subcommands": ["useful", "useless"]
     },
@@ -85,15 +72,9 @@
     },
     {
       "name": "wycustom",
-      "description": "Ajust custom WouldYou messages.",
+      "description": "Ajust custom questions",
       "usage": "/wycustom <subcommand>",
       "subcommands": ["add", "export", "import", "remove", "removeall", "view"]
-    },
-    {
-      "name": "wytype",
-      "description": "Changes the type of messages that will be used",
-      "usage": "/wytype",
-      "subcommands": ["custom", "mixed", "regular"]
     }
   ]
 }
