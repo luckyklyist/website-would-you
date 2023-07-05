@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import axios from "axios"
+import Marquee from "react-fast-marquee";
 import servers from "../data/servers.json";
 import {
   DiscordMessages,
@@ -25,7 +26,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-function DiscordInteractiveReaction(props) {
+function DiscordInteractiveReaction(props: any) {
   const [reacted, setReacted] = useState(false);
   const [count, setCount] = useState(props.count);
   return <DiscordReaction emoji={props.emoji} name={props.name} onClick={() => {
@@ -249,13 +250,9 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <motion.section
+        <section
           className="servers"
-          initial={{ opacity: 0, transform: "translateY(25px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: "easeInOut" }}
-        >
+          >
           <img src="/LandingWave.svg" alt="Wave" draggable={false} />
           <div className="servers-wrapper">
             <h2>Used by <span>{serverCount}</span> communities</h2>
@@ -268,11 +265,9 @@ export default function Home() {
               <div className="servers-slider-container-shade left"></div>
               <div className="servers-slider-container-shade right"></div>
 
-              <motion.div
+              <Marquee
                 className="servers-slider-container"
-                initial={{ transform: "translateX(0)" }}
-                animate={{ transform: "translateX(-7000px)" }}
-                transition={{ duration: 80, repeat: Infinity }}
+                play={true}
               >
                 {servers.map((s: any) => (
                   <div className="servers-slider-item" key={s.name}>
@@ -329,11 +324,11 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </motion.div>
+              </Marquee>
             </div>
             <div className="server-slider-down"></div>
           </div>
-        </motion.section>
+        </section>
 
         <section className="features">
           <motion.div
