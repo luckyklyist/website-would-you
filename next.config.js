@@ -1,23 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
   },
   async redirects() {
     return [
       {
-        source: "/discord",
+        source: '/discord',
         destination: process.env.NEXT_PUBLIC_DISCORD,
         permanent: true,
       },
       {
-        source: "/invite",
+        source: '/invite',
         destination: process.env.NEXT_PUBLIC_INVITE,
         permanent: true,
       },
       {
-        source: "/vote",
+        source: '/vote',
         destination: process.env.NEXT_PUBLIC_VOTE,
         permanent: true,
       },
