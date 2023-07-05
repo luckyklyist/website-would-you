@@ -171,13 +171,11 @@
           }
 
           &.left {
-            box-shadow: 2px 0 40px rgba(0, 0, 0, 0.7);
             left: 0;
           }
 
           &.right {
             left: calc(100vw - (17vw - 22px));
-            box-shadow: -2px 0 40px rgba(0, 0, 0, 0.7);
 
             @media screen and (max-width: 1300px) {
               left: calc(100vw - (50px - 22px));

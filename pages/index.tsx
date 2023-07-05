@@ -25,6 +25,7 @@ import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { randomBytes } from "crypto";
 
 function DiscordInteractiveReaction(props: any) {
   const [reacted, setReacted] = useState(false);
@@ -268,8 +269,10 @@ export default function Home() {
               <Marquee
                 className="servers-slider-container"
                 play={true}
+                autoFill={true}
+                speed={100}
               >
-                {servers.map((s: any) => (
+                {servers[0].map((s: any) => (
                   <div className="servers-slider-item" key={s.name}>
                     <img
                       src={`/logos/${s.avatar}`}
