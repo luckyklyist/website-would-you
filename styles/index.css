@@ -691,6 +691,7 @@ footer .footer-copyright p a:active {
   align-items: center;
   overflow: hidden;
   width: max-content;
+  max-width: 100%;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-wrapper .servers-slider-container .servers-slider-item {
   border-radius: 10px;
