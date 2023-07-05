@@ -281,9 +281,6 @@ const Home = () => {
 
             <div className="server-slider-up"></div>
             <div className="server-slider-wrapper">
-              <div className="servers-slider-container-shade left"></div>
-              <div className="servers-slider-container-shade right"></div>
-
               <Marquee
                 className="servers-slider-container"
                 play={true}
@@ -355,8 +352,6 @@ const Home = () => {
                   marginTop: '20px',
                 }}
               >
-                <div className="servers-slider-container-shade left"></div>
-                <div className="servers-slider-container-shade right"></div>
                 <Marquee
                   className="servers-slider-container"
                   play={true}
