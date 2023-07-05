@@ -349,7 +349,12 @@ const Home = () => {
                   </div>
                 ))}
               </Marquee>
-              <div className="server-slider-wrapper">
+              <div
+                className="server-slider-wrapper"
+                style={{
+                  marginTop: '20px',
+                }}
+              >
                 <div className="servers-slider-container-shade left"></div>
                 <div className="servers-slider-container-shade right"></div>
                 <Marquee
