@@ -109,9 +109,9 @@
         }
 
         span {
-          color: $primary;
+          color: $secondary;
           font-weight: 800;
-          text-shadow: 2px 2px 20px $primary;
+          text-shadow: 2px 2px 20px $secondary;
           animation: flickerAnimation 6s linear 2.5s infinite;
         }
       }

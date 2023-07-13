@@ -192,23 +192,23 @@ a {
   user-select: none;
 }
 .wy-button.primary {
-  background-color: #0598F6;
+  background-color: #8c48d9;
 }
 .wy-button.primary:hover {
-  background-color: #037AC7;
+  background-color: #9265d8;
 }
 .wy-button.primary:active {
-  background-color: #016CB0;
+  background-color: #7f23dd;
   color: #E4E4E4;
 }
 .wy-button.secondary {
-  background-color: #F00505;
+  background-color: #dec65d;
 }
 .wy-button.secondary:hover {
-  background-color: #B60505;
+  background-color: #dcca77;
 }
 .wy-button.secondary:active {
-  background-color: #9A0404;
+  background-color: #cdac2d;
   color: #E4E4E4;
 }
 
@@ -501,14 +501,14 @@ footer .footer-copyright p {
 }
 footer .footer-copyright p a {
   cursor: pointer;
-  color: #0598F6;
+  color: #8c48d9;
   transition: all 0.3s ease;
 }
 footer .footer-copyright p a:hover {
-  color: #037AC7;
+  color: #9265d8;
 }
 footer .footer-copyright p a:active {
-  color: #016CB0;
+  color: #7f23dd;
 }
 
 .homepage-main {
@@ -559,13 +559,13 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.landing .left h1 span.red {
-  color: #F00505;
-  text-shadow: 2px 2px 20px #F00505;
+  color: #dec65d;
+  text-shadow: 2px 2px 20px #dec65d;
   animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.landing .left h1 span.blue {
-  color: #0598F6;
-  text-shadow: 2px 2px 20px #0598F6;
+  color: #8c48d9;
+  text-shadow: 2px 2px 20px #8c48d9;
   animation: flickerAnimation 7s linear 7s infinite;
 }
 .homepage-main section.landing .left p {
@@ -618,9 +618,9 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.servers .servers-wrapper h2 span {
-  color: #0598F6;
+  color: #dec65d;
   font-weight: 800;
-  text-shadow: 2px 2px 20px #0598F6;
+  text-shadow: 2px 2px 20px #dec65d;
   animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.servers .servers-wrapper h3 {
@@ -638,9 +638,9 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.servers .servers-wrapper h3 span {
-  color: #0598F6;
+  color: #8c48d9;
   font-weight: 600;
-  text-shadow: 2px 2px 20px #0598F6;
+  text-shadow: 2px 2px 20px #8c48d9;
   animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-up {
@@ -733,7 +733,7 @@ footer .footer-copyright p a:active {
   margin-left: 17vw;
   margin-right: 17vw;
   text-align: center;
-  background: linear-gradient(92.91deg, #0598F6 10%, #F00505 90%);
+  background: linear-gradient(92.91deg, #8c48d9 10%, #dec65d 90%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -877,13 +877,13 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.invite h2 span.blue {
-  color: #0598F6;
-  text-shadow: 2px 2px 20px #0598F6;
+  color: #8c48d9;
+  text-shadow: 2px 2px 20px #8c48d9;
   animation: flickerAnimation 6s linear 2.5s infinite;
 }
 .homepage-main section.invite h2 span.red {
-  color: #F00505;
-  text-shadow: 2px 2px 20px #F00505;
+  color: #dec65d;
+  text-shadow: 2px 2px 20px #dec65d;
   animation: flickerAnimation 4s linear 4s infinite;
 }
 .homepage-main section.invite h3 {
@@ -1020,9 +1020,9 @@ footer .footer-copyright p a:active {
   font-weight: 800;
   font-size: 60px;
   user-select: none;
-  color: #F00505;
+  color: #dec65d;
   margin: 160px 17vw 30px 17vw;
-  text-shadow: 2px 2px 20px #F00505;
+  text-shadow: 2px 2px 20px #dec65d;
   animation: flickerAnimation 7s linear 2s infinite;
 }
 @media screen and (max-width: 1300px) {
@@ -1036,8 +1036,8 @@ footer .footer-copyright p a:active {
   }
 }
 .imprint-main h1 span {
-  color: #0598F6;
-  text-shadow: 2px 2px 20px #0598F6;
+  color: #8c48d9;
+  text-shadow: 2px 2px 20px #8c48d9;
   animation: flickerAnimation 5s linear 1s infinite;
 }
 .imprint-main br {
@@ -1079,19 +1079,19 @@ footer .footer-copyright p a:active {
 .imprint-main .link {
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #0598F6;
+  color: #8c48d9;
   text-decoration: underline;
   text-decoration-color: transparent;
 }
 .imprint-main .embedded-link:hover,
 .imprint-main .link:hover {
-  color: #037AC7;
-  text-decoration-color: #037AC7;
+  color: #9265d8;
+  text-decoration-color: #9265d8;
 }
 .imprint-main .embedded-link:active,
 .imprint-main .link:active {
-  color: #016CB0;
-  text-decoration-color: #037AC7;
+  color: #7f23dd;
+  text-decoration-color: #9265d8;
 }
 .imprint-main .link {
   margin: 0 17vw;
@@ -1108,12 +1108,12 @@ footer .footer-copyright p a:active {
 }
 
 .commands-main h1 {
-  color: #F00505;
+  color: #dec65d;
   font-weight: 800;
   font-size: 60px;
   user-select: none;
   margin: 160px 17vw 0 17vw;
-  text-shadow: 2px 2px 20px #F00505;
+  text-shadow: 2px 2px 20px #dec65d;
   animation: flickerAnimation 7s linear 2s infinite;
 }
 @media screen and (max-width: 1300px) {
@@ -1127,8 +1127,8 @@ footer .footer-copyright p a:active {
   }
 }
 .commands-main h1 span {
-  color: #0598F6;
-  text-shadow: 2px 2px 20px #0598F6;
+  color: #8c48d9;
+  text-shadow: 2px 2px 20px #8c48d9;
   animation: flickerAnimation 5s linear 1s infinite;
 }
 .commands-main h3 {

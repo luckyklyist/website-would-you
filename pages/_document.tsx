@@ -14,8 +14,8 @@ export default function Document() {
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
         />
         <meta property="og:image" content="/Logo.png" />
-        <meta name="theme-color" content="#0598F6" />
-        <meta name="msapplication-TileColor" content="#0598F6" />
+        <meta name="theme-color" content="#8c48d9" />
+        <meta name="msapplication-TileColor" content="#8c48d9" />
       </Head>
       <body>
         <Main />

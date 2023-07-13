@@ -83,20 +83,20 @@
   ],
   [
     {
+      "name": "𝙉𝙤𝙫𝙖 𝙀𝙢𝙥𝙞𝙧𝙚",
+      "members": "2k+",
+      "avatar": "novaempire.webp",
+      "partnered": true,
+      "verified": false,
+      "invite": "https://discord.gg/krakenhits"
+    },
+    {
       "name": "Doors Community",
       "members": "46k+",
       "avatar": "doors.webp",
       "partnered": false,
       "verified": false,
       "invite": "https://discord.gg/doors"
-    },
-    {
-      "name": "Krakenhits",
-      "members": "2k+",
-      "avatar": "kraken.webp",
-      "partnered": true,
-      "verified": false,
-      "invite": "https://discord.gg/krakenhits"
     },
     {
       "name": "Hobo Slayer",
@@ -148,7 +148,7 @@
     },
     {
       "name": "Would You Support",
-      "members": "200+",
+      "members": "500+",
       "avatar": "wouldyou.webp",
       "partnered": false,
       "verified": false,

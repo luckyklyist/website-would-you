@@ -81,8 +81,8 @@ const Home = () => {
     wouldyou: {
       author: 'Would You',
       avatar:
-        'https://cdn.discordapp.com/avatars/981649513427111957/af5f8264403034530bba73ba6c2492d9.webp?size=96',
-      roleColor: '#1e88e5',
+        'https://cdn.discordapp.com/attachments/984479492510736434/1129081651717214299/WouldYou5000-_1_.webp',
+      roleColor: '#8c48d9 ',
       bot: true,
       verified: true,
     },
@@ -188,7 +188,7 @@ const Home = () => {
                     roleColor={profiles.dominik.roleColor}
                     command="/wouldyou useful"
                   ></DiscordCommand>
-                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                  <DiscordEmbed slot="embeds" color="#8c48d9">
                     <DiscordEmbedFields slot="fields">
                       <DiscordEmbedField fieldTitle="">
                         <p className="discord-field-title">
@@ -200,7 +200,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="https://cdn.discordapp.com/attachments/984479492510736434/1129081651717214299/WouldYou5000-_1_.webp"
                     >
                       Would You
                     </DiscordEmbedFooter>
@@ -456,7 +456,7 @@ const Home = () => {
                   <DiscordMention type="role" color="#3489c3">
                     QOTD
                   </DiscordMention>
-                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                  <DiscordEmbed slot="embeds" color="#8c48d9 ">
                     <DiscordEmbedFields slot="fields">
                       <DiscordEmbedField fieldTitle="Would you want this power?">
                         You get 3% smarter every time someone calls you stupid.
@@ -465,7 +465,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="https://cdn.discordapp.com/attachments/984479492510736434/1129081651717214299/WouldYou5000-_1_.webp"
                     >
                       {' '}
                       Would You{' '}
@@ -527,7 +527,7 @@ const Home = () => {
                     roleColor={profiles.dominik.roleColor}
                     command="/wouldyou useful"
                   ></DiscordCommand>
-                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                  <DiscordEmbed slot="embeds" color="#8c48d9 ">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
                     <DiscordEmbedFields slot="fields">
                       <DiscordEmbedField fieldTitle="Would you want this power?">
@@ -540,7 +540,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="https://cdn.discordapp.com/attachments/984479492510736434/1129081651717214299/WouldYou5000-_1_.webp"
                     >
                       Would You
                     </DiscordEmbedFooter>
@@ -656,7 +656,7 @@ const Home = () => {
                     avatar={profiles.marc.avatar}
                     roleColor={profiles.marc.roleColor}
                   ></DiscordCommand>
-                  <DiscordEmbed slot="embeds" color="#1e88e5">
+                  <DiscordEmbed slot="embeds" color="#8c48d9 ">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
                     <DiscordEmbedFields slot="fields">
                       <DiscordEmbedField fieldTitle="Would You rather have">
@@ -679,7 +679,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footer-image="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footer-image="https://cdn.discordapp.com/attachments/984479492510736434/1129081651717214299/WouldYou5000-_1_.webp"
                     >
                       Would You
                     </DiscordEmbedFooter>
