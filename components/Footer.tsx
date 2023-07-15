@@ -19,10 +19,11 @@ const Footer = () => {
             <h4>Recommended</h4>
             <Link href="/">Home</Link>
             <Link href="/commands">Commands</Link>
+            <Link href="/reddit">Reddit</Link>
           </div>
           <div className="footer-head-column">
             <h4>Legal</h4>
-            <Link href="/imprint">Imprint</Link>
+            <Link href="/legal">Legal Notice</Link>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
           </div>
@@ -37,7 +38,7 @@ const Footer = () => {
             <Link href="/vote" target={"_blank"}>
               Vote
             </Link>
-          </div>
+           </div>
         </div>
       </div>
       <div className="footer-copyright">

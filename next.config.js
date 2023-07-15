@@ -21,6 +21,16 @@ const nextConfig = {
         destination: process.env.NEXT_PUBLIC_VOTE,
         permanent: true,
       },
+      {
+        source: '/imprint',
+        destination: "/legal",
+        permanent: true,
+      },
+      {
+        source: '/impressum',
+        destination: "/legal-de",
+        permanent: true,
+      },
     ];
   },
 };

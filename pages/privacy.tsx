@@ -12,11 +12,11 @@ export default function Privacy() {
         <link rel='icon' href='/Logo.png' />
       </Head>
       <Navbar />
-      <main className='imprint-main'>
+      <main className='legal-notice-main'>
         <h1>
           Privacy <span>Policy</span>
         </h1>
-        <div className='imprint-content'>
+        <div className='legal-notice-content'>
           <h3>Last updated and effective: April 1, 2023</h3>
           <br />
           <p>

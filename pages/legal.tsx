@@ -3,7 +3,7 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export default function Imprint() {
+export default function legalnotice() {
   return (
     <>
       <Head>
@@ -14,9 +14,11 @@ export default function Imprint() {
 
       <Navbar />
 
-      <main className="imprint-main">
-        <h1>Imprint</h1>
-        <div className="imprint-content">
+      <main className="legal-notice-main">
+        <h1>Legal Notice</h1>
+        <p>For the german version please visit <Link href="/legal-de" className="embedded-link">this page</Link>.</p>
+        <br />
+        <div className="legal-notice-content">
           <p>Information according to § 5 TMG.</p>
           <h3>Contact</h3>
           <p>
@@ -54,9 +56,9 @@ export default function Imprint() {
             https://wouldyoubot.gg/privacy/
           </Link>
 
-          <h3>Validy of this imprint</h3>
+          <h3>Validy of this Legal Notice</h3>
           <p>
-            This imprint is valid for the following websites, social media
+            This legal notice is valid for the following websites, social media
             accounts and other services, as long as they are listed here.
           </p>
           <br />
@@ -66,10 +68,6 @@ export default function Imprint() {
           <br />
           <Link href="https://wouldyoubot.gg/" className="link">
             https://wouldyoubot.gg/
-          </Link>
-          <br />
-          <Link href="https://devdominik.com" className="link">
-            https://devdominik.com
           </Link>
           <br />
           <Link
