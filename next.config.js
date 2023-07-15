@@ -22,6 +22,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/reddit',
+        destination: "https://www.reddit.com/r/WouldYou/",
+        permanent: true,
+      },
+      {
         source: '/imprint',
         destination: "/legal",
         permanent: true,
