@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 
@@ -56,7 +57,7 @@ const Navbar = () => {
       <div className="nav-left">
         <Link href="/">
           <div className="logo">
-            <img src="/Logo.png" alt="Would You Logo" draggable={false} />
+            <Image src="/Logo.png" alt="Would You Logo" draggable={false} width="50" height="50" />
             <p>Would You</p>
           </div>
         </Link>

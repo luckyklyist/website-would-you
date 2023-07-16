@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="footer-head">
         <div className="footer-head-column extend">
           <div className="logo">
-            <img src="/Logo.png" alt="Logo" draggable={false} />
+            <Image src="/Logo.png" alt="Logo" draggable={false} width="50" height="50"/>
             <p>WouldYou</p>
           </div>
           <p className="logo-subtext">
@@ -19,7 +20,7 @@ const Footer = () => {
             <h4>Recommended</h4>
             <Link href="/">Home</Link>
             <Link href="/commands">Commands</Link>
-            <Link href="/reddit">Reddit</Link>
+            <Link href="/reddit" target="_blank">Reddit</Link>
           </div>
           <div className="footer-head-column">
             <h4>Legal</h4>

@@ -585,7 +585,8 @@ footer .footer-copyright p a:active {
 .homepage-main section.servers {
   margin-top: 100px;
 }
-.homepage-main section.servers img {
+.homepage-main section.servers Image {
+  width: 100vh;
   user-select: none;
   margin-bottom: 0;
 }

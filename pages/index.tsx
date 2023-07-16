@@ -270,7 +270,7 @@ const Home = () => {
         </section>
 
         <section className="servers">
-          <img src="/LandingWave.svg" alt="Wave" draggable={false} />
+          <Image src="/LandingWave.svg" alt="Wave" draggable={false} width="10000" height="10000" />
           <div className="servers-wrapper">
             <h2>
               Used by <span>{serverCount}</span> communities
@@ -355,7 +355,7 @@ const Home = () => {
                 <Marquee
                   className="servers-slider-container"
                   play={true}
-                  speed={100}
+                  speed={80}
                   gradient={true}
                   gradientColor={[16, 16, 16]}
                   direction="right"
