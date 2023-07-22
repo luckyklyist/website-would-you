@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <script defer data-domain="wouldyoubot.gg" src="https://stats.wouldyoubot.gg/js/script.js"></script>
         <meta
           name="description"
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"

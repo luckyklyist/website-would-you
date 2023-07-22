@@ -8,7 +8,22 @@ const nextConfig = {
     return [
       {
         source: '/discord',
-        destination: "/support",
+        destination: process.env.NEXT_PUBLIC_DISCORD,
+        permanent: true,
+      },
+      {
+        source: '/invite',
+        destination: process.env.NEXT_PUBLIC_INVITE,
+        permanent: true,
+      },
+      {
+        source: '/vote',
+        destination: process.env.NEXT_PUBLIC_VOTE,
+        permanent: true,
+      },
+      {
+        source: '/reddit',
+        destination: "https://www.reddit.com/r/WouldYou/",
         permanent: true,
       },
       {
