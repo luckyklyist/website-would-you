@@ -284,7 +284,7 @@ const Home = () => {
               <Marquee
                 className="servers-slider-container"
                 play={true}
-                speed={100}
+                speed={65}
                 gradient={true}
                 gradientColor={[16, 16, 16]}
               >
@@ -355,7 +355,7 @@ const Home = () => {
                 <Marquee
                   className="servers-slider-container"
                   play={true}
-                  speed={80}
+                  speed={50}
                   gradient={true}
                   gradientColor={[16, 16, 16]}
                   direction="right"
