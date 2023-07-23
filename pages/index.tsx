@@ -30,20 +30,18 @@ import Marquee from 'react-fast-marquee';
 import servers from '../data/servers.json';
 
 const questions = [
-  'You can say “fuck this shit” and you automatically don’t have to do it anymore',
   'You have an irl minecraft inventory, no weight limit, 64 per stack.',
   'You can make anything have the opposite effect of what was supposed to be',
-  `Everytime you see something and say 'Dang, that's too
-expensive.' a random person buys it and gives it to you`,
+  `Every time you see something and say 'Dang, that's too expensive.' a random person buys it and gives it to you`,
   'Each time someone compliments you a turtle will appear and give you a sandwich',
-  'You are invisible to all doors, faucets, soaps, paper towels and hand dryer sensors.',
+  'You are invisible to all doors, faucets, soaps, paper towels, and hand dryer sensors.',
   'You can spawn any soda at will, but it will always be flat',
-  'Any time you don’t understand something time freezes and David Attenborough explains how the thing works',
+  'Any time you don’t understand something, time freezes, and David Attenborough explains how the thing works',
   'You can eat infinite food without getting fat',
 ];
 
 const getRandomQuestion = () => {
-  const index = Math.round(Math.random() * (questions.length - 1));
+  const index = Math.floor(Math.random() * questions.length);
   return questions[index];
 };
 
@@ -81,7 +79,7 @@ const Home = () => {
     wouldyou: {
       author: 'Would You',
       avatar:
-        'https://cdn.discordapp.com/avatars/981649513427111957/af5f8264403034530bba73ba6c2492d9.webp?size=96',
+        'https://cdn.discordapp.com/avatars/981649513427111957/23da96bbf1eef64855a352e0e29cdc10.webp?size=96',
       roleColor: '#1e88e5',
       bot: true,
       verified: true,
@@ -97,7 +95,7 @@ const Home = () => {
     dominik: {
       author: 'Dominik',
       avatar:
-        'https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=128',
+        'https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=80',
       roleColor: '#F47FFF',
       bot: false,
       verified: false,
@@ -270,7 +268,7 @@ const Home = () => {
         </section>
 
         <section className="servers">
-          <img src="/LandingWave.svg" alt="Wave" draggable={false} />
+          <Image src="/LandingWave.svg" alt="Wave" draggable={false} width="10000" height="10000" />
           <div className="servers-wrapper">
             <h2>
               Used by <span>{serverCount}</span> communities
@@ -284,12 +282,12 @@ const Home = () => {
               <Marquee
                 className="servers-slider-container"
                 play={true}
-                speed={100}
+                speed={45}
                 gradient={true}
                 gradientColor={[16, 16, 16]}
               >
                 {servers[0].map((s: any) => (
-                  <div className="servers-slider-item" key={s.name}>
+                  <div className="servers-slider-item cursor-pointer hover:bg-black" key={s.name} onClick={() => window.open(s.invite)}>
                     <Image
                       src={`/logos/${s.avatar}`}
                       alt={s.name}
@@ -310,7 +308,7 @@ const Home = () => {
                           >
                             <path
                               fill="#3BA55C"
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M60 30.555c0 2.959-4.8 5.169-5.7 7.828-.9 2.659 1.65 7.49 0 9.7-1.65 2.21-6.9 1.311-9.225 2.997-2.325 1.685-2.963 6.892-5.775 7.828-2.813.936-6.262-2.997-9.262-2.997-3 0-6.563 3.746-9.263 2.997-2.7-.75-3.45-6.143-5.775-7.828-2.325-1.686-7.5-.674-9.225-2.996-1.725-2.323.862-6.892 0-9.701C4.912 35.573 0 33.513 0 30.555c0-2.96 4.8-5.169 5.7-7.828.9-2.66-1.65-7.491 0-9.701 1.65-2.21 6.937-1.31 9.3-2.996 2.363-1.686 2.925-6.892 5.738-7.94C23.55 1.04 27 5.197 30 5.197c3 0 6.563-3.745 9.263-2.996 2.7.749 3.412 6.142 5.737 7.828 2.325 1.685 7.5.674 9.225 2.996 1.725 2.322-.863 6.892 0 9.7.862 2.81 5.775 4.87 5.775 7.829Z"
                               clipRule="evenodd"
                             />
@@ -330,7 +328,7 @@ const Home = () => {
                           >
                             <path
                               fill="#5865F2"
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M59.987 30.112c0 2.959-4.799 5.168-5.698 7.827-.9 2.658 1.65 7.489 0 9.698-1.65 2.21-6.899 1.311-9.223 2.996-2.325 1.685-2.962 6.89-5.774 7.826-2.812.937-6.261-2.995-9.26-2.995-3 0-6.562 3.745-9.261 2.995-2.7-.748-3.45-6.14-5.774-7.826-2.325-1.685-7.499-.674-9.223-2.996-1.725-2.321.862-6.89 0-9.698C4.91 35.13 0 33.07 0 30.112s4.799-5.167 5.699-7.826c.9-2.659-1.65-7.49 0-9.699 1.65-2.21 6.936-1.31 9.298-2.996 2.362-1.685 2.924-6.89 5.736-7.938 2.812-1.049 6.261 3.108 9.26 3.108 3 0 6.562-3.745 9.261-2.996 2.7.749 3.412 6.141 5.737 7.826 2.324 1.686 7.498.675 9.223 2.996 1.724 2.322-.863 6.89 0 9.699.862 2.808 5.773 4.868 5.773 7.826Z"
                               clipRule="evenodd"
                             />
@@ -355,13 +353,13 @@ const Home = () => {
                 <Marquee
                   className="servers-slider-container"
                   play={true}
-                  speed={100}
+                  speed={30}
                   gradient={true}
                   gradientColor={[16, 16, 16]}
                   direction="right"
                 >
                   {servers[1].map((s: any) => (
-                    <div className="servers-slider-item" key={s.name}>
+                     <div className="servers-slider-item cursor-pointer hover:bg-black" key={s.name} onClick={() => window.open(s.invite)}>
                       <Image
                         src={`/logos/${s.avatar}`}
                         alt={s.name}
@@ -382,7 +380,7 @@ const Home = () => {
                             >
                               <path
                                 fill="#3BA55C"
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M60 30.555c0 2.959-4.8 5.169-5.7 7.828-.9 2.659 1.65 7.49 0 9.7-1.65 2.21-6.9 1.311-9.225 2.997-2.325 1.685-2.963 6.892-5.775 7.828-2.813.936-6.262-2.997-9.262-2.997-3 0-6.563 3.746-9.263 2.997-2.7-.75-3.45-6.143-5.775-7.828-2.325-1.686-7.5-.674-9.225-2.996-1.725-2.323.862-6.892 0-9.701C4.912 35.573 0 33.513 0 30.555c0-2.96 4.8-5.169 5.7-7.828.9-2.66-1.65-7.491 0-9.701 1.65-2.21 6.937-1.31 9.3-2.996 2.363-1.686 2.925-6.892 5.738-7.94C23.55 1.04 27 5.197 30 5.197c3 0 6.563-3.745 9.263-2.996 2.7.749 3.412 6.142 5.737 7.828 2.325 1.685 7.5.674 9.225 2.996 1.725 2.322-.863 6.892 0 9.7.862 2.81 5.775 4.87 5.775 7.829Z"
                                 clipRule="evenodd"
                               />
@@ -402,7 +400,7 @@ const Home = () => {
                             >
                               <path
                                 fill="#5865F2"
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M59.987 30.112c0 2.959-4.799 5.168-5.698 7.827-.9 2.658 1.65 7.489 0 9.698-1.65 2.21-6.899 1.311-9.223 2.996-2.325 1.685-2.962 6.89-5.774 7.826-2.812.937-6.261-2.995-9.26-2.995-3 0-6.562 3.745-9.261 2.995-2.7-.748-3.45-6.14-5.774-7.826-2.325-1.685-7.499-.674-9.223-2.996-1.725-2.321.862-6.89 0-9.698C4.91 35.13 0 33.07 0 30.112s4.799-5.167 5.699-7.826c.9-2.659-1.65-7.49 0-9.699 1.65-2.21 6.936-1.31 9.298-2.996 2.362-1.685 2.924-6.89 5.736-7.938 2.812-1.049 6.261 3.108 9.26 3.108 3 0 6.562-3.745 9.261-2.996 2.7.749 3.412 6.141 5.737 7.826 2.324 1.686 7.498.675 9.223 2.996 1.724 2.322-.863 6.89 0 9.699.862 2.808 5.773 4.868 5.773 7.826Z"
                                 clipRule="evenodd"
                               />

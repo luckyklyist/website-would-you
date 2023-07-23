@@ -13,11 +13,11 @@ export default function Terms() {
       </Head>
       <Navbar />
 
-      <main className="imprint-main">
+      <main className="legal-notice-main">
         <h1>
           Terms of <span>Service</span>
         </h1>
-        <div className="imprint-content">
+        <div className="legal-notice-content">
           <h3>Last updated and effective: April 14, 2023</h3>
 
           <h3>Agreement to Terms.</h3>

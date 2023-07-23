@@ -78,7 +78,8 @@
   section.servers {
     margin-top: 100px;
 
-    img {
+    Image {
+      width: 100vh;
       user-select: none;
       margin-bottom: 0;
     }
@@ -167,6 +168,7 @@
           width: max-content;
           max-width: 100%;
 
+
           .servers-slider-item {
             border-radius: 10px;
             background-color: #141414;
@@ -218,6 +220,9 @@
                 margin-left: 15px;
               }
             }
+          }
+          .servers-slider-item:hover {
+            background-color: #1a1a1a;
           }
         }
       }

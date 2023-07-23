@@ -3,7 +3,7 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export default function Imprint() {
+export default function legalnoticede() {
   return (
     <>
       <Head>
@@ -14,36 +14,35 @@ export default function Imprint() {
 
       <Navbar />
 
-      <main className="imprint-main">
-        <h1>Imprint</h1>
-        <div className="imprint-content">
-          <p>Information according to § 5 TMG.</p>
-          <h3>Contact</h3>
-          <p>
+      <main className="legal-notice-main">
+        <h1>Impressum</h1>
+        <div className="legal-notice-content">
+          <p>Informationen gemäß § 5 TMG.</p>
+          <h3>Kontakt</h3>
+          <p className="select-none">
             Dominik Koch
             <br />
-            Parkstrasse 5<br />
+            Parkstraße 5<br />
             88499 Riedlingen
             <br />
-            Germany
+            Deutschland
           </p>
           <br />
-          <p>No acceptance of parcels or packages.</p>
+          <p>Keine Annahme von Paketen oder Päckchen.</p>
           <br />
           <p>Email: dominik@wouldyoubot.com</p>
 
           <h3>Online dispute resolution</h3>
           <p>
-            The European Comission provides a platform for online dispute
-            resolution, available here:{" "}
+          Die Europäische Kommission bietet eine Plattform für die Online-Streitbeilegung Streitbeilegung, die hier zu finden ist:{" "}
             <Link
               href="https://ec.europa.eu/consumers/odr/"
               className="embedded-link"
             >
               https://ec.europa.eu/consumers/odr/
             </Link>
-            <br />I am neither willing nor obliged to participate in dispute
-            resolution proceedings in front of a consumer arbitration board.
+            <br />Ich bin weder bereit noch verpflichtet, an einem Streitbeilegungsverfahren
+            an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </p>
 
           <h3>Would You Bot&apos;s Privacy Policy</h3>
@@ -54,10 +53,10 @@ export default function Imprint() {
             https://wouldyoubot.gg/privacy/
           </Link>
 
-          <h3>Validy of this imprint</h3>
+          <h3>Gültigkeit dieses Impressums</h3>
           <p>
-            This imprint is valid for the following websites, social media
-            accounts and other services, as long as they are listed here.
+          Dieser rechtliche Hinweis gilt für die folgenden Websites, Social Media
+            Konten und andere Dienste, sofern sie hier aufgeführt sind.
           </p>
           <br />
           <Link href="https://wouldyoubot.com/" className="link">
@@ -66,10 +65,6 @@ export default function Imprint() {
           <br />
           <Link href="https://wouldyoubot.gg/" className="link">
             https://wouldyoubot.gg/
-          </Link>
-          <br />
-          <Link href="https://devdominik.com" className="link">
-            https://devdominik.com
           </Link>
           <br />
           <Link
@@ -81,9 +76,9 @@ export default function Imprint() {
           <br />
           <br />
           <p>
-            The Discord user / bot Would You with the ID 981649513427111957
+          Der Discord-Benutzer/Bot &quot;Would You&quot; mit dem ID 981649513427111957
             <br />
-            The Discord server Would You Support with the ID 1009562516105461780
+            Der Discord Server &quot;Would You &quot; mit der ID1009562516105461780
           </p>
           <br />
           <br />
