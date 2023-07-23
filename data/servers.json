@@ -99,6 +99,14 @@
       "invite": "https://discord.gg/doors"
     },
     {
+      "name": "Krakenhits",
+      "members": "2k+",
+      "avatar": "kraken.webp",
+      "partnered": false,
+      "verified": false,
+      "invite": "https://discord.gg/krakenhits"
+    },
+    {
       "name": "Hobo Slayer",
       "members": "700+",
       "avatar": "hoboslayer.webp",
@@ -148,7 +156,7 @@
     },
     {
       "name": "Would You Support",
-      "members": "500+",
+      "members": "200+",
       "avatar": "wouldyou.webp",
       "partnered": false,
       "verified": false,

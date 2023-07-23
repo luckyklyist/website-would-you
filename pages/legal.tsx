@@ -21,7 +21,7 @@ export default function legalnotice() {
         <div className="legal-notice-content">
           <p>Information according to § 5 TMG.</p>
           <h3>Contact</h3>
-          <p>
+          <p className="select-none">
             Dominik Koch
             <br />
             Parkstrasse 5<br />

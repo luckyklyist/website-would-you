@@ -19,7 +19,7 @@ export default function legalnoticede() {
         <div className="legal-notice-content">
           <p>Informationen gemäß § 5 TMG.</p>
           <h3>Kontakt</h3>
-          <p>
+          <p className="select-none">
             Dominik Koch
             <br />
             Parkstraße 5<br />
