@@ -79,7 +79,7 @@ const Home = () => {
     wouldyou: {
       author: 'Would You',
       avatar:
-        'https://cdn.discordapp.com/avatars/981649513427111957/af5f8264403034530bba73ba6c2492d9.webp?size=96',
+        'https://cdn.discordapp.com/avatars/981649513427111957/23da96bbf1eef64855a352e0e29cdc10.webp?size=96',
       roleColor: '#1e88e5',
       bot: true,
       verified: true,
@@ -95,7 +95,7 @@ const Home = () => {
     dominik: {
       author: 'Dominik',
       avatar:
-        'https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=128',
+        'https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=80',
       roleColor: '#F47FFF',
       bot: false,
       verified: false,
