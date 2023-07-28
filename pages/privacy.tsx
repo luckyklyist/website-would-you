@@ -17,7 +17,7 @@ export default function Privacy() {
           Privacy <span>Policy</span>
         </h1>
         <div className='legal-notice-content'>
-          <h3>Last updated and effective: April 1, 2023</h3>
+          <h3>Last updated and effective: July 27, 2023</h3>
           <br />
           <p>
             Thank you for choosing to be part of our community at Would
@@ -175,6 +175,20 @@ export default function Privacy() {
               https://www.edoeb.admin.ch/edoebtenfhome.html
             </Link>
             .
+          </p>
+          <h3> Analytics Provided by Others</h3>
+          <p>
+          Our website uses Plausible Analytics to help us understand visitor trends and the effectiveness of our marketing outreach. 
+          We chose Plausible Analytics because it is a privacy-focused company and platform that eschews personally identifiable information in favor of anonymous aggregate data.
+          We do not use Plausible Analytics to track or collect any personally identifiable information about you. Plausible is self-hosted and does not use cookies nor store any personal information.
+          {' '}
+          <Link
+                  href='https://plausible.io/data-policy'
+                  target={'_blank'}
+                  className='embedded-link'
+                >
+                   See the Plausible Analytics Data Policy.
+                </Link>
           </p>
 
           <h3> THE INFORMATION WE COLLECT AND HOW WE COLLECT IT</h3>

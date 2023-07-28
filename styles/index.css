@@ -180,10 +180,12 @@ a {
   }
 }
 .wy-button {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   outline: none;
   border: none;
-  border-radius: 200px;
+  border-radius: 10px;
   padding: 15px 27px;
   color: #fff;
   transition: all 0.3s ease;
@@ -210,6 +212,11 @@ a {
 .wy-button.secondary:active {
   background-color: #9A0404;
   color: #E4E4E4;
+}
+
+.wy-button svg {
+  margin-left: 8px; /* Adjust the margin as needed */
+  transition: transform 0.3s ease; /* Added transition for animation */
 }
 
 nav {
@@ -619,10 +626,13 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.servers .servers-wrapper h2 span {
-  color: #0598F6;
-  font-weight: 800;
-  text-shadow: 2px 2px 20px #0598F6;
-  animation: flickerAnimation 6s linear 2.5s infinite;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .homepage-main section.servers .servers-wrapper h3 {
   color: #fff;
@@ -641,8 +651,11 @@ footer .footer-copyright p a:active {
 .homepage-main section.servers .servers-wrapper h3 span {
   color: #0598F6;
   font-weight: 600;
-  text-shadow: 2px 2px 20px #0598F6;
-  animation: flickerAnimation 6s linear 2.5s infinite;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .homepage-main section.servers .servers-wrapper .server-slider-up {
   background-color: #101010;
@@ -730,7 +743,6 @@ footer .footer-copyright p a:active {
   }
 }
 .homepage-main section.features .features-head h2 {
-  user-select: none;
   font-size: 50px;
   font-weight: 700;
   color: #fff;
@@ -755,7 +767,6 @@ footer .footer-copyright p a:active {
 }
 .homepage-main section.features .features-head h3 {
   color: #fff;
-  user-select: none;
   font-size: 26px;
   font-weight: 500;
   margin-top: 5px;
@@ -880,15 +891,12 @@ footer .footer-copyright p a:active {
     margin-right: 50px;
   }
 }
-.homepage-main section.invite h2 span.blue {
-  color: #0598F6;
-  text-shadow: 2px 2px 20px #0598F6;
-  animation: flickerAnimation 6s linear 2.5s infinite;
-}
-.homepage-main section.invite h2 span.red {
-  color: #F00505;
-  text-shadow: 2px 2px 20px #F00505;
-  animation: flickerAnimation 4s linear 4s infinite;
+.homepage-main section.invite h2 span {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .homepage-main section.invite h3 {
   color: #C0C0C0;

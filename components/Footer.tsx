@@ -11,8 +11,7 @@ const Footer = () => {
             <p>WouldYou</p>
           </div>
           <p className="logo-subtext">
-            Elevate your server&apos;s engagement with Would You, featuring user
-            voting, daily messages, and customizability.
+            Would You is not affiliated with Discord or Reddit.
           </p>
         </div>
         <div className="footer-head-column-wrapper">

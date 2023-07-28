@@ -1,8 +1,10 @@
 .wy-button {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   outline: none;
   border: none;
-  border-radius: 200px;
+  border-radius: 10px;
   padding: 15px 27px;
   color: $text;
   transition: all 0.3s ease;
@@ -35,4 +37,8 @@
       color: $textBtnActive;
     }
   }
+}
+.wy-button svg {
+  margin-left: 8px; /* Adjust the margin as needed */
+  transition: transform 0.3s ease; /* Added transition for animation */
 }

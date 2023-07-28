@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import {
   DiscordActionRow,
   DiscordAttachments,
@@ -17,27 +17,27 @@ import {
   DiscordReaction,
   DiscordReactions,
   DiscordReply,
-} from '@skyra/discord-components-react';
-import axios from 'axios';
-import { randomBytes } from 'crypto';
-import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import Marquee from 'react-fast-marquee';
-import servers from '../data/servers.json';
+} from "@skyra/discord-components-react";
+import axios from "axios";
+import { randomBytes } from "crypto";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
+import servers from "../data/servers.json";
 
 const questions = [
-  'You have an irl minecraft inventory, no weight limit, 64 per stack.',
-  'You can make anything have the opposite effect of what was supposed to be',
+  "You have an irl minecraft inventory, no weight limit, 64 per stack.",
+  "You can make anything have the opposite effect of what was supposed to be",
   `Every time you see something and say 'Dang, that's too expensive.' a random person buys it and gives it to you`,
-  'Each time someone compliments you a turtle will appear and give you a sandwich',
-  'You are invisible to all doors, faucets, soaps, paper towels, and hand dryer sensors.',
-  'You can spawn any soda at will, but it will always be flat',
-  'Any time you don’t understand something, time freezes, and David Attenborough explains how the thing works',
-  'You can eat infinite food without getting fat',
+  "Each time someone compliments you a turtle will appear and give you a sandwich",
+  "You are invisible to all doors, faucets, soaps, paper towels, and hand dryer sensors.",
+  "You can spawn any soda at will, but it will always be flat",
+  "Any time you don’t understand something, time freezes, and David Attenborough explains how the thing works",
+  "You can eat infinite food without getting fat",
 ];
 
 const getRandomQuestion = () => {
@@ -77,34 +77,34 @@ const Home = () => {
 
   const profiles = {
     wouldyou: {
-      author: 'Would You',
+      author: "Would You",
       avatar:
-        'https://cdn.discordapp.com/avatars/981649513427111957/23da96bbf1eef64855a352e0e29cdc10.webp?size=96',
-      roleColor: '#1e88e5',
+        "https://cdn.discordapp.com/avatars/981649513427111957/23da96bbf1eef64855a352e0e29cdc10.webp?size=96",
+      roleColor: "#1e88e5",
       bot: true,
       verified: true,
     },
     sky: {
-      author: 'ForGetFulSkyBro',
+      author: "ForGetFulSkyBro",
       avatar:
-        'https://cdn.discordapp.com/avatars/268843733317976066/a_8bd7baad840e8d0b54e7bb90bc91fab2.webp?size=80',
-      roleColor: '#f1c40f',
+        "https://cdn.discordapp.com/avatars/268843733317976066/a_8bd7baad840e8d0b54e7bb90bc91fab2.webp?size=80",
+      roleColor: "#f1c40f",
       bot: false,
       verified: false,
     },
     dominik: {
-      author: 'Dominik',
+      author: "Dominik",
       avatar:
-        'https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=80',
-      roleColor: '#F47FFF',
+        "https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=80",
+      roleColor: "#F47FFF",
       bot: false,
       verified: false,
     },
     marc: {
-      author: 'MarcDev',
+      author: "MarcDev",
       avatar:
-        'https://cdn.discordapp.com/avatars/799319682862809169/b3b2a0adea2900dc6c82962dca366b16.webp?size=80',
-      roleColor: '#346beb',
+        "https://cdn.discordapp.com/avatars/799319682862809169/b3b2a0adea2900dc6c82962dca366b16.webp?size=80",
+      roleColor: "#346beb",
       bot: false,
       verified: false,
     },
@@ -112,7 +112,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get('https://japi.rest/discord/v1/application/981649513427111957/')
+      .get("https://japi.rest/discord/v1/application/981649513427111957/")
       .then((response) => {
         if (response.data.data.bot.approximate_guild_count === undefined)
           return setServerCount(0);
@@ -143,13 +143,13 @@ const Home = () => {
         <section className="landing">
           <motion.div
             className="left"
-            initial={{ opacity: 0, transform: 'translateY(20px)' }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-            transition={{ duration: 0.7, ease: 'easeInOut' }}
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
             viewport={{ once: true }}
           >
             <h1>
-              Entertain Your <span className="red">Discord</span>{' '}
+              Entertain Your <span className="red">Discord</span>{" "}
               <span className="blue">Server</span>
             </h1>
             <p>
@@ -157,14 +157,33 @@ const Home = () => {
               user voting, daily messages, and customizability.
             </p>
             <Link href="/invite" target="_blank">
-              <button className="wy-button primary">Invite</button>
+              <button className="wy-button primary">
+                Unleash the Fun
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  image-rendering="optimizeQuality"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  viewBox="0 0 509 511.54"
+                >
+                  <path
+                    fill-rule="nonzero"
+                    fill="#fff"
+                    d="M447.19 347.03c0-17.06 13.85-30.91 30.91-30.91 17.05 0 30.9 13.85 30.9 30.91v87.82c0 21.08-8.63 40.29-22.51 54.18-13.88 13.88-33.09 22.51-54.18 22.51H76.69c-21.09 0-40.3-8.63-54.18-22.51C8.63 475.14 0 455.93 0 434.85V76.69c0-21.09 8.63-40.3 22.51-54.18C36.39 8.63 55.6 0 76.69 0h86.98c17.06 0 30.9 13.85 30.9 30.9 0 17.06-13.84 30.91-30.9 30.91H76.69c-4.07 0-7.82 1.69-10.51 4.37-2.68 2.69-4.37 6.44-4.37 10.51v358.16c0 4.06 1.69 7.82 4.37 10.5 2.69 2.68 6.44 4.38 10.51 4.38h355.62c4.07 0 7.82-1.7 10.51-4.38 2.68-2.68 4.37-6.44 4.37-10.5v-87.82zm0-243.56L308.15 244.28c-11.91 12.12-31.45 12.28-43.56.37-12.11-11.91-12.28-31.45-.37-43.56L401.77 61.81H309.7c-17.06 0-30.9-13.85-30.9-30.91 0-17.05 13.84-30.9 30.9-30.9h168.4C495.15 0 509 13.85 509 30.9v165.04c0 17.06-13.85 30.9-30.9 30.9-17.06 0-30.91-13.84-30.91-30.9v-92.47z"
+                  />
+                </svg>
+              </button>
             </Link>
           </motion.div>
           <motion.div
             className="right"
-            initial={{ opacity: 0, transform: 'translateY(20px)' }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-            transition={{ duration: 0.7, ease: 'easeInOut' }}
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
             viewport={{ once: true }}
           >
             <div className="interactive-mockup">
@@ -236,8 +255,8 @@ const Home = () => {
                         <DiscordButton
                           onClick={() =>
                             window.open(
-                              'https://wouldyoubot.gg/invite',
-                              '_blank'
+                              "https://wouldyoubot.gg/invite",
+                              "_blank"
                             )
                           }
                         >
@@ -268,7 +287,13 @@ const Home = () => {
         </section>
 
         <section className="servers">
-          <Image src="/LandingWave.svg" alt="Wave" draggable={false} width="10000" height="10000" />
+          <Image
+            src="/LandingWave.svg"
+            alt="Wave"
+            draggable={false}
+            width="10000"
+            height="10000"
+          />
           <div className="servers-wrapper">
             <h2>
               Used by <span>{serverCount}</span> communities
@@ -287,7 +312,11 @@ const Home = () => {
                 gradientColor={[16, 16, 16]}
               >
                 {servers[0].map((s: any) => (
-                  <div className="servers-slider-item cursor-pointer hover:bg-black" key={s.name} onClick={() => window.open(s.invite)}>
+                  <div
+                    className="servers-slider-item cursor-pointer hover:bg-black"
+                    key={s.name}
+                    onClick={() => window.open(s.invite)}
+                  >
                     <Image
                       src={`/logos/${s.avatar}`}
                       alt={s.name}
@@ -347,7 +376,7 @@ const Home = () => {
               <div
                 className="server-slider-wrapper"
                 style={{
-                  marginTop: '20px',
+                  marginTop: "20px",
                 }}
               >
                 <Marquee
@@ -359,7 +388,11 @@ const Home = () => {
                   direction="right"
                 >
                   {servers[1].map((s: any) => (
-                     <div className="servers-slider-item cursor-pointer hover:bg-black" key={s.name} onClick={() => window.open(s.invite)}>
+                    <div
+                      className="servers-slider-item cursor-pointer hover:bg-black"
+                      key={s.name}
+                      onClick={() => window.open(s.invite)}
+                    >
                       <Image
                         src={`/logos/${s.avatar}`}
                         alt={s.name}
@@ -425,10 +458,10 @@ const Home = () => {
         <section className="features">
           <motion.div
             className="features-head"
-            initial={{ opacity: 0, transform: 'translateY(15px)' }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+            initial={{ opacity: 0, transform: "translateY(15px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
           >
             <h2>Features</h2>
             <h3>What Does Would You Offer To Your Server?</h3>
@@ -437,10 +470,10 @@ const Home = () => {
           <div className="feature">
             <motion.div
               className="feature-mockup left"
-              initial={{ opacity: 0, transform: 'translateX(-50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
@@ -465,8 +498,8 @@ const Home = () => {
                       slot="footer"
                       footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
                     >
-                      {' '}
-                      Would You{' '}
+                      {" "}
+                      Would You{" "}
                     </DiscordEmbedFooter>
                   </DiscordEmbed>
                 </DiscordMessage>
@@ -474,10 +507,10 @@ const Home = () => {
             </motion.div>
             <motion.div
               className="feature-info right"
-              initial={{ opacity: 0, transform: 'translateX(50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <h4>Increase user engagement</h4>
               <p>
@@ -490,10 +523,10 @@ const Home = () => {
           <div className="feature">
             <motion.div
               className="feature-info left"
-              initial={{ opacity: 0, transform: 'translateX(-50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <h4>Keep the server active</h4>
               <p>
@@ -503,10 +536,10 @@ const Home = () => {
             </motion.div>
             <motion.div
               className="feature-mockup right"
-              initial={{ opacity: 0, transform: 'translateX(50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
@@ -574,7 +607,7 @@ const Home = () => {
                     bot={profiles.wouldyou.bot}
                     verified={profiles.wouldyou.verified}
                   >
-                    <p style={{ whiteSpace: 'initial' }}>
+                    <p style={{ whiteSpace: "initial" }}>
                       Click to see commands
                     </p>
                   </DiscordReply>
@@ -608,7 +641,7 @@ const Home = () => {
                     avatar={profiles.dominik.avatar}
                     roleColor={profiles.dominik.roleColor}
                   >
-                    <p style={{ whiteSpace: 'initial' }}>
+                    <p style={{ whiteSpace: "initial" }}>
                       Whatever pants you wear they do that
                     </p>
                   </DiscordReply>
@@ -632,10 +665,10 @@ const Home = () => {
           <div className="feature">
             <motion.div
               className="feature-mockup left"
-              initial={{ opacity: 0, transform: 'translateX(-50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(-50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <DiscordMessages class="rounded-lg shadow">
                 <DiscordMessage
@@ -699,10 +732,10 @@ const Home = () => {
             </motion.div>
             <motion.div
               className="feature-info right"
-              initial={{ opacity: 0, transform: 'translateX(50px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0)' }}
+              initial={{ opacity: 0, transform: "translateX(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateX(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               <h4>Upgrade your server</h4>
               <p>
@@ -715,29 +748,28 @@ const Home = () => {
 
         <section className="invite">
           <motion.h2
-            initial={{ opacity: 0, transform: 'translateY(10px)' }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: 'easeInOut' }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
           >
-            Keep Your Server Active - <span className="red">Would</span>{' '}
-            <span className="blue">You</span>
+            Keep Your Server Active - <span>Would You</span>
           </motion.h2>
           <motion.h3
-            initial={{ opacity: 0, transform: 'translateY(10px)' }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: 'easeInOut' }}
+            transition={{ duration: 0.65, ease: "easeInOut" }}
           >
             Invite Me To Your Server Now.
           </motion.h3>
           <Link href="/invite" target="_blank">
             <motion.button
               className="wy-button primary"
-              initial={{ opacity: 0, transform: 'translateY(-20px)' }}
-              whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+              initial={{ opacity: 0, transform: "translateY(-20px)" }}
+              whileInView={{ opacity: 1, transform: "translateY(0)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: 'easeInOut' }}
+              transition={{ duration: 0.65, ease: "easeInOut" }}
             >
               Invite
             </motion.button>

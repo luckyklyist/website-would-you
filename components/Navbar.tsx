@@ -26,7 +26,7 @@ const Navbar = () => {
       );
       menuControls.start(
         { opacity: 0.5, left: "100vw", pointerEvents: "none" },
-        { duration: 0.21, type: "easeInOut" }
+        { duration: 0.21, type: "spring" }
       );
 
       setMobileMenu(false);
@@ -45,7 +45,7 @@ const Navbar = () => {
       );
       menuControls.start(
         { opacity: 1, left: "0", pointerEvents: "all" },
-        { duration: 0.21, type: "easeInOut" }
+        { duration: 0.21, type: "spring" }
       );
 
       setMobileMenu(true);
