@@ -65,12 +65,11 @@ const Navbar = () => {
           <Link href="/">Home</Link>
           <Link href="/commands">Commands</Link>
           <Link href="/vote">Vote</Link>
-          <Link href="/discord">Support</Link>
         </div>
       </div>
       <div className="nav-right">
-        <Link href="/invite" target={"_blank"}>
-          <button className="wy-button primary">Invite</button>
+        <Link href="/discord" target={"_blank"}>
+          <button className="wy-button primary">Support</button>
         </Link>
         <div className="menu-icon" onClick={() => toggleMobileMenu()}>
           <motion.span
@@ -102,9 +101,8 @@ const Navbar = () => {
           <Link href="/">Home</Link>
           <Link href="/commands">Commands</Link>
           <Link href="/vote">Vote</Link>
-          <Link href="/discord">Support</Link>
-          <Link href="/invite" target={"_blank"}>
-            <button className="wy-button primary">Invite</button>
+          <Link href="/discord" target={"_blank"}>
+            <button className="wy-button primary">Support</button>
           </Link>
         </div>
       </motion.div>

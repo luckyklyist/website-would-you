@@ -514,8 +514,7 @@ const Home = () => {
             >
               <h4>Increase user engagement</h4>
               <p>
-                A Daily Would You rather messages allow you to keep your users
-                engaged and active in your community.
+              Keep your community engaged and active with daily &apos;Would You Rather&apos; messages!
               </p>
             </motion.div>
           </div>

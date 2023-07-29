@@ -630,7 +630,7 @@ footer .footer-copyright p a:active {
   font-weight: 700;
   color: #fff;
   text-align: center;
-  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background: linear-gradient(92.91deg, #5765a2 10%, #9f3757 90%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -653,7 +653,7 @@ footer .footer-copyright p a:active {
   font-weight: 600;
   color: #fff;
   text-align: center;
-  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background: linear-gradient(92.91deg, #5765a2 10%, #9f3757 90%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -894,7 +894,7 @@ footer .footer-copyright p a:active {
 .homepage-main section.invite h2 span {
   color: #fff;
   text-align: center;
-  background: linear-gradient(92.91deg, #3979c3 10%, #bd253a 90%);
+  background: linear-gradient(92.91deg, #5765a2 10%, #9f3757 90%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
