@@ -1261,3 +1261,146 @@ footer .footer-copyright p a:active {
 .commands-main .commands .command.active .command-expand .command-expand-group:last-child {
   margin-bottom: 10px;
 }
+
+.status-main h1 {
+  color: #F00505;
+  font-weight: 800;
+  font-size: 60px;
+  user-select: none;
+  margin: 160px 17vw 0 17vw;
+  text-shadow: 2px 2px 20px #F00505;
+  animation: flickerAnimation 7s linear 2s infinite;
+}
+@media screen and (max-width: 1300px) {
+  .status-main h1 {
+    margin: 160px 50px 0 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .status-main h1 {
+    margin: 160px 30px 0 30px;
+  }
+}
+.status-main h1 span {
+  color: #0598F6;
+  text-shadow: 2px 2px 20px #0598F6;
+  animation: flickerAnimation 5s linear 1s infinite;
+}
+.status-main h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin: -5px 17vw 30px 17vw;
+  user-select: none;
+}
+@media screen and (max-width: 1300px) {
+  .status-main h3 {
+    margin: -5px 50px 30px 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .status-main h3 {
+    margin: -5px 30px 30px 30px;
+  }
+}
+.status-main .status {
+  margin: 0 17vw 50px 17vw;
+}
+@media screen and (max-width: 1300px) {
+  .status-main .status {
+    margin: 0 50px 50px 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .status-main .status {
+    margin: 0 30px 50px 30px;
+  }
+}
+.status-main .status .status {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #1b1b1b;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  max-height: 91px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.status-main .status .status .status-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding: 20px 25px 20px 29px;
+}
+.status-main .status .status .status-head svg {
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 33px;
+}
+.status-main .status .status .status-head .status-head-left h4 {
+  user-select: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.status-main .status .status .status-head .status-head-left p {
+  user-select: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C0C0C0;
+  width: calc(100vw - 40px - 60px - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media screen and (max-width: 450px) {
+  .status-main .status .status .status-head .status-head-left p {
+    width: calc(100vw - 40px - 60px - 40px);
+  }
+}
+.status-main .status .status .status-expand .status-expand-group {
+  padding: 0 29px 10px 29px;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.status-main .status .status .status-expand .status-expand-group h5 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.status-main .status .status .status-expand .status-expand-group h6 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: #C0C0C0;
+  background-color: #1b1b1b;
+  padding: 6px 9px;
+  border: 1px solid #131313;
+  border-radius: 5px;
+  width: fit-content;
+}
+.status-main .status .status:hover {
+  background-color: #1f1f1f;
+}
+.status-main .status .status.active {
+  max-height: 300px;
+  background-color: #222222;
+}
+.status-main .status .status.active .status-head svg {
+  rotate: 180deg;
+}
+.status-main .status .status.active .status-head .status-head-left p {
+  text-overflow: initial;
+  overflow: initial;
+  white-space: initial;
+}
+.status-main .status .status.active .status-expand .status-expand-group {
+  opacity: 1;
+}
+.status-main .status .status.active .status-expand .status-expand-group:last-child {
+  margin-bottom: 10px;
+}
