@@ -61,7 +61,7 @@ export default function Commands() {
                 </div>
                 <div className="command-expand-group">
                   <h5>Subcommands</h5>
-                  <h6>{c.subcommands ? c.subcommands : 'None'}</h6>
+                  <h6>{c.subcommands ? c.subcommands.join(", ") : 'None'}</h6>
                 </div>
               </div>
             </div>
