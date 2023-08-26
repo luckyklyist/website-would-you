@@ -18,8 +18,6 @@ import {
   DiscordReactions,
   DiscordReply,
 } from "@skyra/discord-components-react";
-import axios from "axios";
-import { randomBytes } from "crypto";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -67,11 +65,11 @@ function DiscordInteractiveReaction(props: any) {
 
 const Home = () => {
   const [currentDate, setCurrentDate] = useState<string>(
-    new Date().toLocaleString()
+    new Date().toLocaleString(),
   );
   const [replayedRounds, setReplayedRounds] = useState<number>(0);
   const [currentQuestion, setCurrentQuestion] = useState<string>(
-    getRandomQuestion()
+    getRandomQuestion(),
   );
   const [serverCount, setServerCount] = useState<number>(4500);
 
@@ -111,15 +109,13 @@ const Home = () => {
   };
 
   useEffect(() => {
-    axios
-      .get("https://japi.rest/discord/v1/application/981649513427111957/")
-      .then((response) => {
-        if (response.data.data.bot.approximate_guild_count === undefined)
-          return setServerCount(0);
-        setServerCount(response.data.data.bot.approximate_guild_count);
-        console.log(response);
+    fetch("https://japi.rest/discord/v1/application/981649513427111957/")
+      .then(async (response) => {
+        const data = await response.json();
+
+        setServerCount(data.data.bot.approximate_guild_count ?? 0);
       })
-      .catch(() => {});
+      .catch();
   }, []);
 
   const replay = () => {
@@ -256,7 +252,7 @@ const Home = () => {
                           onClick={() =>
                             window.open(
                               "https://wouldyoubot.gg/invite",
-                              "_blank"
+                              "_blank",
                             )
                           }
                         >
@@ -514,7 +510,8 @@ const Home = () => {
             >
               <h4>Increase user engagement</h4>
               <p>
-              Keep your community engaged and active with daily &apos;Would You Rather&apos; messages!
+                Keep your community engaged and active with daily &apos;Would
+                You Rather&apos; messages!
               </p>
             </motion.div>
           </div>
