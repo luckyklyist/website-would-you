@@ -10,7 +10,6 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
     "@skyra/discord-components-react": "^3.6.1",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.6",
