@@ -71,13 +71,13 @@ const Home = () => {
   const [currentQuestion, setCurrentQuestion] = useState<string>(
     getRandomQuestion(),
   );
-  const [serverCount, setServerCount] = useState<number>(4500);
+  const [serverCount, setServerCount] = useState<number>(5660);
 
   const profiles = {
     wouldyou: {
       author: "Would You",
       avatar:
-        "https://cdn.discordapp.com/avatars/981649513427111957/23da96bbf1eef64855a352e0e29cdc10.webp?size=96",
+        "./Logo.svg",
       roleColor: "#1e88e5",
       bot: true,
       verified: true,
@@ -85,7 +85,7 @@ const Home = () => {
     sky: {
       author: "ForGetFulSkyBro",
       avatar:
-        "https://cdn.discordapp.com/avatars/268843733317976066/a_8bd7baad840e8d0b54e7bb90bc91fab2.webp?size=80",
+        "./staff/Sky.webp",
       roleColor: "#f1c40f",
       bot: false,
       verified: false,
@@ -93,19 +93,27 @@ const Home = () => {
     dominik: {
       author: "Dominik",
       avatar:
-        "https://cdn.discordapp.com/avatars/347077478726238228/25242cace4c27ac9dc8fe1cb37d23d89.webp?size=80",
+        "./staff/Dominik.webp",
       roleColor: "#F47FFF",
       bot: false,
       verified: false,
     },
-    marc: {
-      author: "MarcDev",
+    pod: {
+      author: "Pod",
       avatar:
-        "https://cdn.discordapp.com/avatars/799319682862809169/b3b2a0adea2900dc6c82962dca366b16.webp?size=80",
-      roleColor: "#346beb",
+        "./staff/Pod.webp",
+      roleColor: "#F1327F",
       bot: false,
       verified: false,
     },
+    finn: {
+      author: "Finn",
+      avatar:
+        "./staff/Finn.webp",
+      roleColor: "#23CE6B",
+      bot: false,
+      verified: false,
+    }
   };
 
   useEffect(() => {
@@ -213,7 +221,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="/Logo.svg"
                     >
                       Would You
                     </DiscordEmbedFooter>
@@ -492,7 +500,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="/Logo.svg"
                     >
                       {" "}
                       Would You{" "}
@@ -548,11 +556,11 @@ const Home = () => {
                 >
                   <DiscordCommand
                     slot="reply"
-                    profile="dominik"
-                    author={profiles.dominik.author}
-                    avatar={profiles.dominik.avatar}
-                    roleColor={profiles.dominik.roleColor}
-                    command="/wouldyou useful"
+                    profile="finn"
+                    author={profiles.finn.author}
+                    avatar={profiles.finn.avatar}
+                    roleColor={profiles.finn.roleColor}
+                    command="/wouldyourather"
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
@@ -567,7 +575,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footerImage="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="/Logo.svg"
                     >
                       Would You
                     </DiscordEmbedFooter>
@@ -611,12 +619,12 @@ const Home = () => {
                 </DiscordMessage>
 
                 <DiscordMessage
-                  profile="dominik"
-                  author={profiles.dominik.author}
-                  avatar={profiles.dominik.avatar}
-                  roleColor={profiles.dominik.roleColor}
-                  bot={profiles.dominik.bot}
-                  verified={profiles.dominik.verified}
+                  profile="finn"
+                  author={profiles.finn.author}
+                  avatar={profiles.finn.avatar}
+                  roleColor={profiles.finn.roleColor}
+                  bot={profiles.finn.bot}
+                  verified={profiles.finn.verified}
                 >
                   It&apos;s not your pants <br /> Whatever pants you wear they
                   do that
@@ -632,10 +640,10 @@ const Home = () => {
                 >
                   <DiscordReply
                     slot="reply"
-                    profile="dominik"
-                    author={profiles.dominik.author}
-                    avatar={profiles.dominik.avatar}
-                    roleColor={profiles.dominik.roleColor}
+                    profile="finn"
+                    author={profiles.finn.author}
+                    avatar={profiles.finn.avatar}
+                    roleColor={profiles.finn.roleColor}
                   >
                     <p style={{ whiteSpace: "initial" }}>
                       Whatever pants you wear they do that
@@ -645,12 +653,12 @@ const Home = () => {
                 </DiscordMessage>
 
                 <DiscordMessage
-                  profile="dominik"
-                  author={profiles.dominik.author}
-                  avatar={profiles.dominik.avatar}
-                  roleColor={profiles.dominik.roleColor}
-                  bot={profiles.dominik.bot}
-                  verified={profiles.dominik.verified}
+                  profile="finn"
+                  author={profiles.finn.author}
+                  avatar={profiles.finn.avatar}
+                  roleColor={profiles.finn.roleColor}
+                  bot={profiles.finn.bot}
+                  verified={profiles.finn.verified}
                 >
                   So if you don&apos;t wear them you don&apos;t get the benefit
                 </DiscordMessage>
@@ -677,11 +685,11 @@ const Home = () => {
                 >
                   <DiscordCommand
                     slot="reply"
-                    profile="marc"
+                    profile="pod"
                     command="/custom rather"
-                    author={profiles.marc.author}
-                    avatar={profiles.marc.avatar}
-                    roleColor={profiles.marc.roleColor}
+                    author={profiles.pod.author}
+                    avatar={profiles.pod.avatar}
+                    roleColor={profiles.pod.roleColor}
                   ></DiscordCommand>
                   <DiscordEmbed slot="embeds" color="#1e88e5">
                     <DiscordEmbedDescription> </DiscordEmbedDescription>
@@ -706,7 +714,7 @@ const Home = () => {
                     <DiscordEmbedFooter
                       timestamp={currentDate}
                       slot="footer"
-                      footer-image="https://cdn.discordapp.com/attachments/1004008495483457546/1056748109700538429/Logo.png"
+                      footerImage="/Logo.svg"
                     >
                       Would You
                     </DiscordEmbedFooter>

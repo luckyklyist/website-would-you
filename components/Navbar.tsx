@@ -57,14 +57,13 @@ const Navbar = () => {
       <div className="nav-left">
         <Link href="/">
           <div className="logo">
-            <Image src="/Logo.png" alt="Would You Logo" draggable={false} width="50" height="50" />
+            <Image src="/Logo.svg"  className="rounded-full" alt="Would You Logo" draggable={false} width="50" height="50" />
             <p>Would You</p>
           </div>
         </Link>
         <div className="nav-items">
           <Link href="/">Home</Link>
           <Link href="/commands">Commands</Link>
-          <Link href="/vote">Vote</Link>
         </div>
       </div>
       <div className="nav-right">
@@ -100,7 +99,6 @@ const Navbar = () => {
         <div className="links">
           <Link href="/">Home</Link>
           <Link href="/commands">Commands</Link>
-          <Link href="/vote">Vote</Link>
           <Link href="/discord" target={"_blank"}>
             <button className="wy-button primary">Support</button>
           </Link>
