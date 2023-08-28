@@ -1,38 +1,39 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // reactStrictMode: true,
+  reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
   },
+
   async redirects() {
     return [
       {
-        source: '/discord',
+        source: "/discord",
         destination: process.env.NEXT_PUBLIC_DISCORD,
         permanent: true,
       },
       {
-        source: '/invite',
+        source: "/invite",
         destination: process.env.NEXT_PUBLIC_INVITE,
         permanent: true,
       },
       {
-        source: '/vote',
+        source: "/vote",
         destination: process.env.NEXT_PUBLIC_VOTE,
         permanent: true,
       },
       {
-        source: '/reddit',
+        source: "/reddit",
         destination: "https://www.reddit.com/r/WouldYou/",
         permanent: true,
       },
       {
-        source: '/imprint',
+        source: "/imprint",
         destination: "/legal",
         permanent: true,
       },
       {
-        source: '/impressum',
+        source: "/impressum",
         destination: "/legal-de",
         permanent: true,
       },
