@@ -19,6 +19,9 @@ module.exports = {
         ["blue-glow"]: ["2px 2px 20px #0598f6"],
       },
     },
+    backgroundImage: {
+      ["gradient-brand"]: "linear-gradient(90deg, #0598F4 10%, #F00605 90%)",
+    },
   },
   plugins: [],
 } satisfies Config;
