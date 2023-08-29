@@ -1,92 +1,82 @@
-import Navbar from "@/components/Navbar";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function legalnoticede() {
   return (
-    <>
-      <Head>
-        <title>Would You</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Logo.png" />
-      </Head>
-
-      <Navbar />
-
-      <main className="legal-notice-main">
-        <h1>Impressum</h1>
-        <div className="legal-notice-content">
-          <p>Informationen gemäß § 5 TMG.</p>
-          <h3>Kontakt</h3>
-          <p className="select-none">
-            Dominik Koch
-            <br />
-            Parkstraße 5<br />
-            88499 Riedlingen
-            <br />
-            Deutschland
-          </p>
+    <main className="flex flex-col gap-8 px-8 text-neutral-300 sm:px-[17vw]">
+      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+        Impressum
+      </h1>
+      <p>Informationen gemäß § 5 TMG.</p>
+      <div>
+        <h3 className="text-lg font-semibold text-white">Kontakt</h3>
+        <p className="select-none">
+          Dominik Koch
           <br />
-          <p>Keine Annahme von Paketen oder Päckchen.</p>
+          Parkstraße 5<br />
+          88499 Riedlingen
           <br />
-          <p>Email: dominik@wouldyoubot.com</p>
-
-          <h3>Online dispute resolution</h3>
-          <p>
-          Die Europäische Kommission bietet eine Plattform für die Online-Streitbeilegung Streitbeilegung, die hier zu finden ist:{" "}
-            <Link
-              href="https://ec.europa.eu/consumers/odr/"
-              className="embedded-link"
-            >
-              https://ec.europa.eu/consumers/odr/
-            </Link>
-            <br />Ich bin weder bereit noch verpflichtet, an einem Streitbeilegungsverfahren
-            an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-          </p>
-
-          <h3>Would You Bot&apos;s Privacy Policy</h3>
+          Deutschland
+        </p>
+      </div>
+      <p>Keine Annahme von Paketen oder Päckchen.</p>
+      <p>Email: dominik@wouldyoubot.com</p>
+      <div>
+        <h3 className="text-lg font-semibold text-white">
+          Online dispute resolution
+        </h3>
+        <p>
+          Die Europäische Kommission bietet eine Plattform für die
+          Online-Streitbeilegung Streitbeilegung, die hier zu finden ist:{" "}
           <Link
-            href="https://wouldyoubot.gg/privacy/"
-            className="link"
+            href="https://ec.europa.eu/consumers/odr/"
+            className="text-white underline"
           >
-            https://wouldyoubot.gg/privacy/
+            https://ec.europa.eu/consumers/odr/
           </Link>
-
-          <h3>Gültigkeit dieses Impressums</h3>
-          <p>
-          Dieser rechtliche Hinweis gilt für die folgenden Websites, Social Media
-            Konten und andere Dienste, sofern sie hier aufgeführt sind.
-          </p>
-          <br />
-          <Link href="https://wouldyoubot.com/" className="link">
-            https://wouldyoubot.com/
-          </Link>
-          <br />
-          <Link href="https://wouldyoubot.gg/" className="link">
-            https://wouldyoubot.gg/
-          </Link>
-          <br />
-          <Link
-            href="https://twitter.com/WouldYouBot/"
-            className="link"
-          >
-            https://twitter.com/WouldYouBot/
-          </Link>
-          <br />
-          <br />
-          <p>
-          Der Discord-Benutzer/Bot &quot;Would You&quot; mit dem ID 981649513427111957
-            <br />
-            Der Discord Server &quot;Would You &quot; mit der ID1009562516105461780
-          </p>
-          <br />
-          <br />
-          <br />
-        </div>
-      </main>
-
-      <Footer />
-    </>
+          . <br />
+          Ich bin weder bereit noch verpflichtet, an einem
+          Streitbeilegungsverfahren an einem Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-white">Privacy Policy</h3>
+        <Link
+          href="https://wouldyoubot.gg/privacy/"
+          className="text-white underline"
+        >
+          https://wouldyoubot.gg/privacy/
+        </Link>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-white">
+          Gültigkeit dieses Impressums
+        </h3>
+        <p>
+          Dieser rechtliche Hinweis gilt für die folgenden Websites, Social
+          Media Konten und andere Dienste, sofern sie hier aufgeführt sind.
+        </p>
+      </div>
+      <div className="text-white">
+        <Link href="https://wouldyoubot.com/" className="underline">
+          https://wouldyoubot.com/
+        </Link>
+        <br />
+        <Link href="https://wouldyoubot.gg/" className="underline">
+          https://wouldyoubot.gg/
+        </Link>
+        <br />
+        <Link href="https://twitter.com/WouldYouBot/" className="underline">
+          https://twitter.com/WouldYouBot/
+        </Link>
+      </div>
+      <p>
+        Der Discord Bot mit dem id
+        <span className="font-mono text-white">981649513427111957</span>
+        <br />
+        Der Discord server with the id{" "}
+        <span className="font-mono text-white">1009562516105461780</span>
+      </p>
+    </main>
   );
 }
