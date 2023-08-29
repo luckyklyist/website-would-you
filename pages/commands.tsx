@@ -1,6 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import { useState } from "react";
 import commands from "../data/commands.json";
 
@@ -8,68 +5,82 @@ export default function Commands() {
   const [openedCommand, setOpenedCommand] = useState("");
 
   return (
-    <>
-      <Head>
-        <title>Would You</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Logo.png" />
-      </Head>
+    <main className="px-8 sm:px-[17vw]">
+      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+        Commands
+      </h1>
 
-      <Navbar />
+      <div className="mt-8 flex flex-col gap-4">
+        {commands.map((c) => {
+          const isActive = openedCommand === c.name;
 
-      <main className="commands-main">
-        <h1>
-          Commands <span>List</span>
-        </h1>
-        <h3>All The Commands Would You Has To Offer!</h3>
-
-        <div className="commands">
-          {commands.commands.map((c: any) => (
+          return (
             <div
-              className={`command ${
-                openedCommand === c.name ? "active" : ""
+              className={`relative cursor-pointer overflow-hidden rounded-lg p-4 text-neutral-300 transition-all duration-300 ${
+                openedCommand === c.name
+                  ? "max-h-[210px] bg-neutral-700"
+                  : "max-h-[90px] bg-neutral-800"
               }`}
               onClick={() =>
-                openedCommand === c.name
-                  ? setOpenedCommand("")
-                  : setOpenedCommand(c.name)
+                isActive ? setOpenedCommand("") : setOpenedCommand(c.name)
               }
               key={c.name}
             >
-              <div className="command-head">
-                <div className="command-head-left">
-                  <h4>{c.name}</h4>
-                  <p>{c.description}</p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="mb-1 text-lg font-semibold text-white">
+                    <span className="mr-0.5 text-neutral-500">/</span>
+                    {c.name}
+                  </h4>
+                  <p className="mb-3 text-ellipsis whitespace-nowrap text-sm">
+                    {c.description}
+                  </p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
-                  fill="none"
+                  fill="currentColor"
                   viewBox="0 0 30 30"
+                  className={`transition-all duration-300 ${
+                    isActive
+                      ? "rotate-180 text-neutral-300"
+                      : "text-neutral-500"
+                  }`}
                 >
-                  <path
-                    fill="#666"
-                    d="M15 20.938a.93.93 0 0 1-.663-.275l-8.75-8.75a.938.938 0 1 1 1.327-1.327L15 18.674l8.088-8.088a.938.938 0 1 1 1.326 1.327l-8.75 8.75a.94.94 0 0 1-.665.274Z"
-                  />
+                  <path d="M15 20.938a.93.93 0 0 1-.663-.275l-8.75-8.75a.938.938 0 1 1 1.327-1.327L15 18.674l8.088-8.088a.938.938 0 1 1 1.326 1.327l-8.75 8.75a.94.94 0 0 1-.665.274Z" />
                 </svg>
               </div>
-              <div className="command-expand">
-                <div className="command-expand-group">
-                  <h5>Usage</h5>
-                  <h6>{c.usage}</h6>
-                </div>
-                <div className="command-expand-group">
-                  <h5>Subcommands</h5>
-                  <h6>{c.subcommands ? c.subcommands.join(", ") : 'None'}</h6>
-                </div>
+              <div
+                className={`transition-all duration-300 ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <h5 className="mb-1">Usage</h5>
+                <h6 className="mb-2 w-fit rounded-md bg-neutral-900 px-2 py-1 font-mono text-xs">
+                  {c.usage}
+                </h6>
+                {c.subcommands && (
+                  <>
+                    <h5 className="mb-1">Subcommands</h5>
+                    <h6 className="w-fit rounded-md bg-neutral-900 px-2 py-1 font-mono text-xs">
+                      {c.subcommands.join(", ")}
+                    </h6>
+                  </>
+                )}
+                {c.options && (
+                  <>
+                    <h5 className="mb-1">Options</h5>
+                    <h6 className="w-fit rounded-md bg-neutral-900 px-2 py-1 font-mono text-xs">
+                      {c.options.join(", ")}
+                    </h6>
+                  </>
+                )}
               </div>
             </div>
-          ))}
-        </div>
-      </main>
-
-      <Footer />
-    </>
+          );
+        })}
+      </div>
+    </main>
   );
 }
