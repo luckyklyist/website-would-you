@@ -15,8 +15,8 @@ module.exports = {
         },
       },
       dropShadow: {
-        ["red-glow"]: ["2px 2px 20px #f00505"],
-        ["blue-glow"]: ["2px 2px 20px #0598f6"],
+        ["red-glow"]: ["2px 2px 10px #f00505"],
+        ["blue-glow"]: ["2px 2px 10px #0598f6"],
       },
     },
     backgroundImage: {
