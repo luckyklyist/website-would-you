@@ -26,29 +26,35 @@ const Footer = () => {
             <h4 className="mb-2 text-lg font-semibold text-white">
               Recommended
             </h4>
-            <Link href="/">Home</Link>
-            <Link href="/commands">Commands</Link>
-            <Link href="/reddit" target="_blank">
-              Reddit
-            </Link>
+            <div className="flex flex-col gap-1">
+              <Link href="/">Home</Link>
+              <Link href="/commands">Commands</Link>
+              <Link href="/reddit" target="_blank">
+                Reddit
+              </Link>
+            </div>
           </div>
           <div className="flex flex-1 flex-col items-center sm:items-start">
             <h4 className="mb-2 text-lg font-semibold text-white">Links</h4>
-            <Link href="/discord" target={"_blank"}>
-              Support Server
-            </Link>
-            <Link href="/invite" target={"_blank"}>
-              Invite
-            </Link>
-            <Link href="/vote" target={"_blank"}>
-              Vote
-            </Link>
+            <div className="flex flex-col gap-1">
+              <Link href="/discord" target={"_blank"}>
+                Support Server
+              </Link>
+              <Link href="/invite" target={"_blank"}>
+                Invite
+              </Link>
+              <Link href="/vote" target={"_blank"}>
+                Vote
+              </Link>
+            </div>
           </div>
           <div className="flex flex-1 flex-col items-center sm:items-start">
             <h4 className="mb-2 text-lg font-semibold text-white">Legal</h4>
-            <Link href="/legal">Legal Notice</Link>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
+            <div className="flex flex-col gap-1">
+              <Link href="/legal">Legal Notice</Link>
+              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/terms">Terms of Service</Link>
+            </div>
           </div>
         </div>
       </div>
