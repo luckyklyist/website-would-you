@@ -64,6 +64,7 @@ const Navbar = () => {
               alt="Would You Logo"
               width="50"
               height="50"
+              priority
             />
             <p className="ml-4 text-2xl font-semibold text-white">Would You</p>
           </div>

@@ -13,6 +13,7 @@ const Footer = () => {
               className="rounded-full"
               width="40"
               height="40"
+              priority
             />
             <p className="ml-3">Would You</p>
           </div>
