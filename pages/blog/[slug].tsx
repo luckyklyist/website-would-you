@@ -29,8 +29,6 @@ const BlogPost: NextPage<{
   source: MDXRemoteSerializeResult;
   frontMatter: FrontMatter;
 }> = ({ source, frontMatter }) => {
-  console.log(frontMatter);
-
   return (
     <>
       <div className="mt-36 px-8 text-neutral-300 sm:px-[17vw]">
