@@ -71,12 +71,6 @@ const Navbar = () => {
         </Link>
         <div className="ml-24 hidden items-center sm:flex">
           <Link
-            href="/"
-            className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
-          >
-            Home
-          </Link>
-          <Link
             href="/commands"
             className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
           >
@@ -123,16 +117,17 @@ const Navbar = () => {
         animate={menuControls}
       >
         <div className="absolute top-36 flex w-full flex-col items-center">
-          <Link href="/" className="mt-8 text-center text-3xl text-white">
+          <Link href="/" className="mt-8 text-center text-3xl text-white" onClick={() => toggleMobileMenu()}>
             Home
           </Link>
           <Link
             href="/commands"
             className="mt-8 text-center text-3xl text-white"
+              onClick={() => toggleMobileMenu()}
           >
             Commands
           </Link>
-          <Link href="/blog" className="mt-8 text-center text-3xl text-white">
+          <Link href="/blog" className="mt-8 text-center text-3xl text-white" onClick={() => toggleMobileMenu()}>
             Blog
           </Link>
           <Link
