@@ -81,6 +81,12 @@ const Navbar = () => {
           >
             Commands
           </Link>
+          <Link
+            href="/blog"
+            className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
+          >
+            Blog
+          </Link>
         </div>
       </div>
       <div className="z-50 mr-8 flex items-center sm:mr-[17vw]">
@@ -124,6 +130,9 @@ const Navbar = () => {
             className="mt-8 text-center text-3xl text-white"
           >
             Commands
+          </Link>
+          <Link href="/blog" className="mt-8 text-center text-3xl text-white">
+            Blog
           </Link>
           <Link
             href="/discord"
