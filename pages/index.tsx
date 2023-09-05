@@ -275,17 +275,17 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-neutral-950 px-8 pb-8 text-center text-5xl font-semibold text-white sm:-mt-20 sm:px-[17vw]">
+        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white sm:-mt-20 sm:px-[17vw] sm:pb-28">
           <h2>
             Used by{" "}
-            <span className="text-brand-blue-100 drop-shadow-blue-glow">
+            <span className="bg-gradient-brand bg-clip-text text-transparent">
               {serverCount.toLocaleString()}+
             </span>{" "}
             communities
           </h2>
           <h3 className="mt-4 text-2xl">
             keeping{" "}
-            <span className="text-brand-red-100 drop-shadow-red-glow">
+            <span className="bg-gradient-brand bg-clip-text text-transparent">
               2,000,000+
             </span>{" "}
             users entertained
@@ -304,15 +304,11 @@ const Home = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-5xl font-semibold text-brand-blue-100 drop-shadow-blue-glow">
+          <h2 className="bg-gradient-brand bg-clip-text text-6xl font-semibold text-transparent">
             Features
           </h2>
-          <h3 className="mt-4 text-xl text-neutral-300">
-            What Does{" "}
-            <span className="font-semibold text-brand-red-100 drop-shadow-red-glow">
-              Would You
-            </span>{" "}
-            Offer To Your Server?
+          <h3 className="mt-4 text-2xl text-white">
+            What Does Would You Offer To Your Server?
           </h3>
         </motion.div>
 
@@ -574,7 +570,7 @@ const Home = () => {
           className="text-center text-4xl font-semibold leading-normal text-white"
         >
           Keep Your Server Active with{" "}
-          <span className="text-brand-red-100 drop-shadow-red-glow">
+          <span className="bg-gradient-brand bg-clip-text text-transparent">
             Would You
           </span>
         </motion.h2>

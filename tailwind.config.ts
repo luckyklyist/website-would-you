@@ -20,7 +20,8 @@ module.exports = {
       },
     },
     backgroundImage: {
-      ["gradient-brand"]: "linear-gradient(90deg, #0598F4 10%, #F00605 90%)",
+      ["gradient-brand"]:
+        "linear-gradient(92.91deg, #0598F4 -50%,#F00605 150%)",
     },
   },
   plugins: [],

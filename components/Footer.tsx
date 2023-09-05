@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="py-8 sm:px-[17vw]">
-      <div className="mb-8 flex flex-col items-center justify-between text-neutral-300 sm:flex-row">
-        <div className="flex flex-1 flex-col items-center sm:items-start">
+    <footer className="mt-8 py-8 sm:px-[17vw]">
+      <div className="mb-8 flex flex-col items-center justify-between gap-4 text-neutral-300 sm:flex-row">
+        <div className="flex w-full flex-col items-center sm:mr-4 sm:items-start">
           <div className="flex items-center text-xl font-semibold text-white">
             <Image
               src="/Logo.svg"
@@ -22,40 +22,62 @@ const Footer = () => {
             reserved.
           </p>
         </div>
-        <div className="mt-8 flex items-start gap-16 whitespace-nowrap sm:mt-0">
-          <div className="flex flex-1 flex-col items-center sm:items-start">
-            <h4 className="mb-2 text-lg font-semibold text-white">
-              Recommended
-            </h4>
-            <div className="flex flex-col gap-1">
-              <Link href="/">Home</Link>
-              <Link href="/commands">Commands</Link>
-              <Link href="/reddit" target="_blank">
-                Reddit
-              </Link>
-            </div>
+        <div className="flex w-full flex-col items-center sm:items-start">
+          <h4 className="mb-2 text-lg font-semibold text-white">Recommended</h4>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <Link href="/" className="transition-all hover:text-white">
+              Home
+            </Link>
+            <Link href="/commands" className="transition-all hover:text-white">
+              Commands
+            </Link>
+            <Link
+              href="/reddit"
+              target="_blank"
+              className="transition-all hover:text-white"
+            >
+              Reddit
+            </Link>
           </div>
-          <div className="flex flex-1 flex-col items-center sm:items-start">
-            <h4 className="mb-2 text-lg font-semibold text-white">Links</h4>
-            <div className="flex flex-col gap-1">
-              <Link href="/discord" target={"_blank"}>
-                Support Server
-              </Link>
-              <Link href="/invite" target={"_blank"}>
-                Invite
-              </Link>
-              <Link href="/vote" target={"_blank"}>
-                Vote
-              </Link>
-            </div>
+        </div>
+        <div className="flex w-full flex-col items-center sm:items-start">
+          <h4 className="mb-2 text-lg font-semibold text-white">Links</h4>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <Link
+              href="/discord"
+              target="_blank"
+              className="transition-all hover:text-white"
+            >
+              Support Server
+            </Link>
+            <Link
+              href="/invite"
+              target="_blank"
+              className="transition-all hover:text-white"
+            >
+              Invite
+            </Link>
+            <Link
+              href="/vote"
+              target="_blank"
+              className="transition-all hover:text-white"
+            >
+              Vote
+            </Link>
           </div>
-          <div className="flex flex-1 flex-col items-center sm:items-start">
-            <h4 className="mb-2 text-lg font-semibold text-white">Legal</h4>
-            <div className="flex flex-col gap-1">
-              <Link href="/legal">Legal Notice</Link>
-              <Link href="/privacy">Privacy Policy</Link>
-              <Link href="/terms">Terms of Service</Link>
-            </div>
+        </div>
+        <div className="flex w-full flex-col items-center sm:items-start">
+          <h4 className="mb-2 text-lg font-semibold text-white">Legal</h4>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <Link href="/legal" className="transition-all hover:text-white">
+              Legal Notice
+            </Link>
+            <Link href="/privacy" className="transition-all hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-all hover:text-white">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
@@ -65,7 +87,7 @@ const Footer = () => {
           Made with <span className="text-brand-red-100">♥</span> by{" "}
           <Link
             href="https://github.com/orgs/Would-You-Bot/people"
-            target={"_blank"}
+            target="_blank"
             className="text-white underline"
           >
             Would You Team
@@ -73,7 +95,7 @@ const Footer = () => {
           &{" "}
           <Link
             href="https://github.com/Would-You-Bot/website/graphs/contributors"
-            target={"_blank"}
+            target="_blank"
             className="text-white underline"
           >
             Contributors

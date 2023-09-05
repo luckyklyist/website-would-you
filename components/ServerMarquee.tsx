@@ -25,9 +25,7 @@ const ServerMarquee: React.FC<MarqueeProps> = ({
   className,
 }) => {
   return (
-    <div
-      className={`relative -mx-[2vw] my-auto mt-8 overflow-hidden ${className}`}
-    >
+    <div className={`relative my-auto mt-8 overflow-hidden ${className}`}>
       <Marquee
         className="flex w-max items-center overflow-hidden"
         play
