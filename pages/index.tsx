@@ -80,7 +80,7 @@ const FeatureItem: React.FC<{
   left: React.ReactNode;
   right: React.ReactNode;
 }> = ({ left, right }) => (
-  <div className="flex flex-col justify-between gap-20 sm:flex-row">
+  <div className="flex flex-col justify-between gap-20 md:flex-row">
     <motion.div
       initial={{ opacity: 0, transform: "translateX(-50px)" }}
       whileInView={{ opacity: 1, transform: "translateX(0)" }}
@@ -128,7 +128,7 @@ const Home = () => {
 
   return (
     <main className="mt-52 text-neutral-300 ">
-      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center sm:flex-row sm:px-[17vw] sm:text-left">
+      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center md:flex-row md:px-[17vw] md:text-left">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -136,7 +136,8 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-6xl font-semibold leading-normal text-white">
-            Entertain Your{" "}
+            Entertain Your
+            <br />
             <span className="text-brand-red-100 drop-shadow-red-glow">
               Discord
             </span>{" "}
@@ -149,7 +150,7 @@ const Home = () => {
             voting, daily messages, and customizability.
           </p>
           <Link href="/invite" target="_blank">
-            <Button className="mx-auto mt-8 gap-2 sm:mx-0">
+            <Button className="mx-auto mt-8 gap-2 md:mx-0">
               Unleash the Fun
               <svg
                 width="13"
@@ -275,7 +276,7 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white sm:-mt-20 sm:px-[17vw] sm:pb-28">
+        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white md:-mt-20 md:px-[17vw] md:pb-28">
           <h2>
             Used by{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
@@ -296,7 +297,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-20 flex flex-col items-center gap-8 px-9 sm:px-[17vw]">
+      <section className="mt-20 flex flex-col items-center gap-8 px-9 md:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(15px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -346,10 +347,10 @@ const Home = () => {
           }
           right={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white sm:text-left">
+              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
                 Increase user engagement
               </h4>
-              <p className="text-center text-lg text-neutral-300 sm:text-left">
+              <p className="text-center text-lg text-neutral-300 md:text-left">
                 Keep your community engaged and active with daily &quot;Would
                 You Rather&quot; messages!
               </p>
@@ -360,10 +361,10 @@ const Home = () => {
         <FeatureItem
           left={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white sm:text-left">
+              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
                 Keep the server active
               </h4>
-              <p className="text-center text-lg text-neutral-300 sm:text-left">
+              <p className="text-center text-lg text-neutral-300 md:text-left">
                 We provide your server with hundreds of funny possible
                 superpowers ready to start a conversation with.
               </p>
@@ -549,10 +550,10 @@ const Home = () => {
           }
           right={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white sm:text-left">
+              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
                 Upgrade your server
               </h4>
-              <p className="text-center text-lg text-neutral-300 sm:text-left">
+              <p className="text-center text-lg text-neutral-300 md:text-left">
                 Customized responses make your server unique and stand out from
                 the crowd.
               </p>
@@ -567,7 +568,7 @@ const Home = () => {
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: "easeInOut" }}
-          className="text-center text-4xl font-semibold leading-normal text-white"
+          className="text-center text-5xl font-semibold leading-normal text-white"
         >
           Keep Your Server Active with{" "}
           <span className="bg-gradient-brand bg-clip-text text-transparent">

@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 top-0 z-50 mb-28 flex h-28 w-full items-center justify-between border-b border-b-neutral-800 bg-neutral-900 bg-opacity-90 backdrop-blur-sm">
-      <div className="ml-8 flex items-center sm:ml-[17vw]">
+      <div className="ml-8 flex items-center md:ml-[17vw]">
         <Link href="/">
           <div className="flex items-center">
             <Image
@@ -69,7 +69,7 @@ const Navbar = () => {
             <p className="ml-4 text-2xl font-semibold text-white">Would You</p>
           </div>
         </Link>
-        <div className="ml-24 hidden items-center sm:flex">
+        <div className="ml-24 hidden items-center md:flex">
           <Link
             href="/commands"
             className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
@@ -84,12 +84,12 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="z-50 mr-8 flex items-center sm:mr-[17vw]">
-        <Link href="/discord" target="_blank" className="hidden sm:block">
+      <div className="z-50 mr-8 flex items-center md:mr-[17vw]">
+        <Link href="/discord" target="_blank" className="hidden md:block">
           <Button className="">Support</Button>
         </Link>
         <div
-          className="relative ml-6 flex h-6 w-8 flex-col items-center justify-between sm:hidden"
+          className="relative ml-6 flex h-6 w-8 flex-col items-center justify-between md:hidden"
           onClick={() => toggleMobileMenu()}
         >
           <motion.span
@@ -117,17 +117,25 @@ const Navbar = () => {
         animate={menuControls}
       >
         <div className="absolute top-36 flex w-full flex-col items-center">
-          <Link href="/" className="mt-8 text-center text-3xl text-white" onClick={() => toggleMobileMenu()}>
+          <Link
+            href="/"
+            className="mt-8 text-center text-3xl text-white"
+            onClick={() => toggleMobileMenu()}
+          >
             Home
           </Link>
           <Link
             href="/commands"
             className="mt-8 text-center text-3xl text-white"
-              onClick={() => toggleMobileMenu()}
+            onClick={() => toggleMobileMenu()}
           >
             Commands
           </Link>
-          <Link href="/blog" className="mt-8 text-center text-3xl text-white" onClick={() => toggleMobileMenu()}>
+          <Link
+            href="/blog"
+            className="mt-8 text-center text-3xl text-white"
+            onClick={() => toggleMobileMenu()}
+          >
             Blog
           </Link>
           <Link

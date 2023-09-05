@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="mt-8 py-8 sm:px-[17vw]">
-      <div className="mb-8 flex flex-col items-center justify-between gap-4 text-neutral-300 sm:flex-row">
-        <div className="flex w-full flex-col items-center sm:mr-4 sm:items-start">
+    <footer className="mt-8 py-8 md:px-[17vw]">
+      <div className="mb-8 flex flex-col items-center justify-between gap-4 text-neutral-300 md:flex-row">
+        <div className="flex w-full flex-col items-center md:mr-4 md:items-start">
           <div className="flex items-center text-xl font-semibold text-white">
             <Image
               src="/Logo.svg"
@@ -22,9 +22,9 @@ const Footer = () => {
             reserved.
           </p>
         </div>
-        <div className="flex w-full flex-col items-center sm:items-start">
+        <div className="flex w-full flex-col items-center md:items-start">
           <h4 className="mb-2 text-lg font-semibold text-white">Recommended</h4>
-          <div className="flex flex-col items-center gap-1 sm:items-start">
+          <div className="flex flex-col items-center gap-1 md:items-start">
             <Link href="/" className="transition-all hover:text-white">
               Home
             </Link>
@@ -40,9 +40,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center sm:items-start">
+        <div className="flex w-full flex-col items-center md:items-start">
           <h4 className="mb-2 text-lg font-semibold text-white">Links</h4>
-          <div className="flex flex-col items-center gap-1 sm:items-start">
+          <div className="flex flex-col items-center gap-1 md:items-start">
             <Link
               href="/discord"
               target="_blank"
@@ -66,9 +66,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center sm:items-start">
+        <div className="flex w-full flex-col items-center md:items-start">
           <h4 className="mb-2 text-lg font-semibold text-white">Legal</h4>
-          <div className="flex flex-col items-center gap-1 sm:items-start">
+          <div className="flex flex-col items-center gap-1 md:items-start">
             <Link href="/legal" className="transition-all hover:text-white">
               Legal Notice
             </Link>
