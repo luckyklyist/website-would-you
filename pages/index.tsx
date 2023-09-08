@@ -79,7 +79,8 @@ const profiles = {
 const FeatureItem: React.FC<{
   left: React.ReactNode;
   right: React.ReactNode;
-}> = ({ left, right }) => (
+  reverse?: true;
+}> = ({ left, right, reverse }) => (
   <div className="flex flex-col justify-between gap-20 md:flex-row">
     <motion.div
       initial={{ opacity: 0, transform: "translateX(-50px)" }}
@@ -95,7 +96,9 @@ const FeatureItem: React.FC<{
       whileInView={{ opacity: 1, transform: "translateX(0)" }}
       viewport={{ once: true }}
       transition={{ duration: 0.65, ease: "easeInOut" }}
-      className="flex flex-col justify-center gap-2"
+      className={`flex flex-col justify-center gap-2 ${
+        reverse ? "order-last lg:order-first" : ""
+      }`}
     >
       {right}
     </motion.div>
@@ -128,7 +131,7 @@ const Home = () => {
 
   return (
     <main className="mt-52 text-neutral-300 ">
-      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center md:flex-row md:px-[17vw] md:text-left">
+      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center md:flex-row md:text-left lg:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -276,7 +279,7 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white md:-mt-20 md:px-[17vw] md:pb-28">
+        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
           <h2>
             Used by{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
@@ -297,7 +300,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-20 flex flex-col items-center gap-8 px-9 md:px-[17vw]">
+      <section className="mt-20 flex flex-col items-center gap-8 px-9 lg:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(15px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -314,7 +317,8 @@ const Home = () => {
         </motion.div>
 
         <FeatureItem
-          left={
+          reverse
+          right={
             <DiscordMessages class="min-w-fit rounded-lg shadow">
               <DiscordMessage
                 profile="wouldyou"
@@ -345,7 +349,7 @@ const Home = () => {
               </DiscordMessage>
             </DiscordMessages>
           }
-          right={
+          left={
             <>
               <h4 className="text-center text-3xl font-semibold text-white md:text-left">
                 Increase user engagement
@@ -490,7 +494,8 @@ const Home = () => {
         />
 
         <FeatureItem
-          left={
+          reverse
+          right={
             <DiscordMessages class="rounded-lg shadow">
               <DiscordMessage
                 profile="wouldyou"
@@ -548,7 +553,7 @@ const Home = () => {
               </DiscordMessage>
             </DiscordMessages>
           }
-          right={
+          left={
             <>
               <h4 className="text-center text-3xl font-semibold text-white md:text-left">
                 Upgrade your server
