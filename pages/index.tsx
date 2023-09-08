@@ -279,7 +279,7 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-bold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
+        <div className="bg-[#101010] px-8 pb-12 text-center text-5xl font-bold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
           <h2>
             Used by{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
