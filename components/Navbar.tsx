@@ -84,6 +84,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/vote"
+            target="_blank"
             className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
           >
             Vote
@@ -146,6 +147,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/vote"
+            target="_blank"
             className="mt-8 text-center text-3xl text-white"
             onClick={() => toggleMobileMenu()}
           >
