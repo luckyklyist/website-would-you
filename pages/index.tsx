@@ -131,7 +131,7 @@ const Home = () => {
 
   return (
     <main className="mt-52 text-neutral-300 ">
-      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center md:flex-row md:text-left lg:px-[17vw]">
+      <section className="flex flex-col items-center justify-between gap-8 px-8 text-center lg:flex-row lg:text-left xl:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -153,7 +153,7 @@ const Home = () => {
             voting, daily messages, and customizability.
           </p>
           <Link href="/invite" target="_blank">
-            <Button className="mx-auto mt-8 gap-2 md:mx-0">
+            <Button className="mx-auto mt-8 gap-2 lg:mx-0">
               Unleash the Fun
               <svg
                 width="13"
@@ -279,7 +279,7 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-[#101010] px-8 pb-12 text-center text-5xl font-bold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
+        <div className="bg-[#101010] px-8 pb-12 text-center text-5xl font-bold text-white md:-mt-20 md:pb-28 xl:px-[17vw]">
           <h2>
             Used by{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
@@ -300,7 +300,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-20 flex flex-col items-center gap-8 px-9 lg:px-[17vw]">
+      <section className="mt-20 flex flex-col items-center gap-8 px-9 xl:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(15px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}

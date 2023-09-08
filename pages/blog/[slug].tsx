@@ -31,7 +31,7 @@ const BlogPost: NextPage<{
 }> = ({ source, frontMatter }) => {
   return (
     <>
-      <div className="mt-36 px-8 text-neutral-300 lg:px-[17vw]">
+      <div className="mt-36 px-8 text-neutral-300 xl:px-[17vw]">
         <Link
           href="/blog"
           className="text-neutral-300 transition-all hover:text-white"
@@ -66,7 +66,7 @@ const BlogPost: NextPage<{
       </div>
 
       <main
-        className={`markdown px-8 text-neutral-300 lg:px-[17vw] ${blogStyles.markdown}`}
+        className={`markdown px-8 text-neutral-300 xl:px-[17vw] ${blogStyles.markdown}`}
       >
         <MDXRemote {...source} components={components} />
       </main>

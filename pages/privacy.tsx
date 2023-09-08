@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Privacy() {
   return (
-    <main className="flex flex-col gap-8 px-8 text-neutral-300 lg:px-[17vw]">
+    <main className="flex flex-col gap-8 px-8 text-neutral-300 xl:px-[17vw]">
       <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Privacy Policy
       </h1>

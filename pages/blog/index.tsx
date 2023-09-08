@@ -25,7 +25,7 @@ interface PageProps {
 
 const BlogPosts: NextPage<PageProps> = ({ posts }) => {
   return (
-    <main className="px-8 lg:px-[17vw]">
+    <main className="px-8 xl:px-[17vw]">
       <h1 className="mt-36 text-4xl font-bold text-white">
         <span className="text-brand-red-100 drop-shadow-red-glow">Would</span>{" "}
         <span className="text-brand-blue-100 drop-shadow-blue-glow">You</span>{" "}
