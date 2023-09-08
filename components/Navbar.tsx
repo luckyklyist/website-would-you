@@ -82,6 +82,12 @@ const Navbar = () => {
           >
             Blog
           </Link>
+          <Link
+            href="/vote"
+            className="mr-6 text-lg text-neutral-300 transition-all hover:text-neutral-100"
+          >
+            Vote
+          </Link>
         </div>
       </div>
       <div className="z-50 mr-8 flex items-center xl:mr-[17vw]">
@@ -137,6 +143,13 @@ const Navbar = () => {
             onClick={() => toggleMobileMenu()}
           >
             Blog
+          </Link>
+          <Link
+            href="/vote"
+            className="mt-8 text-center text-3xl text-white"
+            onClick={() => toggleMobileMenu()}
+          >
+            Vote
           </Link>
           <Link
             href="/discord"
