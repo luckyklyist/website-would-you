@@ -1,80 +1,77 @@
-{
-  "commands": [
-    {
-      "name": "debug",
-      "description": "Debug the would you bot",
-      "usage": "/debug <subcommand>",
-      "subcommands": ["channel", "mode", "webhook"]
-    },
-    {
-      "name": "guide",
-      "description": "A Guide on how to use the bot and increase activity",
-      "usage": "/guide"
-    },
-    {
-      "name": "help",
-      "description": "Lists all commands",
-      "usage": "/help"
-    },
-    {
-      "name": "info",
-      "description": "Shows general information about the bot",
-      "usage": "/info"
-    },
-    {
-      "name": "language",
-      "description": "Change the language for the current guild",
-      "usage": "/language <language>",
-      "subcommands": ["spanish", "german", "english"]
-    },
-    {
-      "name": "neverhaveiever",
-      "description": "Get a never have I ever message",
-      "usage": "/neverhaveiever>"
-    },
-    {
-      "name": "ping",
-      "description": "Displays the bot's ping",
-      "usage": "/ping"
-    },
-    {
-      "name": "replay",
-      "description": "Configure the replay system",
-      "usage": "/replay <subcommand>",
-      "subcommands": ["cooldown", "toggle"]
-    },
-    {
-      "name": "settings",
-      "description": "Change settings for Daily Messages and Welcomes",
-      "usage": "/settings <category>",
-      "subcommands": ["General Settings", "Daily Messages", "Welcomes"]
-    },
-    {
-      "name": "support",
-      "description": "Links our support server",
-      "usage": "/support"
-    },
-    {
-      "name": "vote",
-      "description": "Vote for Would You",
-      "usage": "/vote"
-    },
-    {
-      "name": "wouldyourather",
-      "description": "Get a would you rather question",
-      "usage": "/wouldyou <category>",
-      "subcommands": ["useful", "useless"]
-    },
-    {
-      "name": "wwyd",
-      "description": "What would you do in this situation",
-      "usage": "/wwyd"
-    },
-    {
-      "name": "wycustom",
-      "description": "Ajust custom questions",
-      "usage": "/wycustom <subcommand>",
-      "subcommands": ["add", "export", "import", "remove", "removeall", "view"]
-    }
-  ]
-}
+[
+  {
+    "name": "debug",
+    "description": "Debug the would you bot",
+    "usage": "/debug <subcommand>",
+    "subcommands": ["channel", "mode", "webhook"]
+  },
+  {
+    "name": "guide",
+    "description": "A Guide on how to use the bot and increase activity",
+    "usage": "/guide"
+  },
+  {
+    "name": "help",
+    "description": "Lists all commands",
+    "usage": "/help"
+  },
+  {
+    "name": "info",
+    "description": "Shows general information about the bot",
+    "usage": "/info"
+  },
+  {
+    "name": "language",
+    "description": "Change the language for the current guild",
+    "usage": "/language <language>",
+    "options": ["Deutsch", "English", "Espanol", "Français"]
+  },
+  {
+    "name": "neverhaveiever",
+    "description": "Get a never have I ever message",
+    "usage": "/neverhaveiever"
+  },
+  {
+    "name": "ping",
+    "description": "Displays the bot's ping",
+    "usage": "/ping"
+  },
+  {
+    "name": "settings",
+    "description": "Change settings for Daily Messages and Welcomes",
+    "usage": "/settings <category>",
+    "options": ["General Settings", "Daily Messages", "Welcomes"]
+  },
+  {
+    "name": "support",
+    "description": "Links our support server",
+    "usage": "/support"
+  },
+  {
+    "name": "vote",
+    "description": "Vote for Would You",
+    "usage": "/vote"
+  },
+  {
+    "name": "wouldyourather",
+    "description": "Get a would you rather question",
+    "usage": "/wouldyourather"
+  },
+  {
+    "name": "wwyd",
+    "description": "What would you do in this situation",
+    "usage": "/wwyd"
+  },
+  {
+    "name": "custom",
+    "description": "Adjust custom questions",
+    "usage": "/custom <subcommand>",
+    "subcommands": ["add", "export", "import", "remove", "removeall", "view"]
+  },
+  {
+    "name": "type",
+    "description": "Change the type of questions you get",
+    "usage": "/type <subcommand>",
+    "subcommands": ["regular", "mixed", "custom"]
+  }
+]

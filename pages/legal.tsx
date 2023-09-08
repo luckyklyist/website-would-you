@@ -1,95 +1,88 @@
-import Navbar from "@/components/Navbar";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function legalnotice() {
   return (
-    <>
-      <Head>
-        <title>Would You</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Logo.png" />
-      </Head>
-
-      <Navbar />
-
-      <main className="legal-notice-main">
-        <h1>Legal Notice</h1>
-        <p>For the german version please visit <Link href="/legal-de" className="embedded-link">this page</Link>.</p>
+    <main className="flex flex-col gap-8 px-8 text-neutral-300 xl:px-[17vw]">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
+        Legal Notice
+      </h1>
+      <p>
+        <span className="mr-1.5 text-lg">🇩🇪</span>
+        For the German version please visit{" "}
+        <Link href="/legal-de" className="text-white underline">
+          this page
+        </Link>
+        .
+      </p>
+      <p>Information according to § 5 TMG.</p>
+      <div>
+        <h3 className="text-lg font-bold text-white">Contact</h3>
+        <p className="select-none">
+          Dominik Koch
+          <br />
+          Parkstrasse 5<br />
+          88499 Riedlingen
+          <br />
+          Germany
+        </p>
+      </div>
+      <p>No acceptance of parcels or packages.</p>
+      <p>Email: dominik@wouldyoubot.com</p>
+      <div>
+        <h3 className="text-lg font-bold text-white">
+          Online dispute resolution
+        </h3>
+        <p>
+          The European Comission provides a platform for online dispute
+          resolution, available at{" "}
+          <Link
+            href="https://ec.europa.eu/consumers/odr/"
+            className="text-white underline"
+          >
+            https://ec.europa.eu/consumers/odr/
+          </Link>
+          . <br />I am neither willing nor obliged to participate in dispute
+          resolution proceedings in front of a consumer arbitration board.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-lg font-bold text-white">Privacy Policy</h3>
+        <Link
+          href="https://wouldyoubot.gg/privacy/"
+          className="text-white underline"
+        >
+          https://wouldyoubot.gg/privacy/
+        </Link>
+      </div>
+      <div>
+        <h3 className="text-lg font-bold text-white">
+          Validity of this Legal Notice
+        </h3>
+        <p>
+          This legal notice is valid for the following websites, social media
+          accounts and other services, as long as they are listed below.
+        </p>
+      </div>
+      <div className="text-white">
+        <Link href="https://wouldyoubot.com/" className="underline">
+          https://wouldyoubot.com/
+        </Link>
         <br />
-        <div className="legal-notice-content">
-          <p>Information according to § 5 TMG.</p>
-          <h3>Contact</h3>
-          <p className="select-none">
-            Dominik Koch
-            <br />
-            Parkstrasse 5<br />
-            88499 Riedlingen
-            <br />
-            Germany
-          </p>
-          <br />
-          <p>No acceptance of parcels or packages.</p>
-          <br />
-          <p>Email: dominik@wouldyoubot.com</p>
-
-          <h3>Online dispute resolution</h3>
-          <p>
-            The European Comission provides a platform for online dispute
-            resolution, available here:{" "}
-            <Link
-              href="https://ec.europa.eu/consumers/odr/"
-              className="embedded-link"
-            >
-              https://ec.europa.eu/consumers/odr/
-            </Link>
-            <br />I am neither willing nor obliged to participate in dispute
-            resolution proceedings in front of a consumer arbitration board.
-          </p>
-
-          <h3>Would You Bot&apos;s Privacy Policy</h3>
-          <Link
-            href="https://wouldyoubot.gg/privacy/"
-            className="link"
-          >
-            https://wouldyoubot.gg/privacy/
-          </Link>
-
-          <h3>Validy of this Legal Notice</h3>
-          <p>
-            This legal notice is valid for the following websites, social media
-            accounts and other services, as long as they are listed here.
-          </p>
-          <br />
-          <Link href="https://wouldyoubot.com/" className="link">
-            https://wouldyoubot.com/
-          </Link>
-          <br />
-          <Link href="https://wouldyoubot.gg/" className="link">
-            https://wouldyoubot.gg/
-          </Link>
-          <br />
-          <Link
-            href="https://twitter.com/WouldYouBot/"
-            className="link"
-          >
-            https://twitter.com/WouldYouBot/
-          </Link>
-          <br />
-          <br />
-          <p>
-            The Discord user / bot Would You with the ID 981649513427111957
-            <br />
-            The Discord server Would You Support with the ID 1009562516105461780
-          </p>
-          <br />
-          <br />
-          <br />
-        </div>
-      </main>
-
-      <Footer />
-    </>
+        <Link href="https://wouldyoubot.gg/" className="underline">
+          https://wouldyoubot.gg/
+        </Link>
+        <br />
+        <Link href="https://twitter.com/WouldYouBot/" className="underline">
+          https://twitter.com/WouldYouBot/
+        </Link>
+      </div>
+      <p>
+        The Discord bot with the id{" "}
+        <span className="font-mono text-white">981649513427111957</span>
+        <br />
+        The Discord server with the id{" "}
+        <span className="font-mono text-white">1009562516105461780</span>
+      </p>
+    </main>
   );
 }
