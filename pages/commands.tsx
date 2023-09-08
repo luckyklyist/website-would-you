@@ -5,7 +5,7 @@ export default function Commands() {
   const [openedCommand, setOpenedCommand] = useState("");
 
   return (
-    <main className="px-8 md:px-[17vw]">
+    <main className="px-8 lg:px-[17vw]">
       <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
         Commands
       </h1>

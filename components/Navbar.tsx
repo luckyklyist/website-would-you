@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 top-0 z-50 mb-28 flex h-28 w-full items-center justify-between border-b border-b-neutral-800 bg-neutral-900 bg-opacity-90 backdrop-blur-sm">
-      <div className="ml-8 flex items-center md:ml-[17vw]">
+      <div className="ml-8 flex items-center lg:ml-[17vw]">
         <Link href="/">
           <div className="flex items-center">
             <Image
@@ -84,7 +84,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="z-50 mr-8 flex items-center md:mr-[17vw]">
+      <div className="z-50 mr-8 flex items-center lg:mr-[17vw]">
         <Link href="/discord" target="_blank" className="hidden md:block">
           <Button className="">Support</Button>
         </Link>

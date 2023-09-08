@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Error: NextPage<{ statusCode?: number }> = ({ statusCode }) => {
   return (
-    <div className="my-56 flex flex-col items-center justify-center px-8 text-white md:px-[17vw]">
+    <div className="my-56 flex flex-col items-center justify-center px-8 text-white lg:px-[17vw]">
       <h1 className="text-5xl font-semibold">
         Error{" "}
         <span className="text-brand-red-100 drop-shadow-red-glow">
