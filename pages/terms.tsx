@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Terms() {
   return (
     <main className="flex flex-col gap-8 px-8 text-neutral-300 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Terms of Service
       </h1>
       <div>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Last updated and effective: April 14, 2023
         </h3>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Agreement to Terms.
         </h3>
         <p>
@@ -43,7 +43,7 @@ export default function Terms() {
           Discord&apos;s services.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Intellectual property rights.
         </h3>
         <p>
@@ -63,7 +63,7 @@ export default function Terms() {
           and the Marks.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           User representations.
         </h3>
         <p>
@@ -82,14 +82,14 @@ export default function Terms() {
           any portion thereof).
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">Products.</h3>
+        <h3 className="my-4 text-lg font-bold text-white">Products.</h3>
         <p>
           All products are subject to availability. We reserve the right to
           discontinue any products at any time for any reason. Prices for all
           products are subject to change.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Contribution licence.
         </h3>
         <p>
@@ -113,7 +113,7 @@ export default function Terms() {
           refrain from any legal action against us regarding your Contributions.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Term and Termination.
         </h3>
         <p>
@@ -139,7 +139,7 @@ export default function Terms() {
           criminal, and injunctive redress.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Modifications and interruptions.
         </h3>
         <p>
@@ -168,9 +168,7 @@ export default function Terms() {
           corrections, updates, or releases in connection therewith.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
-          Governing Law.
-        </h3>
+        <h3 className="my-4 text-lg font-bold text-white">Governing Law.</h3>
         <p>
           These Terms and your use of Would You will be governed by and
           construed in accordance with the laws of Germany. Any dispute arising
@@ -182,7 +180,7 @@ export default function Terms() {
           from the Service.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">Disclaimer.</h3>
+        <h3 className="my-4 text-lg font-bold text-white">Disclaimer.</h3>
         <p>
           Would You is provided &quot;as is&quot; and &quot;as available&quot;,
           and the Company makes no warranties of any kind, express or implied,
@@ -194,7 +192,7 @@ export default function Terms() {
           to use it only with the required permissions.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Limitation of Liability.
         </h3>
         <p>
@@ -204,9 +202,7 @@ export default function Terms() {
           consequential, and punitive damages.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
-          Miscellaneous.
-        </h3>
+        <h3 className="my-4 text-lg font-bold text-white">Miscellaneous.</h3>
         <p>
           These Terms of Use and any policies or operating rules posted by us on
           the Site or in respect to the Site constitute the entire agreement and

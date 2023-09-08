@@ -138,7 +138,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <h1 className="text-6xl font-semibold leading-normal text-white">
+          <h1 className="text-6xl font-bold leading-normal text-white">
             Entertain Your
             <br />
             <span className="text-brand-red-100 drop-shadow-red-glow">
@@ -279,7 +279,7 @@ const Home = () => {
           className="-z-50 w-screen"
           priority
         />
-        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-semibold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
+        <div className="bg-neutral-950 px-8 pb-12 text-center text-5xl font-bold text-white md:-mt-20 md:pb-28 lg:px-[17vw]">
           <h2>
             Used by{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
@@ -308,7 +308,7 @@ const Home = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="flex flex-col items-center"
         >
-          <h2 className="bg-gradient-brand bg-clip-text text-6xl font-semibold text-transparent">
+          <h2 className="bg-gradient-brand bg-clip-text text-6xl font-bold text-transparent">
             Features
           </h2>
           <h3 className="mt-4 text-2xl text-white">
@@ -351,7 +351,7 @@ const Home = () => {
           }
           left={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
+              <h4 className="text-center text-3xl font-bold text-white md:text-left">
                 Increase user engagement
               </h4>
               <p className="text-center text-lg text-neutral-300 md:text-left">
@@ -365,7 +365,7 @@ const Home = () => {
         <FeatureItem
           left={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
+              <h4 className="text-center text-3xl font-bold text-white md:text-left">
                 Keep the server active
               </h4>
               <p className="text-center text-lg text-neutral-300 md:text-left">
@@ -555,7 +555,7 @@ const Home = () => {
           }
           left={
             <>
-              <h4 className="text-center text-3xl font-semibold text-white md:text-left">
+              <h4 className="text-center text-3xl font-bold text-white md:text-left">
                 Upgrade your server
               </h4>
               <p className="text-center text-lg text-neutral-300 md:text-left">
@@ -573,10 +573,10 @@ const Home = () => {
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: "easeInOut" }}
-          className="text-center text-5xl font-semibold leading-normal text-white"
+          className="text-center text-5xl font-bold leading-normal text-white"
         >
           Keep Your Server Active with{" "}
-          <span className="bg-gradient-brand bg-clip-text text-transparent">
+          <span className="bg-gradient-brand bg-clip-text font-bold text-transparent">
             Would You
           </span>
         </motion.h2>

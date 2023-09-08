@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function legalnotice() {
   return (
     <main className="flex flex-col gap-8 px-8 text-neutral-300 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Legal Notice
       </h1>
       <p>
@@ -16,7 +16,7 @@ export default function legalnotice() {
       </p>
       <p>Information according to § 5 TMG.</p>
       <div>
-        <h3 className="text-lg font-semibold text-white">Contact</h3>
+        <h3 className="text-lg font-bold text-white">Contact</h3>
         <p className="select-none">
           Dominik Koch
           <br />
@@ -29,7 +29,7 @@ export default function legalnotice() {
       <p>No acceptance of parcels or packages.</p>
       <p>Email: dominik@wouldyoubot.com</p>
       <div>
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-lg font-bold text-white">
           Online dispute resolution
         </h3>
         <p>
@@ -46,7 +46,7 @@ export default function legalnotice() {
         </p>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-white">Privacy Policy</h3>
+        <h3 className="text-lg font-bold text-white">Privacy Policy</h3>
         <Link
           href="https://wouldyoubot.gg/privacy/"
           className="text-white underline"
@@ -55,7 +55,7 @@ export default function legalnotice() {
         </Link>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-lg font-bold text-white">
           Validity of this Legal Notice
         </h3>
         <p>

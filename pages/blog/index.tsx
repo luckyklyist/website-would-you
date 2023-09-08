@@ -26,7 +26,7 @@ interface PageProps {
 const BlogPosts: NextPage<PageProps> = ({ posts }) => {
   return (
     <main className="px-8 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-white">
+      <h1 className="mt-36 text-4xl font-bold text-white">
         <span className="text-brand-red-100 drop-shadow-red-glow">Would</span>{" "}
         <span className="text-brand-blue-100 drop-shadow-blue-glow">You</span>{" "}
         Blog
@@ -54,7 +54,7 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
               />
               <div>
                 <div className="flex items-center gap-2">
-                  <h4 className="mb-1 text-xl font-semibold text-white">
+                  <h4 className="mb-1 text-xl font-bold text-white">
                     {post.data.title}
                   </h4>
                   {post.data.tags.map((tag) => (

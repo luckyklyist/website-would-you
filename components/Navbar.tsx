@@ -66,7 +66,7 @@ const Navbar = () => {
               height="50"
               priority
             />
-            <p className="ml-4 text-2xl font-semibold text-white">Would You</p>
+            <p className="ml-4 text-2xl font-bold text-white">Would You</p>
           </div>
         </Link>
         <div className="ml-24 hidden items-center md:flex">

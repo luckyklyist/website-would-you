@@ -38,9 +38,7 @@ const BlogPost: NextPage<{
         >
           <p className="mb-4">&larr; Back</p>
         </Link>
-        <h1 className="text-4xl font-semibold text-white">
-          {frontMatter.title}
-        </h1>
+        <h1 className="text-4xl font-bold text-white">{frontMatter.title}</h1>
         <p className="mt-4">{frontMatter.description}</p>
         <div className="mt-4 flex items-center">
           <Image

@@ -5,7 +5,7 @@ import Link from "next/link";
 const NotFound: NextPage = () => {
   return (
     <div className="my-56 flex flex-col items-center justify-center px-8 text-white lg:px-[17vw]">
-      <h1 className="text-5xl font-semibold">
+      <h1 className="text-5xl font-bold">
         Error{" "}
         <span className="text-brand-red-100 drop-shadow-red-glow">404</span>
       </h1>

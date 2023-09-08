@@ -3,12 +3,12 @@ import Link from "next/link";
 export default function legalnoticede() {
   return (
     <main className="flex flex-col gap-8 px-8 text-neutral-300 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Impressum
       </h1>
       <p>Informationen gemäß § 5 TMG.</p>
       <div>
-        <h3 className="text-lg font-semibold text-white">Kontakt</h3>
+        <h3 className="text-lg font-bold text-white">Kontakt</h3>
         <p className="select-none">
           Dominik Koch
           <br />
@@ -21,7 +21,7 @@ export default function legalnoticede() {
       <p>Keine Annahme von Paketen oder Päckchen.</p>
       <p>Email: dominik@wouldyoubot.com</p>
       <div>
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-lg font-bold text-white">
           Online dispute resolution
         </h3>
         <p>
@@ -40,7 +40,7 @@ export default function legalnoticede() {
         </p>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-white">Privacy Policy</h3>
+        <h3 className="text-lg font-bold text-white">Privacy Policy</h3>
         <Link
           href="https://wouldyoubot.gg/privacy/"
           className="text-white underline"
@@ -49,7 +49,7 @@ export default function legalnoticede() {
         </Link>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-lg font-bold text-white">
           Gültigkeit dieses Impressums
         </h3>
         <p>

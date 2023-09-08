@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="mt-8 py-8 lg:px-[17vw]">
       <div className="mb-8 flex flex-col items-center justify-between gap-4 text-neutral-300 md:flex-row">
         <div className="flex w-full flex-col items-center md:mr-4 md:items-start">
-          <div className="flex items-center text-xl font-semibold text-white">
+          <div className="flex items-center text-xl font-bold text-white">
             <Image
               src="/Logo.svg"
               alt="Logo"
@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex w-full flex-col items-center md:items-start">
-          <h4 className="mb-2 text-lg font-semibold text-white">Recommended</h4>
+          <h4 className="mb-2 text-lg font-bold text-white">Recommended</h4>
           <div className="flex flex-col items-center gap-1 md:items-start">
             <Link href="/" className="transition-all hover:text-white">
               Home
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-full flex-col items-center md:items-start">
-          <h4 className="mb-2 text-lg font-semibold text-white">Links</h4>
+          <h4 className="mb-2 text-lg font-bold text-white">Links</h4>
           <div className="flex flex-col items-center gap-1 md:items-start">
             <Link
               href="/discord"
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-full flex-col items-center md:items-start">
-          <h4 className="mb-2 text-lg font-semibold text-white">Legal</h4>
+          <h4 className="mb-2 text-lg font-bold text-white">Legal</h4>
           <div className="flex flex-col items-center gap-1 md:items-start">
             <Link href="/legal" className="transition-all hover:text-white">
               Legal Notice

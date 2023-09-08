@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Privacy() {
   return (
     <main className="flex flex-col gap-8 px-8 text-neutral-300 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Privacy Policy
       </h1>
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-white">
+        <h3 className="mb-4 text-lg font-bold text-white">
           Last updated and effective July 27, 2023
         </h3>
         <p>
@@ -65,9 +65,7 @@ export default function Privacy() {
           our Services immediately.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
-          Privacy Statement
-        </h3>
+        <h3 className="my-4 text-lg font-bold text-white">Privacy Statement</h3>
         <p>
           We respect the privacy of your information. We provide this
           explanation about our information practices as a show of our
@@ -127,7 +125,7 @@ export default function Privacy() {
           acceptance of those changes, so please check the policy every once in
           a while for updates.
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           {" "}
           What are your Privacy rights?
         </h3>
@@ -169,7 +167,7 @@ export default function Privacy() {
           </Link>
           .
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Analytics Provided by Others
         </h3>
         <p>
@@ -190,7 +188,7 @@ export default function Privacy() {
           </Link>
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           Information We Collect and How We Collect It
         </h3>
         <p>
@@ -222,7 +220,7 @@ export default function Privacy() {
             </li>
           </ul>
         </p>
-        <h3 className="font-lg my-4 font-semibold text-white">
+        <h3 className="font-lg my-4 font-bold text-white">
           Third-Party Websites
         </h3>
         <p>
@@ -242,7 +240,7 @@ export default function Privacy() {
           practices of any third party website or tool.
         </p>
 
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           The Way We Use Information
         </h3>
         <p>
@@ -334,7 +332,7 @@ export default function Privacy() {
           the Website, but please be aware that the data may not be completely
           or comprehensively removed from all our systems (e.g. backups etc.).
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           {" "}
           Do we make updates to this notice?
         </h3>
@@ -348,7 +346,7 @@ export default function Privacy() {
           notice frequently to be informed of how we are protecting your
           information.
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           {" "}
           How can you contact us about this notice?
         </h3>
@@ -356,7 +354,7 @@ export default function Privacy() {
           If you have any questions or comments about this notice, you may email
           us at dominik@wouldyoubot.com.
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">
+        <h3 className="my-4 text-lg font-bold text-white">
           How can you review, update, or delete the data we collect from you?
         </h3>
         <p>
@@ -374,7 +372,7 @@ export default function Privacy() {
           </Link>
           .
         </p>
-        <h3 className="my-4 text-lg font-semibold text-white">Attribution</h3>
+        <h3 className="my-4 text-lg font-bold text-white">Attribution</h3>
         <p>
           Thanks to{" "}
           <Link

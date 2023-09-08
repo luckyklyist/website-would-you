@@ -6,7 +6,7 @@ export default function Commands() {
 
   return (
     <main className="px-8 lg:px-[17vw]">
-      <h1 className="mt-36 text-4xl font-semibold text-brand-red-100 drop-shadow-red-glow">
+      <h1 className="mt-36 text-4xl font-bold text-brand-red-100 drop-shadow-red-glow">
         Commands
       </h1>
 
@@ -28,7 +28,7 @@ export default function Commands() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="mb-1 text-lg font-semibold text-white">
+                  <h4 className="mb-1 text-lg font-bold text-white">
                     <span className="mr-0.5 text-neutral-500">/</span>
                     {c.name}
                   </h4>
