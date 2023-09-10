@@ -4,7 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script defer data-domain="wouldyoubot.gg" src="https://stats.wouldyoubot.gg/js/script.js"></script>
+        <script
+          rel="preconnect"
+          defer
+          data-domain="wouldyoubot.gg"
+          src="https://stats.wouldyoubot.gg/js/script.js"
+        ></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -24,7 +29,7 @@ export default function Document() {
               "aggregateRating":{
                  "@type":"AggregateRating",
                  "ratingValue":"5",
-                 "reviewCount":"28"
+                 "reviewCount":"31"
               }
            }
   `,
@@ -36,11 +41,9 @@ export default function Document() {
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
         />
         <meta property="og:title" content="Would You | Discord Bot" />
-        <meta
-          property="og:description"
-          content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
-        />
-        <meta property="og:image" content="/Logo.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="0" />
+        <meta property="og:image" content="https://i.imgur.com/OPQaiVa.png" />
         <meta name="theme-color" content="#0598F6" />
         <meta name="msapplication-TileColor" content="#0598F6" />
       </Head>
