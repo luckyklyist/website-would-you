@@ -1,7 +1,8 @@
 const { readdirSync } = require("fs");
 const path = require("path");
 
-/** @type {import('next-sitemap').IConfig} */ module.exports = {
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
   siteUrl: "https://wouldyoubot.gg/",
   generateRobotsTxt: true,
 
