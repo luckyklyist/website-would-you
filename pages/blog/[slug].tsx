@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import { GetStaticProps, NextPage } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
@@ -32,6 +33,13 @@ const BlogPost: NextPage<{
 }> = ({ source, frontMatter }) => {
   return (
     <>
+      <Head>
+        <title>Would You Blog | {frontMatter.title}</title>
+        <meta name="description" content={frontMatter.description} />
+        <meta property="og:title" content={frontMatter.title} />
+        <meta property="og:description" content={frontMatter.description} />
+      </Head>
+
       <div className="mt-36 px-8 text-neutral-300 xl:px-[17vw]">
         <Link
           href="/blog"
