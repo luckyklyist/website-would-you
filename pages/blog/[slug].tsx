@@ -23,6 +23,7 @@ interface FrontMatter {
     avatar: string;
   };
   tags: string[];
+  pinned?: boolean;
 }
 
 const BlogPost: NextPage<{
