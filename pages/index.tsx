@@ -311,7 +311,7 @@ const Home = () => {
           <h2 className="bg-gradient-brand bg-clip-text text-6xl font-bold text-transparent">
             Features
           </h2>
-          <h3 className="mt-4 text-2xl text-white">
+          <h3 className="mt-4 text-center text-2xl text-white">
             What Does Would You Offer To Your Server?
           </h3>
         </motion.div>
