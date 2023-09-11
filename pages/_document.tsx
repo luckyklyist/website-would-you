@@ -4,12 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script
+        <link
           rel="preconnect"
-          defer
+          as="script"
           data-domain="wouldyoubot.gg"
-          src="https://stats.wouldyoubot.gg/js/script.js"
-        ></script>
+          href="https://stats.wouldyoubot.gg/js/script.js"
+        ></link>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
