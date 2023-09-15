@@ -19,6 +19,10 @@ interface FrontMatter {
   title: string;
   description: string;
   date: string;
+  thumbnail?: {
+    large?: string;
+    banner?: string;
+  };
   author: {
     name: string;
     avatar: string;
@@ -38,6 +42,13 @@ const BlogPost: NextPage<{
         <meta name="description" content={frontMatter.description} />
         <meta property="og:title" content={frontMatter.title} />
         <meta property="og:description" content={frontMatter.description} />
+        {frontMatter.thumbnail?.large && (
+          <meta
+            key="og:image"
+            property="og:image"
+            content={frontMatter.thumbnail?.large}
+          />
+        )}
       </Head>
 
       <div className="mt-36 px-8 text-neutral-300 xl:px-[17vw]">
@@ -47,6 +58,15 @@ const BlogPost: NextPage<{
         >
           <p className="mb-4">&larr; Back</p>
         </Link>
+        {frontMatter.thumbnail?.banner && (
+          <Image
+            src={frontMatter.thumbnail.banner}
+            alt={frontMatter.title}
+            width={1000}
+            height={200}
+            className="mb-4 h-auto w-full rounded-lg"
+          />
+        )}
         <h1 className="text-4xl font-bold text-white">{frontMatter.title}</h1>
         <p className="mt-4">{frontMatter.description}</p>
         <div className="mt-4 flex items-center">
