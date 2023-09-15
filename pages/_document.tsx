@@ -15,26 +15,46 @@ export default function Document() {
             __html: `
             {
               "@context":"http://schema.org",
-              "@type":"SoftwareApplication",
+              "@type":"Product",
               "name":"Would You Bot",
               "url":"https://wouldyoubot.gg",
               "logo":"https://i.imgur.com/YjwOfOX.png",
-              "description":"Elevate your server's engagement with Would You, featuring user voting, daily messages, and customizability. Would You Rather",
+              "image":"https://i.imgur.com/OPQaiVa.png",
+              "description":"Increase server engagement and entertain your members with Would You, featuring user polls, daily questions, and customization. Would You Rather",
               "sameAs":[
                  "https://twitter.com/wouldyoubot",
                  "https://www.youtube.com/@wouldyoubot",
                  "https://top.gg/bot/981649513427111957"
               ],
-              "offers": {
-                "@type": "Offer",
-                "price": "0"
+              "offers":{
+                "@type":"Offer",
+                "availability":"https://schema.org/OnlineOnly",
+                "price":"0.00",
+                "priceCurrency":"USD",
+                "url":"https://wouldyoubot.gg"
+             },
+             "review":{
+              "@type":"Review",
+              "reviewRating":{
+                 "@type":"Rating",
+                 "bestRating":5,
+                 "worstRating":1,
+                 "ratingValue":5
               },
-              "aggregateRating":{
-                 "@type":"AggregateRating",
-                 "ratingValue":"5",
-                 "reviewCount":"32"
-              }
+              "author":{
+                 "@type":"Person",
+                 "name":"_kiru_"
+              },
+              "reviewBody":"Geiler Bot, fördert die Aktivität des Server&apos;s enorm. Der Developer ist auch sehr symphytisch. Kann ich nur weiter empfehlen!"
+           },
+           "aggregateRating":{
+              "@type":"AggregateRating",
+              "ratingValue":5,
+              "ratingCount":32,
+              "bestRating":5,
+              "worstRating":1
            }
+        }
   `,
           }}
         ></script>
