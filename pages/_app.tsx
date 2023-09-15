@@ -12,6 +12,23 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Would You</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Logo.png" />
+        {pageProps.frontMatter?.thumbnail?.large ? (
+          <>
+            <meta
+              key="og:image"
+              name="og:image"
+              content={pageProps.frontMatter.thumbnail.large}
+            />
+          </>
+        ) : (
+          <>
+            <meta
+              key="og:image"
+              property="og:image"
+              content="https://i.imgur.com/OPQaiVa.png"
+            />
+          </>
+        )}
       </Head>
 
       <Navbar />

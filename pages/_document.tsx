@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -40,14 +40,13 @@ export default function Document() {
           name="description"
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
         />
-         <meta
+        <meta
           property="og:description"
           content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
         />
         <meta property="og:title" content="Would You | Discord Bot" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:image" content="0" />
-        <meta property="og:image" content="https://i.imgur.com/OPQaiVa.png" />
         <meta name="theme-color" content="#0598F6" />
         <meta name="msapplication-TileColor" content="#0598F6" />
       </Head>
