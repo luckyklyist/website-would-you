@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <script
-          rel="preconnect"
           defer
           data-domain="wouldyoubot.gg"
           src="https://stats.wouldyoubot.gg/js/script.js"
@@ -16,7 +15,7 @@ export default function Document() {
             __html: `
             {
               "@context":"http://schema.org",
-              "@type":"Organization",
+              "@type":"SoftwareApplication",
               "name":"Would You Bot",
               "url":"https://wouldyoubot.gg",
               "logo":"https://i.imgur.com/YjwOfOX.png",
@@ -26,10 +25,14 @@ export default function Document() {
                  "https://www.youtube.com/@wouldyoubot",
                  "https://top.gg/bot/981649513427111957"
               ],
+              "offers": {
+                "@type": "Offer",
+                "price": "0"
+              },
               "aggregateRating":{
                  "@type":"AggregateRating",
                  "ratingValue":"5",
-                 "reviewCount":"31"
+                 "reviewCount":"32"
               }
            }
   `,
