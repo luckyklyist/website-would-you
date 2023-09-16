@@ -2,25 +2,37 @@ name: Lint and Build
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2        
-      - name: install dependencies
-        run: npm ci
-      - name: run lint
-        run:  npm run lint
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run lint
+        run: pnpm lint
 
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2        
-      - name: install dependencies
-        run: npm ci
-      - name: run build
-        run:  npm run build
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run build
+        run: pnpm build
