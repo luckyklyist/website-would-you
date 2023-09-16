@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Would You</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Logo.png" />
+        <link rel="canonical" href="https://wouldyoubot.gg"/>
         {pageProps.frontMatter?.thumbnail?.large ? (
           <>
             <meta
