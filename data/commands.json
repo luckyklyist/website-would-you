@@ -16,6 +16,11 @@
     "usage": "/help"
   },
   {
+    "name": "higherlower",
+    "description": "Starts the higher or lower game",
+    "usage": "/higherlower"
+  },
+  {
     "name": "info",
     "description": "Shows general information about the bot",
     "usage": "/info"
