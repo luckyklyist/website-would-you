@@ -44,7 +44,7 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
           </p>
         )}
         {posts
-          .sort((p) => (p.data.pinned ? 0 : 1))
+           .sort((a, b) => (a.data.pinned === b.data.pinned ? 0 : a.data.pinned ? -1 : 1))
           .map((post) => (
             <Link
               href={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
@@ -64,7 +64,7 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
                     <h4 className="mb-1 text-xl font-bold text-white">
                       {post.data.title}
                     </h4>
-                    {post.data.tags.map((tag) => (
+                    {post.data.tags.slice(0, 4).map((tag) => (
                       <p
                         key={tag}
                         className="-mt-1 rounded-full border border-neutral-500 px-2 py-1 text-xs text-neutral-300"
