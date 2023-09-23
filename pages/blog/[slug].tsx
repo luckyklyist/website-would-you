@@ -22,6 +22,7 @@ interface FrontMatter {
   thumbnail?: {
     large?: string;
     banner?: string;
+    alt?: string;
   };
   author: {
     name: string;

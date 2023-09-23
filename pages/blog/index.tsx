@@ -16,6 +16,7 @@ interface PageProps {
       thumbnail?: {
         large?: string;
         banner?: string;
+        alt?: string;
       };
       author: {
         name: string;
@@ -84,7 +85,7 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
                   src={post.data.thumbnail.large}
                   width={500}
                   height={500}
-                  alt="thumbnail"
+                  alt={post.data.thumbnail.alt || post.data.title}
                   className="h-24 w-auto rounded-lg"
                 />
               )}
