@@ -50,7 +50,7 @@ export default function Document() {
            "aggregateRating":{
               "@type":"AggregateRating",
               "ratingValue":5,
-              "ratingCount":32,
+              "ratingCount":33,
               "bestRating":5,
               "worstRating":1
            }
