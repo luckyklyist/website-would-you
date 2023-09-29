@@ -1,36 +1,71 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - main
+    push:
+      branches:
+        - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    pull: 
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: pnpm/action-setup@v2
+            with:
+              version: latest
+          - uses: actions/setup-node@v3
+            with:
+              node-version: "18.x"
+              cache: "pnpm"
+          - name: Deploy using SSH
+            uses: appleboy/ssh-action@master
+            with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USERNAME }}
+                key: ${{ secrets.SSH_PRIVATE_KEY }}
+                port: 22
+                script: |
+                     cd /home/wouldyou/website
+                     git pull origin main
+                     git status
 
-      - name: Setup Node.js 18.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+    install:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: pnpm/action-setup@v2
+          with:
+            version: latest
+        - uses: actions/setup-node@v3
+          with:
+            node-version: "18.x"
+            cache: "pnpm"
+        - name: Install dependencies
+          run: pnpm install
+        - name: Run lint
+          run: pnpm lint
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: pnpm/action-setup@v2
+          with:
+            version: latest
+        - uses: actions/setup-node@v3
+          with:
+            node-version: "18.x"
+            cache: "pnpm"
+        - name: Build website
+          run: pnpm build
 
-      - name: Deploy using ssh
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          node-version: 18
-          port: 22
-          script: |
-            cd /home/wouldyou/website
-            git pull origin main
-            git status
-            pnpm install
-            pm2 restart Would-You-Website
+    deploy: 
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: pnpm/action-setup@v2
+            with:
+              version: latest
+          - uses: actions/setup-node@v3
+          - name: Restart Process
+            run: pm2 restrt Would-You-Website
