@@ -67,5 +67,11 @@ jobs:
             with:
               version: latest
           - uses: actions/setup-node@v3
+            with:
+             node-version: "18.x"
+             cache: "pnpm"
+
+          - name: Install pm2
+            run: pnpm install pm2 -g
           - name: Restart Process
-            run: pm2 restrt Would-You-Website
+            run: pm2 restart Would-You-Website
