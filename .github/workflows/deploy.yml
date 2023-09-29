@@ -45,4 +45,4 @@ jobs:
 
       - name: Restart process
         run: |
-          pm2 restart Would-You-Website
+          pm2 list && pm2 restart 14
