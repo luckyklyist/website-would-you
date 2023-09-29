@@ -15,12 +15,9 @@ jobs:
       - name: Setup Node.js and pnpm
         uses: actions/setup-node@v2
         with:
-          node-version: "18.x" # Use the desired Node.js version
-
+          node-version: "18.x"
       - name: Install pnpm and pm2
-        run: |
-          npm install -g pnpm
-          npm install -g pm2
+        run: npm install -g pnpm pm2
 
       - name: Deploy using SSH
         uses: appleboy/ssh-action@master
@@ -36,22 +33,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd /home/wouldyou/website
           pnpm install
 
       - name: Run lint
         run: |
-          cd /home/wouldyou/website
           pnpm lint
 
       - name: Build website
         run: |
-          cd /home/wouldyou/website
           pnpm build
 
-      - name: Restart process with PM2
+      - name: Restart process
         run: |
-          # Navigate to your application directory
-          cd /home/wouldyou/website
-
-          pm2 restart Would-You-Website
+          pm2 list && pm2 restart 14
