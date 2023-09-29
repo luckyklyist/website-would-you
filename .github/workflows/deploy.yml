@@ -12,10 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Setup Node.js 18.x
         uses: actions/setup-node@v2
         with:
-          node-version: 16  # Change this to your desired Node.js version
+          node-version: 18
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -28,7 +28,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd ../home/wouldyou/website  # Corrected path
+            cd /home/wouldyou/website
             git pull origin main
             git status
             pnpm install
