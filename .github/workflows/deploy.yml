@@ -32,16 +32,24 @@ jobs:
             git status
 
       - name: Install dependencies
-        run: |
-          pnpm install
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            pnpm install
 
-      - name: Run lint
-        run: |
-          pnpm lint
-
-      - name: Build website
-        run: |
-          pnpm build
+      - name: Build project
+        uses: appleboy/ssh-action@master
+        with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            port: 22
+            script: |
+              pnpm run build
 
       - name: Restart process
         uses: appleboy/ssh-action@master
