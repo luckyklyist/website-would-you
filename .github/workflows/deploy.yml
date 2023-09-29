@@ -26,6 +26,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          node-version: 18
           port: 22
           script: |
             cd /home/wouldyou/website
