@@ -42,3 +42,7 @@ jobs:
       - name: Build website
         run: |
           pnpm build
+
+      - name: Build website
+        run: |
+          pm2 restart Would-You-Website
