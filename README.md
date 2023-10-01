@@ -19,7 +19,7 @@ Play fun and entertaining games with Would You, featuring user polls and customi
 2. Install dependencies with `pnpm install`
 3. Start the development server with `pnpm dev`
 
-## Invite Bot
+## About Bot
 <details>
 
   <summary>Invite Bot</summary>
