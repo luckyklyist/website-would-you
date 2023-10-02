@@ -52,7 +52,7 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
             <Link
               href={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
               key={post.filePath}
-              className="block items-center justify-between rounded-lg bg-neutral-800 p-4 text-neutral-300 transition-all duration-300 hover:bg-neutral-700 sm:flex"
+              className="relative block items-center justify-between rounded-lg bg-neutral-800 p-4 text-neutral-300 transition-all duration-300 hover:bg-neutral-700 sm:flex"
             >
               <div className="mb-2 flex items-start sm:mb-0 sm:mr-4 sm:gap-4">
                 <Image
