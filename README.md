@@ -1,13 +1,17 @@
+# Gopal Verma
 # Would You Web
 
 The official repository for the [Would You website](https://wouldyoubot.gg)
 
 ## Table of Contents
 
-- [Introduction](#Introduction)
-- [Development](#development)
-- [About Bot](#about-Bot)
-- [Contributors](#contributors)
+- [Gopal Verma](#gopal-verma)
+- [Would You Web](#would-you-web)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Development](#development)
+  - [About Bot](#about-bot)
+  - [Contributors](#contributors)
 
 ## Introduction
 
