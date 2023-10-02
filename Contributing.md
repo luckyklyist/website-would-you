@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-We are all eager to work on official website for the Would You Discord bot, and this document will help you to get started!
+Thank you for your interest in contributing! All types of contributions are valuable to us. This guide will help you get started!
 
 ### Issues
 
