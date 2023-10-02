@@ -18,21 +18,21 @@ WORKDIR /app
 # -- following code if pnpm-lock.yaml exist -- 
 
 # Copy package.json and pnpm-lock.yaml
-# COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml* ./
 
 # Install dependencies using pnpm
-# RUN \
-#   if [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm install; \
-#   else echo "pnpm lock file (pnpm-lock.yaml) not found." && exit 1; \
-#   fi
+RUN \
+  if [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm install; \
+  else echo "pnpm lock file (pnpm-lock.yaml) not found." && exit 1; \
+  fi
 
 # -- following code if pnpm-lock.yaml does not exist -- 
 
 # Copy package.json and lock files (if any) to the container
-COPY package.json ./
+# COPY package.json ./
 
 # Install dependencies using package.json only
-RUN yarn global add pnpm && pnpm install
+# RUN yarn global add pnpm && pnpm install
 
 # Rebuild the source code only when needed
 FROM base AS builder
