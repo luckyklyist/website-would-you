@@ -2,6 +2,8 @@
 
 The official repository for the [Would You website](https://wouldyoubot.gg)
 
+![Discord Bots](https://top.gg/api/widget/981649513427111957.svg)
+
 ## Table of Contents
 
 - [Introduction](#Introduction)
