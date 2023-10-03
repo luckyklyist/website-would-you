@@ -7,8 +7,9 @@ export default function Commands() {
   const [copyText, setCopyText] = useState("");
 
   const handleCopyUsage = (textToCopy: any) => {
+    const commandPart = textToCopy.split(" ")[0];
     const textArea = document.createElement("textarea");
-    textArea.value = textToCopy;
+    textArea.value = commandPart;
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand("copy");
@@ -84,7 +85,11 @@ export default function Commands() {
                     handleCopyUsage(c.usage);
                   }}
                 >
-                  {isHovered ? copyText : c.usage}
+                  {isHovered ? (
+                    <div className="text-gray-400">{copyText}</div>
+                  ) : (
+                    <div>{c.usage}</div>
+                  )}
                 </h6>
                 {c.subcommands && (
                   <>
