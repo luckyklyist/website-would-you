@@ -20,7 +20,7 @@ export default function Document() {
               "url":"https://wouldyoubot.gg",
               "logo":"https://i.imgur.com/YjwOfOX.png",
               "image":"https://i.imgur.com/OPQaiVa.png",
-              "description":"Increase server engagement and entertain your members with Would You, featuring user polls, daily questions, and customization. Would You Rather",
+              "description":"Would you lets you play Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do!",
               "sameAs":[
                  "https://twitter.com/wouldyoubot",
                  "https://www.youtube.com/@wouldyoubot",
@@ -61,13 +61,11 @@ export default function Document() {
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
-          content="Play fun and entertaining games with Would You, featuring user polls and customization. 
-          Play Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do!"
+          content="Would you lets you play Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do on discord!"
         />
         <meta
           property="og:description"
-          content="Play fun and entertaining games with Would You, featuring user polls and customization. 
-          Play Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do!"
+          content="Would you lets you play Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do on discord!"
         />
         <meta property="og:title" content="Would You | Discord Bot" />
         <meta property="twitter:card" content="summary_large_image" />
