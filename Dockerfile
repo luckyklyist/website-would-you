@@ -2,16 +2,9 @@ FROM node:18-alpine
 
 WORKDIR /
 
-# Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
-# Omit --production flag for TypeScript devDependencies
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i; \
-  # Allow install without lockfile, so example works even without Node.js installed locally
-  else echo "Warning: Lockfile not found. It is recommended to commit lockfiles to version control." && yarn install; \
-  fi
+# Install dependencies using pnpm
+COPY package.json pnpm-lock.yaml* ./
+RUN yarn global add pnpm && pnpm i
 
 # COPY src ./src
 COPY public ./public
@@ -25,18 +18,8 @@ COPY . .
 
 # Note: Don't expose ports here, Compose will handle that for us
 
-# Build Next.js based on the preferred package manager
-RUN \
-  if [ -f yarn.lock ]; then yarn build; \
-  elif [ -f package-lock.json ]; then npm run build; \
-  elif [ -f pnpm-lock.yaml ]; then pnpm build; \
-  else yarn build; \
-  fi
+# Build Next.js using pnpm
+RUN pnpm build
 
-# Start Next.js based on the preferred package manager
-CMD \
-  if [ -f yarn.lock ]; then yarn start; \
-  elif [ -f package-lock.json ]; then npm run start; \
-  elif [ -f pnpm-lock.yaml ]; then pnpm start; \
-  else yarn start; \
-  fi
+# Start Next.js using pnpm
+CMD pnpm start
