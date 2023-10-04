@@ -23,3 +23,6 @@ RUN pnpm build
 
 # Start Next.js using pnpm
 CMD pnpm start
+
+# Explicitly expose port 2123
+EXPOSE 2123
