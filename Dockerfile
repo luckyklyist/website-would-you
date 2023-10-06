@@ -4,7 +4,7 @@ WORKDIR /
 
 # Install dependencies using pnpm
 COPY package.json pnpm-lock.yaml* ./
-RUN yarn global add pnpm && pnpm i
+RUN npm i -g pnpm && pnpm i
 
 # COPY src ./src
 COPY public ./public
