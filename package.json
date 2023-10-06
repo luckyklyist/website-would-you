@@ -9,8 +9,8 @@
     "lint": "next lint",
     "format": "prettier --write ./**/*.{ts,tsx}",
     "postbuild": "next-sitemap",
-    "docker:build": "docker build -t wouldyou-website .",
-    "docker:start": "docker run -p 2123:2123 wouldyou-website"
+    "docker:build": "docker build -t dominikdoesdev/wy-website .",
+    "docker:start": "docker run -p 2123:2123 dominikdoesdev/wy-website"
   },
   "repository": {
     "type": "git",
