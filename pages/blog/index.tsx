@@ -52,9 +52,9 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
             <Link
               href={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
               key={post.filePath}
-              className="relative block items-center justify-between rounded-lg bg-neutral-800 p-4 text-neutral-300 transition-all duration-300 hover:bg-neutral-700 sm:flex"
+              className="relative flex flex-col items-center justify-between rounded-lg bg-neutral-800 p-4 text-neutral-300 transition-all duration-300 hover:bg-neutral-700 sm:flex-row"
             >
-              <div className="mb-2 flex items-start sm:mb-0 sm:mr-4 sm:gap-4">
+              <div className="z-10 flex flex-col items-start gap-2 sm:flex-row">
                 <Image
                   src={post.data.author.avatar}
                   alt={post.data.author.name}
@@ -62,39 +62,35 @@ const BlogPosts: NextPage<PageProps> = ({ posts }) => {
                   height={50}
                   className="h-10 w-10 rounded-full"
                 />
-                <div>
-                  <div className="flex items-center gap-2">
+                <div className="text-center sm:text-left">
+                  <div className="flex flex-wrap gap-2">
                     <h4 className="mb-1 text-xl font-bold text-white">
                       {post.data.title}
                     </h4>
-                    <div className="flex flex-wrap">
-                      {post.data.tags.slice(0, 4).map((tag) => (
-                        <p
-                          key={tag}
-                          className="mb-2 mr-2 rounded-full bg-neutral-700 px-2 py-1 text-xs text-neutral-300"
-                        >
-                          {tag}
-                        </p>
-                      ))}
-                    </div>
+                    {post.data.tags.slice(0, 4).map((tag) => (
+                      <p
+                        key={tag}
+                        className="rounded-full border border-neutral-500 px-2 py-1 text-xs text-neutral-300"
+                      >
+                        {tag}
+                      </p>
+                    ))}
                   </div>
-                  <p className="mb-2 text-xs text-neutral-400 sm:text-sm">
+                  <p className="mb-2 text-sm text-neutral-400">
                     {post.data.date}
                   </p>
                   <p className="text-sm">{post.data.description}</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                {post.data.thumbnail?.large && (
-                  <Image
-                    src={post.data.thumbnail.large}
-                    width={500}
-                    height={500}
-                    alt={post.data.thumbnail.alt || post.data.title}
-                    className="h-24 w-auto rounded-lg"
-                  />
-                )}
-              </div>
+              {post.data.thumbnail?.large && (
+                <Image
+                  src={post.data.thumbnail.large}
+                  alt={post.data.thumbnail.alt || post.data.title}
+                  className="mt-4 h-24 w-auto rounded-lg sm:mt-0"
+                  width={200}
+                  height={112.5}
+                />
+              )}
               {post.data.pinned && (
                 <svg
                   width="210"
