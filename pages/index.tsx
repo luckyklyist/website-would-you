@@ -414,7 +414,7 @@ const Home = () => {
                     avatar={profiles.nightkiller.avatar}
                     roleColor={profiles.nightkiller.roleColor}
                   >
-                    Wow thats a good one let...
+                    Wow thats a good...
                   </DiscordThreadMessage>
                 </DiscordThread>
               </DiscordMessage>
@@ -460,7 +460,7 @@ const Home = () => {
                   author={profiles.finn.author}
                   avatar={profiles.finn.avatar}
                   roleColor={profiles.finn.roleColor}
-                  command="/wouldyourather"
+                  command="/higherlower"
                 />
                 <DiscordEmbed
                   slot="embeds"
