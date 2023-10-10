@@ -440,7 +440,9 @@ const Home = () => {
                 Entertain your server
               </h4>
               <p className="text-center text-lg text-neutral-300 md:text-left">
-                Entertain your discord server with fun and interactive games like Would You Rather, Never Have I Ever, Higher or Lower, and What Would You Do!
+                Entertain your discord server with fun and interactive games
+                like Would You Rather, Never Have I Ever, Higher or Lower, and
+                What Would You Do!
               </p>
             </>
           }
@@ -530,7 +532,7 @@ const Home = () => {
                 avatar={profiles.emilia.avatar}
                 roleColor={profiles.emilia.roleColor}
               >
-                Yep should be McDonalds 
+                Yep should be McDonalds
               </DiscordMessage>
 
               <DiscordMessage
@@ -547,7 +549,7 @@ const Home = () => {
                   roleColor={profiles.emilia.roleColor}
                 >
                   <p style={{ whiteSpace: "initial" }}>
-                  Yep should be McDonalds 
+                    Yep should be McDonalds
                   </p>
                 </DiscordReply>
                 Soooo, we gonna press higher?
