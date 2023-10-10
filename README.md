@@ -2,12 +2,16 @@
 
 The official repository for the [Would You website](https://wouldyoubot.gg)
 
+![Discord Bots](https://top.gg/api/widget/981649513427111957.svg)
+
 ## Table of Contents
 
-- [Introduction](#Introduction)
-- [Development](#development)
-- [About Bot](#about-Bot)
-- [Contributors](#contributors)
+- [Would You Web](#would-you-web)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Development](#development)
+  - [About Bot](#about-bot)
+  - [Contributors](#contributors)
 
 ## Introduction
 
@@ -20,6 +24,7 @@ Play fun and entertaining games with Would You, featuring user polls and customi
 3. Start the development server with `pnpm dev`
 
 ## About Bot
+
 <details>
 
   <summary>Invite Bot</summary>
