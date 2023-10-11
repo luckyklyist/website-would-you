@@ -79,7 +79,7 @@ export default function Document() {
                   "name": "How do I invite the would you rather discord bot?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "To invite the Would You Discord bot, visit their website at https://wouldyoubot.gg/ and click on the \"unleash the fun\" button. This will take you to Discord, where you will be prompted to invite the bot."
+                    "text": "To invite the Would You Discord bot, visit their website at https://wouldyoubot.gg/ and click on the 'unleash the fun' button. This will take you to Discord, where you will be prompted to invite the bot."
                   }
                 },
                 {
@@ -87,12 +87,11 @@ export default function Document() {
                   "name": "Can I play would you rather on Discord?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, you can. To play would you rather on Discord, go to https://wouldyoubot.gg and click the \"unleash the fun\" button to invite the would you rather bot!"
+                    "text": "Yes, you can. To play would you rather on Discord, go to https://wouldyoubot.gg and click the 'unleash the fun' button to invite the would you rather bot!"
                   }
                 }
               ]
             }
-</script>
   `,
           }}
         ></script>
