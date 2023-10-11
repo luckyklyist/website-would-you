@@ -414,7 +414,7 @@ const Home = () => {
                     avatar={profiles.nightkiller.avatar}
                     roleColor={profiles.nightkiller.roleColor}
                   >
-                    Wow thats a good...
+                    Wow thats...
                   </DiscordThreadMessage>
                 </DiscordThread>
               </DiscordMessage>
