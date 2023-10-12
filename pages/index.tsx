@@ -166,7 +166,7 @@ const Home = () => {
   };
 
   return (
-    <main className="mt-48 text-neutral-300 ">
+    <main className="mt-48 text-neutral-300 overflow-x-hidden">
       <section className="flex flex-col items-center justify-between gap-8 px-8 text-center lg:flex-row lg:text-left xl:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -214,7 +214,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <DiscordMessages class="rounded-lg text-left shadow">
+          <DiscordMessages class="rounded-lg text-left shadow overflow-x-hidden">
             <DiscordMessage
               profile="wouldyou"
               author={profiles.wouldyou.author}
@@ -387,7 +387,7 @@ const Home = () => {
         <FeatureItem
           reverse
           right={
-            <DiscordMessages class="min-w-fit rounded-lg shadow">
+            <DiscordMessages class="min-w-fit rounded-lg shadow overflow-x-hidden">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
@@ -447,7 +447,7 @@ const Home = () => {
             </>
           }
           right={
-            <DiscordMessages class="rounded-lg shadow">
+            <DiscordMessages class="rounded-lg shadow overflow-x-hidden">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
@@ -471,23 +471,23 @@ const Home = () => {
                 >
                   <DiscordEmbedFields slot="fields">
                     <DiscordEmbedDescription>
-                      Do you think that <b>Mcdonalds</b> has higher or lower
-                      searches than <b>Wrestling</b>? <br /> Image source:{" "}
+                      Do you think that{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://media.gettyimages.com/id/172983250/de/foto/el-bolte.jpg?s=612x612&w=0&k=20&c=k_mRK-vNunI3_-Vj4PuZ1Ego3gritQdXNobiZIlzszU="
                       >
-                        Image 1
-                      </a>{" "}
-                      |{" "}
+                        <b>Mcdonalds </b>
+                      </a>
+                      has higher or lower searches than{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.flickr.com/photos/jeepersmedia/14148153870/in/photolist-nydZeq-nQDDp3-pdpSvU-g7LgY-o3o2jd-pcNHiK-o3cCTF-5WPCjg-nQ2NWU-f2zTHH-pcNMyi-nQ2NHY-pcNHte-pfrPLZ-8spnG2-5pW4Z-pfaUUH-2uoaCe-nRMfuF-oXXAPw-nPUyfN-pfpNHs-pfaWDV-pfrMUx-pfrMD2-oXWWcy-5WPCZP-so4g2-5WPBYk-5WTTfu-p5tWUQ-5WTSBW-d39Ks-KHuxQ-oN23na-ayyYGJ-8spkbH-7B9Qwt-z6GPjP-p5vZi6-fJofT-LwbCj-bwPBWn-e9VGDK-8ssDmf-ea2nUm-8spDep-PanEt-8spyZR-z6GNxD"
                       >
-                        Image 2
+                        <b>Wrestling</b>
                       </a>
+                      ?
                     </DiscordEmbedDescription>
                   </DiscordEmbedFields>
                   <DiscordEmbedFooter
@@ -572,7 +572,7 @@ const Home = () => {
         <FeatureItem
           reverse
           right={
-            <DiscordMessages class="rounded-lg text-left shadow">
+            <DiscordMessages class="rounded-lg text-left shadow overflow-x-hidden">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
