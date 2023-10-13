@@ -166,7 +166,7 @@ const Home = () => {
   };
 
   return (
-    <main className="mt-48 text-neutral-300 overflow-x-hidden">
+    <main className="mt-48 overflow-x-hidden text-neutral-300">
       <section className="flex flex-col items-center justify-between gap-8 px-8 text-center lg:flex-row lg:text-left xl:px-[17vw]">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -214,7 +214,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <DiscordMessages class="rounded-lg text-left shadow overflow-x-hidden">
+          <DiscordMessages class="overflow-x-hidden rounded-lg text-left shadow">
             <DiscordMessage
               profile="wouldyou"
               author={profiles.wouldyou.author}
@@ -387,7 +387,7 @@ const Home = () => {
         <FeatureItem
           reverse
           right={
-            <DiscordMessages class="min-w-fit rounded-lg shadow overflow-x-hidden">
+            <DiscordMessages class="min-w-fit overflow-x-hidden rounded-lg shadow">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
@@ -447,7 +447,7 @@ const Home = () => {
             </>
           }
           right={
-            <DiscordMessages class="rounded-lg shadow overflow-x-hidden">
+            <DiscordMessages class="overflow-x-hidden rounded-lg shadow">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
@@ -572,7 +572,7 @@ const Home = () => {
         <FeatureItem
           reverse
           right={
-            <DiscordMessages class="rounded-lg text-left shadow overflow-x-hidden">
+            <DiscordMessages class="overflow-x-hidden rounded-lg text-left shadow">
               <DiscordMessage
                 profile="wouldyou"
                 author={profiles.wouldyou.author}
