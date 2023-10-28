@@ -47,7 +47,7 @@ const BlogPost: NextPage<{
   return (
     <>
       <Head>
-        <title>Would You Blog | {frontMatter.title}</title>
+        <title>{frontMatter.title}</title>
         <meta name="description" content={frontMatter.description} />
         <meta property="og:title" content={frontMatter.title} />
         <meta property="og:description" content={frontMatter.description} />
